@@ -101,19 +101,36 @@ body {
 
 
 /* HEADER */
-header{
+header {
   background: #fff;
   width: 100%;
 }
-.container{
+header .container {
   width: 1300px;
+  height: 132px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
 }
-
+.logo {
+  display: flex;
+  align-items: center;
+}
+.main_menu, .right_menu {
+  display: flex;
+  align-items: center;
+}
+.main_menu {
+  flex: 1;
+  gap: 17px;
+}
+.right_menu {
+  padding-left: 68px;
+  gap: 63px;
+  justify-content: flex-end;
+}
+/* 뎁스들 숨기기 */
 .depth_1, .depth_2 {
   display: none;
-
 }
