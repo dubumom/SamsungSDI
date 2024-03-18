@@ -16,4 +16,23 @@ header ul{
     display: flex;
     gap:20px;
     text-align: center;
-  }
+  }@charset 'utf-8';
+
+@import url(normalize.css);
+@import url(reset.css);
+
+/* 프리텐다드 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/* 
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+*/
+
+/* 삼성폰트 */
+@font-face {
+  font-family: 'samsunggothic';
+  src: url('../srcs/fonts/NeonPlanetDisplay.ttf') format('ttf');
+}
+/* 
+  font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+*/
+
