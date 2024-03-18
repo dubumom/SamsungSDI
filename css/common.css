@@ -2,6 +2,22 @@
 @import url(normalize.css);
 @import url(reset.css);
 
+header{
+    background: #fff;
+}
+.main_container{
+    width: 1300px;
+    margin: 0 auto;
+}
+header > div{
+    display: flex;
+    justify-content: space-between;
+}
+header ul{
+    display: flex;
+    gap:20px;
+    text-align: center;
+  }
 /* 프리텐다드 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 /* 
