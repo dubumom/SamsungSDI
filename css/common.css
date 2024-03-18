@@ -113,9 +113,12 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-.logo {
-  display: flex;
-  align-items: center;
+.logo a{
+  width: 264px;
+  height: 46px;
+  background: url(/images/Logo.png) no-repeat;
+  display: block;
+  text-indent: -9999em;
 }
 .main_menu, .right_menu {
   display: flex;
@@ -123,7 +126,7 @@ header .container {
 }
 .main_menu {
   flex: 1;
-  gap: 17px;
+  gap: 34px;
 }
 .right_menu {
   padding-left: 68px;
