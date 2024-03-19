@@ -113,26 +113,16 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-.logo a{
-  width: 264px;
-  height: 46px;
-  background: url(/images/Logo.png) no-repeat;
-  display: block;
-  text-indent: -9999em;
-}
-.main_menu, .right_menu {
+.main_menu{
   display: flex;
-  align-items: center;
-}
-.main_menu {
-  flex: 1;
-  gap: 34px;
-}
-.right_menu {
-  padding-left: 68px;
   gap: 63px;
-  justify-content: flex-end;
 }
+.right_menu{
+  display: flex;
+  margin-left: 102px;
+  gap: 45px;
+}
+
 /* 뎁스들 숨기기 */
 .depth_1, .depth_2 {
   display: none;
