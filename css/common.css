@@ -48,6 +48,7 @@ header ul{
   --text-black: #333333;
   --text-sub2: #2C2C2C;
   --white: #fff;
+  --row:27px;
 }
 
 /* 
@@ -72,6 +73,7 @@ header ul{
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
+.p-row {padding: calc(var(--row)) 0;}
 
 /* 
 typography
