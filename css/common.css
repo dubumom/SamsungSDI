@@ -113,6 +113,11 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
+.logo{
+  /* width: 100%; */
+  background: url(/images/Logo.png);
+  text-indent: -9999em;
+}
 .main_menu{
   display: flex;
   gap: 63px;
