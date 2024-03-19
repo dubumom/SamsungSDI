@@ -2,22 +2,6 @@
 @import url(normalize.css);
 @import url(reset.css);
 
-header{
-    background: #fff;
-}
-.main_container{
-    width: 1300px;
-    margin: 0 auto;
-}
-header > div{
-    display: flex;
-    justify-content: space-between;
-}
-header ul{
-    display: flex;
-    gap:20px;
-    text-align: center;
-  }
 /* 프리텐다드 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 /* 
@@ -81,14 +65,13 @@ typography
 
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-  font-size: var(--font);
+    font-size: var(--font);
   color: var(--text-black);
 }
 .banner-title{
   font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: calc(var(--font) * 4);
   line-height: 80px;
-
 }
 .h1{
   font-size: calc(var(--font) * 2);
@@ -118,3 +101,31 @@ body {
 .body_s{font-size: calc(var(--font) * 0.875);}
 .body_xs{font-size: calc(var(--font) * 0.75);}
 
+
+/* HEADER */
+header {
+  background: #fff;
+  width: 100%;
+}
+header .container {
+  width: 1300px;
+  height: 132px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_menu{
+  display: flex;
+  gap: 63px;
+}
+.right_menu{
+  display: flex;
+  margin-left: 102px;
+  gap: 45px;
+}
+
+/* 뎁스들 숨기기 */
+.depth_1, .depth_2 {
+  display: none;
+}
