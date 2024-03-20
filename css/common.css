@@ -106,29 +106,28 @@ body {
 header {
   background: #fff;
   width: 100%;
+  position: relative;
 }
 header .container {
   width: 1300px;
-  height: 132px;
+  height: 100px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo a{
   display: block;
   width: 200px;
-  height: 35px;
+  height: 46px;
   background: url(/images/Logo.png) no-repeat;
   text-indent: -9999em;
   background-size: contain;
   align-items: center;
 }
 .main_menu{
-  display: flex;
   gap: 63px;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .right_menu{
   display: flex;
@@ -138,6 +137,6 @@ header .container {
 }
 
 /* 뎁스들 숨기기 */
-.depth_1, .depth_2 {
+.depth_2, .depth_3 {
   display: none;
 }
