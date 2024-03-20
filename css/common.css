@@ -105,7 +105,6 @@ body {
 header {
   background: #fff;
   width: 100%;
-  height: 100px;
   position: relative;
 }
 header .container {
@@ -128,38 +127,19 @@ header .container {
   left: 50%;
   top: 50px;
   transform: translate(-50%,-50%);
+  font-size: 18px;
 }
 .right_menu{
   gap: 45px;
 }
 
-/* .depth_2, .depth_3 {
-  display: none;
-} */
-
 /* depth */
-.depth_2 {
-  width: 100%;
-  background-color: #E2E2E2;
-}
-header nav ul li:hover > ul.depth_2 {
-  display: block;
-}
-
-header nav ul li ul.depth_2 li:hover > ul.depth_3 {
-  display: block;
-}
-
-header nav ul ul {
-  display: none;
+.depth_2{
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #E2E2E2;
   width: 100%;
+  background-color: #e2e2e2;
+  font-size: 18px;
 }
-
-header nav ul ul.depth_3 {
-  left: 100%;
-  top: 0;
+.depth_2 li em{
+  font-weight: bold;
 }
