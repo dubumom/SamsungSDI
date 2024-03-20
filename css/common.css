@@ -39,7 +39,7 @@
   layout
 */
 
-.contanier {
+.container {
   width: 1300px;
   margin: 0 auto;
 }
@@ -101,7 +101,6 @@ body {
 .body_s{font-size: calc(var(--font) * 0.875);}
 .body_xs{font-size: calc(var(--font) * 0.75);}
 
-
 /* HEADER */
 header {
   background: #fff;
@@ -134,7 +133,33 @@ header .container {
   gap: 45px;
 }
 
-/* 뎁스들 숨기기 */
-.depth_2, .depth_3 {
+/* .depth_2, .depth_3 {
   display: none;
+} */
+
+/* depth */
+.depth_2 {
+  width: 100%;
+  background-color: #E2E2E2;
+}
+header nav ul li:hover > ul.depth_2 {
+  display: block;
+}
+
+header nav ul li ul.depth_2 li:hover > ul.depth_3 {
+  display: block;
+}
+
+header nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #E2E2E2;
+  width: 100%;
+}
+
+header nav ul ul.depth_3 {
+  left: 100%;
+  top: 0;
 }
