@@ -127,12 +127,11 @@ header .container {
   gap: 63px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-
+  top: 50px;
+  transform: translate(-50%,-50%);
 }
 .right_menu{
   gap: 45px;
-  line-height: 100px;
 }
 
 /* 뎁스들 숨기기 */
