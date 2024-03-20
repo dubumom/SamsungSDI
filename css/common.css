@@ -39,7 +39,7 @@
   layout
 */
 
-.contanier {
+.container {
   width: 1300px;
   margin: 0 auto;
 }
@@ -101,43 +101,65 @@ body {
 .body_s{font-size: calc(var(--font) * 0.875);}
 .body_xs{font-size: calc(var(--font) * 0.75);}
 
-
 /* HEADER */
 header {
   background: #fff;
   width: 100%;
+  height: 100px;
+  position: relative;
 }
 header .container {
   width: 1300px;
-  height: 132px;
+  height: 100px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo a{
   display: block;
   width: 200px;
-  height: 35px;
-  background: url(/images/Logo.png) no-repeat;
+  height: 46px;
+  background: url(../images/Logo.png) no-repeat;
   text-indent: -9999em;
   background-size: contain;
-  align-items: center;
 }
 .main_menu{
-  display: flex;
   gap: 63px;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%,-50%);
 }
 .right_menu{
-  display: flex;
-  margin-left: 102px;
   gap: 45px;
-  align-items: center;
 }
 
-/* 뎁스들 숨기기 */
-.depth_1, .depth_2 {
+/* .depth_2, .depth_3 {
   display: none;
+} */
+
+/* depth */
+.depth_2 {
+  width: 100%;
+  background-color: #E2E2E2;
+}
+header nav ul li:hover > ul.depth_2 {
+  display: block;
+}
+
+header nav ul li ul.depth_2 li:hover > ul.depth_3 {
+  display: block;
+}
+
+header nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #E2E2E2;
+  width: 100%;
+}
+
+header nav ul ul.depth_3 {
+  left: 100%;
+  top: 0;
 }
