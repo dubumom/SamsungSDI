@@ -32,13 +32,14 @@
   --text-black: #333333;
   --text-sub2: #2C2C2C;
   --white: #fff;
+  --row:27px;
 }
 
 /* 
   layout
 */
 
-.contanier {
+.container {
   width: 1300px;
   margin: 0 auto;
 }
@@ -56,6 +57,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
+.p-row {padding: calc(var(--row)) 0;}
 
 /* 
 typography
@@ -99,43 +101,45 @@ body {
 .body_s{font-size: calc(var(--font) * 0.875);}
 .body_xs{font-size: calc(var(--font) * 0.75);}
 
-
 /* HEADER */
 header {
   background: #fff;
   width: 100%;
+  position: relative;
 }
 header .container {
   width: 1300px;
-  height: 132px;
+  height: 100px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo a{
   display: block;
   width: 200px;
-  height: 35px;
-  background: url(/images/Logo.png) no-repeat;
+  height: 46px;
+  background: url(../images/Logo.png) no-repeat;
   text-indent: -9999em;
   background-size: contain;
-  align-items: center;
 }
 .main_menu{
-  display: flex;
   gap: 63px;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%,-50%);
+  font-size: 18px;
 }
 .right_menu{
-  display: flex;
-  margin-left: 102px;
   gap: 45px;
-  align-items: center;
 }
 
-/* 뎁스들 숨기기 */
-.depth_1, .depth_2 {
-  display: none;
+/* depth */
+.depth_2{
+  position: absolute;
+  width: 100%;
+  background-color: #e2e2e2;
+  font-size: 18px;
+}
+.depth_2 li em{
+  font-weight: bold;
 }
