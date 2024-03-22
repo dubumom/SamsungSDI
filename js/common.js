@@ -1,4 +1,4 @@
-const mainMenu = document.querySelectorAll('.main_menu > li');
+const mainMenu = document.querySelectorAll('.main_menu');
 const header = document.querySelector('header');
 const initHeight = header.offsetHeight;
 let tallestHeight = 0;
@@ -9,7 +9,7 @@ for(let mm of mainMenu){
 	if(smHeight > tallestHeight){
 		tallestHeight = smHeight;
 	}
-	let headerHeight = tallestHeight + initHeight + 50;
+	let headerHeight = tallestHeight + initHeight + 100;
 	
 	mm.addEventListener('mouseover',()=>{
 		header.style.height = `${headerHeight}px`;
@@ -18,14 +18,13 @@ for(let mm of mainMenu){
 		header.style.height = `${initHeight}px`;
 	});	
 }
-$(document).ready(function() {
-    $('.main_menu > li').click(function(e) {
-      e.preventDefault();
-  
-      var submenu = $(this).find('.depth_3');
-      if (submenu.length) { 
-        submenu.slideToggle(); 
-      }
+$(function(){
+    $(".main_menu .depth_2").on("click", function(e) {
+
+        let submenu = $(this).find(".depth_3");
+        if (submenu.length) { 
+            submenu.slideToggle();
+        }
     });
-  });
-  
+});
+
