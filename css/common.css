@@ -176,3 +176,8 @@ nav ul.main_menu li:hover {
 .depth_2 li em{
   font-weight: bold;
 }
+
+/*footer*/
+.customer_li img{
+  width: 189px;
+}
