@@ -115,12 +115,11 @@ link button
 /* HEADER */
 header {
   background: #fff;
-  width: 100%;
+  width: 100px;
   position: relative;
 }
 header .container {
   width: 1300px;
-  height: 100px;
   margin: 0 auto;
 }
 
@@ -153,8 +152,7 @@ nav ul.depth_2 {
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 20px; 
-  display: none; 
+  padding: 20px;
 }
 
 nav ul.main_menu li:hover {
@@ -162,17 +160,16 @@ nav ul.main_menu li:hover {
 }
 
 
-.depth_2 {
-  position: absolute;
-  width: 100%;
-  background-color: #e2e2e2;
-  font-size: 18px;
-  display: none; 
-}
+
 
 .main_menu li:hover .depth_2 {
   display: block; 
 }
 .depth_2 li em{
   font-weight: bold;
+}
+
+/*footer*/
+.customer_li img{
+  width: 189px;
 }
