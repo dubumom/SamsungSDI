@@ -115,13 +115,15 @@ link button
 /* HEADER */
 header {
   background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 100px, rgba(238,238,238,1) 100px);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 132px, rgba(238,238,238,1) 132px);
   width: 100%;
-  height: 100px;
+  height: 132px;
   position: fixed; /* 헤더 고정*/
   left: 0;
   right: 0;
-  overflow: hidden;
+  overflow: hidden; 
+  padding: 43px 0;
+  box-sizing:border-box;
 }
 header .container {
   width: 1300px;
@@ -140,7 +142,7 @@ header .container {
   gap: 63px;
   position: absolute;
   left: 50%;
-  top: 50px;
+  top: 60px;
   transform: translate(-50%,-50%);
   font-size: 18px;
 }
@@ -150,11 +152,11 @@ header .container {
 
 
 /* depth */
+
+nav > ul > li { line-height:50px;position: relative;}
 nav > ul > li > ul{ width:100%;  position: absolute; top: 100px} /* 2depth만 절대값 */
 nav > ul > li ul li{white-space:nowrap;}
-
-
-
+.depth_3 {display: none;}
 
 .depth_2 li em{
   font-weight: bold;
@@ -163,4 +165,18 @@ nav > ul > li ul li{white-space:nowrap;}
 /*footer*/
 .customer_li img{
   width: 189px;
+}
+
+.footer_data span{
+  display: block;
+  height: 30px;
+  text-align: center;
+}
+.footer_data span:last-child{
+  background: var( --main-color);
+  color: aliceblue;
+  padding: 5px;
+}
+.footer_navi{
+  padding: 30px;
 }
