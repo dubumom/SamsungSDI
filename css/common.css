@@ -153,6 +153,38 @@ header .container {
   gap: 45px;
 }
 
+/* language */
+.language_menu{
+  background-color: #fff;
+  padding: 10px;
+  z-index: 1;
+}
+
+.right_menu li:hover .language_menu {
+  display: block;
+}
+
+.language_menu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; 
+}
+
+.language_menu:hover ul{
+  display: block;
+}
+.language_menu ul li{
+  padding: 10px;
+  cursor: pointer;
+}
+
 
 /* depth */
 
@@ -176,6 +208,99 @@ nav > ul > li ul li{white-space:nowrap;}
   align-items: center;
   font-size: 18px;
 }
+
+/* 미디어 쿼리를 사용하여 반응형 스타일 적용 */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .main_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 모바일에서 가운데 정렬 */
+  }
+
+  .main_menu li {
+    width: 100%;
+    display: block;
+  }
+
+  .main_menu li ul {
+    position: static;
+    display: none;
+    padding: 10px 0;
+    box-shadow: none;
+  }
+
+  .main_menu li:hover ul {
+    display: block;
+  }
+
+  .depth_2 .material-symbols-outlined {
+    display: none; /* 모바일에서 화살표 아이콘 숨김 */
+  }
+
+  .right_menu {
+    display: none; /* 우측 메뉴 모바일에서 숨김 */
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 99999; /* 메뉴 아이콘을 상위로 올려서 보이도록 조정 */
+  }
+
+  .language_menu {
+    position: static;
+    display: none;
+  }
+
+  .language_menu ul {
+    position: static;
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+  .language_menu ul li {
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .language_menu:hover ul {
+    display: none;
+  }
+
+  .language_menu:hover ul {
+    display: none;
+  }
+
+  /* 모바일에서 헤더 크기 조정 */
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo a {
+    width: 150px; /* 로고 크기 축소 */
+  }
+}
+
+
+
+
 
 
 /*footer*/
