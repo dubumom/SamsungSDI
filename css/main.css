@@ -130,13 +130,37 @@ career
 MAIN
 prcenter
 */
-.prcenter
-.prcenter .container {position: relative;}
-.prcenter ul{
-  position: absolute;
+.prcenter {
+  height: 100vh;
+  overflow: hidden;
 }
-.prcenter .slideUp{}
+.prcenter .container {position: relative;}
+.prcenter_txt {
+
+}
+.prcenter_txt div{
+  position: absolute;
+  top: 350%; left: 3%;
+  text-align: center;
+  width: 30%;
+}
+
+.prcenter ul{
+  position: absolute; top: 0;
+  width: 386px;
+}
+.prcenter .slideUp{right: 416px;}
 .prcenter .slideDown{right: 0;}
+.prcenter li {
+  width: 100%;
+}
+.prcenter li + li {
+  margin-top: 30px;
+}
+.prcenter img {
+  width: 100%;
+  object-fit: cover;
+}
 
 
 /* 
