@@ -14,7 +14,6 @@ banner
 }
 .bannerWrapper .slidecontainer{
   position: relative;
-  height: 100%;
 }
 /* .slidecontainer.animated{
   transition:transform 0.3s;
@@ -66,3 +65,10 @@ banner
   color: var(--sub-color);
 }
 
+/* 
+MAIN
+business
+*/
+.business video {
+  width: 100%;
+}
