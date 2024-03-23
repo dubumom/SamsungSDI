@@ -153,13 +153,21 @@ header .container {
 
 /* depth */
 
-nav > ul > li { line-height:50px;position: relative;}
-nav > ul > li > ul{ width:100%;  position: absolute; top: 100px} /* 2depth만 절대값 */
+nav > ul > li { line-height:50px;position: relative; }
+nav > ul > li > ul{ width:100%;  position: absolute; top: 100px; margin-right: 10px;} /* 2depth만 절대값 */
 nav > ul > li ul li{white-space:nowrap;}
 .depth_3 {display: none;}
 
 .depth_2 li em{
   font-weight: bold;
+}
+
+.material-symbols-outlined{
+  position: absolute;
+  left: 100px;
+  padding-top: 15px;
+  align-items: center;
+  font-size: 18px;
 }
 
 /*footer*/
