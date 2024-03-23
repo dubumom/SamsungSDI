@@ -175,3 +175,36 @@ prcenter
 MAIN
 esg
 */
+.esg {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/main_esg_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.esg .container {
+  padding-top: calc(27px * 3);
+  text-align: center;
+  color: var(--white);
+}
+.esg .container h3, 
+.esg .container p {
+  position: relative;
+  z-index: 1;
+}
+.esg .esgText {
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(124,149,88,1) 35%, rgba(124,149,88,1) 100%);
+  width: 50%;
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+}
+.esg .esgText ul{
+  margin-top: 25%;
+  /* color: var(--dark-gray); */
+}
+.esg .esgText li + li {
+  margin-top: 60px;
+
+}
