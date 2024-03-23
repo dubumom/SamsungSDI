@@ -124,11 +124,7 @@ header {
   overflow: hidden; 
   padding: 20px 0;
   box-sizing:border-box;
-<<<<<<< HEAD
   z-index: 9999;
-=======
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
->>>>>>> member-im
 }
 header .container {
   width: 1300px;
