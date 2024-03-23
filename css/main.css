@@ -133,6 +133,7 @@ prcenter
 .prcenter {
   height: 100vh;
   overflow: hidden;
+  background: #F2F2F2;
 }
 .prcenter .container {position: relative;}
 .prcenter_txt {

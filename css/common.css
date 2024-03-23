@@ -72,10 +72,11 @@ body {
   font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: calc(var(--font) * 4);
   line-height: 80px;
+  text-transform: uppercase;
 }
 .h1{
   font-size: calc(var(--font) * 2);
-  font-weight: 700;
+  font-weight: 700; 
   line-height: 40px;
 }
 .h2{
