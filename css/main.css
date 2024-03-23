@@ -58,10 +58,10 @@ banner
   top: -25px; left: 0;
   color: var(--light-gray);
 }
-.bannerWrapper .pager a.active{
+.bannerWrapper .pager a.bannerActive{
   background: var(--sub-color);
 }
-.bannerWrapper .pager a.active span {
+.bannerWrapper .pager a.bannerActive span {
   color: var(--sub-color);
 }
 
@@ -136,16 +136,23 @@ prcenter
   background: #F2F2F2;
 }
 .prcenter .container {position: relative;}
-.prcenter_txt {
-
+.prcenter .container h2{
+  padding-top: calc(27px * 3);
 }
 .prcenter_txt div{
   position: absolute;
-  top: 350%; left: 3%;
+  top: 190%; left: 3%;
   text-align: center;
   width: 30%;
+  display: none;
 }
-
+.prcenter_txt div.prcenterActive {
+  display: block;
+}
+.prcenter .container h3 {
+  color: var(--sub-color);
+  margin-bottom: calc(27px * 2);
+}
 .prcenter ul{
   position: absolute; top: 0;
   width: 386px;
