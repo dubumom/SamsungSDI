@@ -4,7 +4,6 @@
 /* 
 MAIN
 banner 
-
 */
 .bannerWrapper{
   width: 100%;
@@ -125,7 +124,94 @@ business
 MAIN
 career
 */
+.career {
+  padding-top: calc(27px * 3);
+  height: 100vh;
 
+}
+.career h2,
+.career p {text-align: center;}
+.career p {margin-bottom: calc(27px * 5);}
+.career::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.career .career_left {
+  width: 45%;
+  padding-top: 10px;
+  padding-left: 94px;
+  float: left;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.career .career_left span {
+  display: block;
+}
+.career .career_left span:first-child {
+  line-height: calc(27px * 2);
+}
+.career .career_left .h2 {
+  color: var(--sub-color);
+}
+.career .career_left ul {
+  margin-top: 150px;
+}
+.career .career_left li {
+  width: 50%;
+  position: relative;
+  right: 15%;
+}
+.career .career_left li:first-child{transform: translateX(80px);}
+.career .career_left li:nth-child(2){transform: translateX(60px);}
+.career .career_left li:nth-child(3){transform: translateX(40px);}
+.career .career_left li:nth-child(4){transform: translateX(20px);}
+.career .career_left li:last-child{transform: translateX(0px);}
+.career .career_left li img{
+  width: 100%;
+}
+.career .career_right {
+  float: right;
+  width: 55%;
+  position: relative;
+}
+.career_right .sellphone{
+  width: 227px;
+  height: 452px;
+  background-image: url(../images/main_career_sellphone_img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--white);
+}
+.career .career_right li {
+  font-weight: 500;
+  line-height: calc(27px * 2);
+}
+.career .career_right li::after {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 1px;
+  background: var(--dark-gray);
+}
+.career .career_right ul {
+  transform: translateY(20%);
+}
+.career .career_right .readmore {
+  position: absolute;
+  right: 216px; bottom: 136px;
+}
+.career .career_right .readmore::before {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 2px;
+  background: var(--dark-gray);
+  position: absolute;
+  bottom: -1px; left: -180px;
+}
 /* 
 MAIN
 prcenter
