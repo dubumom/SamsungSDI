@@ -163,9 +163,6 @@ nav > ul > li ul li{white-space:nowrap;}
 }
 
 /*footer*/
-.customer_li img{
-  width: 189px;
-}
 
 .footer_data span{
   display: block;
@@ -179,4 +176,12 @@ nav > ul > li ul li{white-space:nowrap;}
 }
 .footer_navi{
   padding: 30px;
+}
+.customer_li .batteryimg{
+  width: 189px;
+}
+.footer_bottom{
+  background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
 }
