@@ -72,6 +72,7 @@ business
   margin-top: -9px;
   position: relative;
   color: var(--white);
+  overflow: hidden;
 }
 .business video {
   width: 100%;
