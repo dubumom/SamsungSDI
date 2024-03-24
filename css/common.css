@@ -23,6 +23,7 @@
 
 :root {
   --font:16px;
+  --row:26px;
   --main-color: #1C5CB0;
   --sub-color: #11359A;
   --light-gray: #F2F2F2;
@@ -32,7 +33,6 @@
   --text-black: #333333;
   --text-sub2: #2C2C2C;
   --white: #fff;
-  --row:27px;
 }
 
 /* 
@@ -320,4 +320,22 @@ nav > ul > li ul li{white-space:nowrap;}
 }
 .footer_navi{
   padding: 30px;
+}
+
+
+/* sub common */
+main {
+  padding-top:calc(var(--row) * 3);
+}
+.sub_common {
+  padding: calc(var(--row) * 3) 0 calc(var(--row) * 2) 0;
+}
+.align {padding-bottom: var(--row);}
+.align ul {
+  gap: 10px;
+  color: var(--main-color);
+  /* opacity: 0.7; */
+}
+.sub_common> img {
+  border-radius: 10px;
 }

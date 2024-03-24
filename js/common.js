@@ -1,6 +1,6 @@
 
 	$('#header').load('header.html', headerJs);
-	$('#footer').load('footer.html');
+	$('#footer').load('footer.html', footerJs);
 
 // 헤데 제이쿼리 작동 함수
 function headerJs(){

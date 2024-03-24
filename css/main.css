@@ -126,13 +126,13 @@ MAIN
 career
 */
 .career {
-  padding-top: calc(27px * 3);
+  padding-top: calc(var(--row) * 3);
   height: 100vh;
 
 }
 .career h2,
 .career p {text-align: center;}
-.career p {margin-bottom: calc(27px * 5);}
+.career p {margin-bottom: calc(var(--row) * 5);}
 .career::after{
   content: '';
   display: block;
@@ -150,7 +150,7 @@ career
   display: block;
 }
 .career .career_left span:first-child {
-  line-height: calc(27px * 2);
+  line-height: calc(var(--row) * 2);
 }
 .career .career_left .h2 {
   color: var(--sub-color);
@@ -188,7 +188,7 @@ career
 }
 .career .career_right li {
   font-weight: 500;
-  line-height: calc(27px * 2);
+  line-height: calc(var(--row) * 2);
 }
 .career .career_right li::after {
   content: '';
@@ -224,7 +224,7 @@ prcenter
 }
 .prcenter .container {position: relative;}
 .prcenter .container h2{
-  padding-top: calc(27px * 3);
+  padding-top: calc(var(--row) * 3);
 }
 .prcenter_txt div{
   position: absolute;
@@ -238,7 +238,7 @@ prcenter
 }
 .prcenter .container h3 {
   color: var(--sub-color);
-  margin-bottom: calc(27px * 2);
+  margin-bottom: calc(var(--row) * 2);
 }
 .prcenter ul{
   position: absolute; top: 0;
@@ -271,7 +271,7 @@ esg
   position: relative;
 }
 .esg .container {
-  padding-top: calc(27px * 3);
+  padding-top: calc(var(--row) * 3);
   text-align: center;
   color: var(--white);
 }
