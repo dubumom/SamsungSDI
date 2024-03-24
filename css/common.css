@@ -312,9 +312,6 @@ main {
   color: var(--main-color);
   /* opacity: 0.7; */
 }
-.sub_common> img {
-  border-radius: 10px;
-}
 
 /*footer*/
 
