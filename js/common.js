@@ -55,6 +55,10 @@ function headerJs(){
 	});
 	
 }
+document.addEventListener("DOMContentLoaded", function() {
+	// 페이지가 로드될 때 실행되는 코드
+	document.querySelector(".sub_common > img").classList.add("loaded");
+  });
 
 //푸터 제이쿼리 작동 함수
 function footerJs(){
