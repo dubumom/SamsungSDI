@@ -312,7 +312,16 @@ main {
   color: var(--main-color);
   /* opacity: 0.7; */
 }
-
+.sub_common img {
+  width: 0;
+  height: 179px;
+  perspective-origin: 0 center;
+  animation: img 3s forwards;
+}
+@keyframes img {
+  0%{}
+  100%{width: 100%;}
+}
 /*footer*/
 
 .footer_data span{
