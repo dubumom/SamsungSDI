@@ -314,12 +314,6 @@ main {
 }
 .sub_common> img {
   border-radius: 10px;
-  height: auto; 
-  width: 0; 
-  transition: width 0.5s ease;
-}
-.sub_common > img.loaded {
-  width: 100%;
 }
 
 /*footer*/
