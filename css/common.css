@@ -297,8 +297,6 @@ nav > ul > li ul li{white-space:nowrap;}
   }
 }
 
-
-
 /* sub common */
 main {
   padding-top:calc(var(--row) * 3);
@@ -322,6 +320,7 @@ main {
   0%{}
   100%{width: 100%;}
 }
+
 /*footer*/
 
 .footer_data span{
