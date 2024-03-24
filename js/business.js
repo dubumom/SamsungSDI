@@ -39,15 +39,11 @@ $(document).ready(function () {
 	});
   });
   $(document).ready(function() {
-    // depth_2에 마우스가 들어갔을 때 이벤트 핸들러 추가
     $(".depth_2").mouseenter(function() {
-        // 해당 .depth_2의 하위 .depth_3를 표시
         $(this).children(".depth_3").show();
     });
 
-    // depth_2에서 마우스가 빠져나갔을 때 이벤트 핸들러 추가
     $(".depth_2").mouseleave(function() {
-        // 해당 .depth_2의 하위 .depth_3를 숨김
         $(this).children(".depth_3").hide();
     });
 });
