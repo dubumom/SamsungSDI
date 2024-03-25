@@ -1,10 +1,15 @@
-const slider = $('.slider');
+let wrapper = $('.slidewrapper'),
+  slideContainer = wrapper.find('.slide-container'),
+  slideWidth = 200,
+  slideGap = 20,
+  controlBtn = $('.controls button'),
+  currentIdx = 0;
 
-$(document).on('click', activate);
+  controlBtn.click((e)=>{
+    let slides = slideContainer.find('.slide');
+    e.target.matches('.next') && slideContainer.append(slides.eq(0));
+    
+    e.target.matches('.prev') && slideContainer.prepend(slides.eq(slides.length -1)); 
 
-function activate(e){
-  const items = slider.find('.item');
-
-  e.target.matches('.next') && slider.append(items.eq(0));
-  e.target.matches('.prev') && slider.prepend(items.eq(items.length -1)); 
-}
+   
+  })
