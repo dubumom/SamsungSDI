@@ -298,7 +298,7 @@ nav > ul > li ul li{white-space:nowrap;}
 }
 
 /* sub common */
-main {
+main.container {
   padding-top:calc(var(--row) * 3);
 }
 .sub_common {
@@ -310,15 +310,14 @@ main {
   color: var(--main-color);
   /* opacity: 0.7; */
 }
+
 .sub_common img {
-  width: 0;
-  height: 179px;
-  perspective-origin: 0 center;
+  clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
 }
 @keyframes img {
   0%{}
-  100%{width: 100%;}
+  100% {clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
 }
 
 /*footer*/
