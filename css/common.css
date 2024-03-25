@@ -142,7 +142,7 @@ header .container {
   background-size: contain;
 }
 .main_menu{
-  gap: 63px;
+  gap: 73px;
   position: absolute;
   left: 50%;
   top: 40px;
@@ -204,7 +204,7 @@ header .container {
 
 .depth_2 .material-symbols-outlined{
   position: absolute;
-  left: 100px;
+  left: 110px;
   padding-top: 15px;
   align-items: center;
   font-size: 18px;
