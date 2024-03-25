@@ -360,10 +360,31 @@ main {
 .footer_bottom nav{
   height: 326px;
 }
+.body_s span{
+  vertical-align: middle;
+}
+.footer-last{
+  padding: 50px;
+}
+.samsungwhitelogo{
+  width: 137px;
+  height: 37px;
+}
+.footer_3th ul{
+  gap: 5px;
+}
+.mm_menu{
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.mm_menu ul{
+  gap: 30px;
+}
 
 /* modal */
 .modal {
-  position: fixed;
+  position: fixed; 
   left: 5%; top: 15%;
   z-index: 999999999;
 }
