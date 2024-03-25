@@ -13,6 +13,8 @@ banner
 }
 .bannerWrapper .slidecontainer{
   position: relative;
+  height: 100%;
+  /* overflow:hidden; */
 }
 /* .slidecontainer.animated{
   transition:transform 0.3s;
@@ -20,10 +22,16 @@ banner
 .bannerWrapper .slidecontainer .slide {
   position: absolute;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.bannerWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .bannerWrapper .slidecontainer .slide h3, .slide p {
   position: absolute;
