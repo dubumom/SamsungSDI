@@ -21,17 +21,28 @@ function headerJs(){
 		header.stop().animate({height:`${headerHeight}px`});
 	})
 	
-	header.mouseout(function(){
+	header.mouseleave(function(){
 		header.stop().animate({height:`${initHeight}px`});
-	});
+	 });
+	 
+	 $(".main_menu .depth_2 > li").on("click", function() {
+	 
+		   let submenu = $(this).find(".depth_3");
+		   console.log(submenu);
+		   let submenuHeight = submenu.outerHeight();
+		   if (submenu.length) { 
+				 submenu.slideToggle();
+		   }
+		   header.stop().animate({height:`${headerHeight + submenuHeight}px`});
+	 });
 	
-	$(".main_menu .depth_2").on("click", function() {
+	// $(".main_menu .depth_2").on("click", function() {
 	
-			let submenu = $(this).find(".depth_3");
-			if (submenu.length) { 
-					submenu.slideToggle();
-			}
-	});
+	// 		let submenu = $(this).find(".depth_3");
+	// 		if (submenu.length) { 
+	// 				submenu.slideToggle();
+	// 		}
+	// });
 	
 	$(".depth_2 > li > a").click(function (event) {
 		event.preventDefault();

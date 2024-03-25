@@ -142,7 +142,7 @@ header .container {
   background-size: contain;
 }
 .main_menu{
-  gap: 63px;
+  padding: 00px;
   position: absolute;
   left: 50%;
   top: 40px;
@@ -188,9 +188,10 @@ header .container {
 
 /* depth */
 
-nav > ul > li { line-height:50px;position: relative;}
-nav > ul > li > ul{ width:100%;  position: absolute; top: 80px; justify-content: space-between;}
-nav > ul > li ul li{white-space:nowrap;}
+.main_nav > ul > li { line-height:50px;position: relative; white-space: nowrap;}
+.main_nav > ul > li > a { white-space: nowrap;}
+.main_nav > ul > li > ul{  position: absolute; top: 80px; justify-content: space-between;}
+.main_nav > ul > li ul li{white-space:nowrap;}
 .depth_3 {display: none;}
 
 .depth_2 li em{
