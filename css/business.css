@@ -28,15 +28,91 @@
 
 }
 
-
-
-
-
 h2{
     margin-bottom: 20px;
 }
 
-.swiper {
+.slide-wrapper {
+    width: 100%;
+    height: 810px;
+    padding-bottom: 134px;
+  }
+.slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    width: 100%;
+    height: 636px;
+    position: relative;
+}
+.item{
+    width: 200px;
+    height: 300px;
+    list-style: none;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow: inset 0 20px 30px rgba(255,255,255,.3);
+    transition:transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+    .text{
+      width: 645px;
+      img{
+        width: 645px;
+        height: 412px;
+        object-fit: cover;
+        top: 0;
+        margin: 0 auto;
+      }
+    }
+    &:nth-child(1), &:nth-child(2){
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        border-radius:0;
+        box-shadow: none;
+      }
+      &:nth-child(3) {left:50%;}
+      &:nth-child(4) {left:calc(50% + 220px);}
+      &:nth-child(5) {left:calc(50% + 440px);}
+      &:nth-child(6) {left:calc(50% + 660px);}
+      &:nth-child(7) {left:calc(50% + 880px); opacity:0;}
+      &:nth-child(8) {left:calc(50% + 1100px); opacity:0;}
+    }
+    .item .text{
+        width:min(30vw, 400px);
+        position: absolute;
+        left: 3rem;
+        top:50%;
+        transform:translateY(-50%);
+        font:400 0.85rem Arial, sans-serif;
+        color: #fff;
+        text-shadow: 0 3px 8px rgba(0,0,0,.5);
+        opacity: 0;
+        visibility: hidden;
+        h2{
+          font-family: 'Arial-black';
+          text-transform: uppercase;
+        }
+        p{
+          line-height: 1.7;
+          margin:1rem 0 1.5rem;
+          font-size: 0.8rem;
+        }
+      }
+      .item:nth-child(2) figcaption{
+        visibility: visible;
+        animation:show 0.75s ease-in-out 0.3s forwards;
+      }
+ 
+/* .swiper {
     width: 100%;
     height: 810px;
     padding-bottom: 134px;
@@ -58,13 +134,13 @@ h2{
 .swiper-slide img {
     /* display: block; */
     /* position: absolute; */
-    width: 645px;
+    /* width: 645px;
     height: 412px;
     object-fit: cover;
     top: 0;
     margin: 0 auto;
-}
-
+} */
+/* 
 .swiper-button-next,
 .swiper-button-prev,
 .swiper-pagination{
@@ -84,4 +160,4 @@ h2{
     margin: 0 auto;
     margin-top: 130px;
     line-height: 30px;
-}
+} */
