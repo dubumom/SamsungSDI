@@ -312,7 +312,7 @@ main.container {
 }
 
 .sub_common img {
-  clip-path:polygon(0 100%, 100% 100%, 100% 100%,0 100%);
+  clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
 }
 @keyframes img {
