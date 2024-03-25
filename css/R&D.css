@@ -1,3 +1,43 @@
 @charset "utf-8";
 /* member-woo */
 @import url(common.css);
+main .sub_fiexd{
+  position: relative;
+}
+main header {
+  width: 500px;
+  position: sticky;
+  left: 0;
+  top: 120px;
+  height: 215px;
+  background: none;
+  color: var(--medium-gray);
+  box-shadow: none;
+  z-index: 1;
+}
+#sub_header li +li {
+  margin-top: 20px;
+}
+#sub_header li a {padding: 10px 20px;}
+#sub_header li.sHeaderActive a {
+  background: var(--sub-color);
+  border-radius: 50px;
+  color: var(--white);
+}
+.sec_content section {
+  text-align: center;
+  justify-content: space-between;
+  gap: 100px;
+  margin: calc(var(--row) * 2) 0;
+}
+.sec_content section div {width: 400px;}
+.sec_content section div h3 {margin-bottom: var(--row);}
+.sec_content section div p {line-height: 30px;}
+#sec1 div {order: 2;}
+#sec1 p {order: 1;}
+#sec3 div {order: 2;}
+#sec3 p {order: 1;}
+.patent {padding: calc(var(--row) * 3) 0;}
+.patent h2.h1{line-height: 55px;}
+.patent img {margin-top: var(--row);}
+.patent .explan {text-align: center;}
