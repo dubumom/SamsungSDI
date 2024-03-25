@@ -142,7 +142,7 @@ header .container {
   background-size: contain;
 }
 .main_menu{
-  padding: 00px;
+  gap: 63px;
   position: absolute;
   left: 50%;
   top: 40px;
