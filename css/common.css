@@ -328,9 +328,13 @@ main.container {
   padding-bottom: 50px;
 }
 .notice{
-  padding-top: 50px;
+  padding-top: 20px;
 }
-
+.notice_1st,
+.notice_2st{
+  width: 640px;
+  height: 260px;
+}
 .footer_data span{
   display: block;
   height: 30px;
@@ -344,12 +348,23 @@ main.container {
 .footer_navi{
   padding: 30px;
 }
+.customer_li img{
+  width: 300px;
+}
+.customer_div{
+  display: flex;
+  flex-direction: column;
+  a{
+    display: flex;
+  }
+}
 /*고객문의*/
 .customer{
   padding-top: 50px;
 }
 .customer_li .batteryimg{
   width: 189px;
+  height: 89px;
 }
 .footer_bottom{
   color: #fff;
