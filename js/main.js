@@ -7,7 +7,7 @@ function moveTop(){
   $('.autoSlide > .slideUp').css('margin-top',dTop);
   dTop-=2; 
 
-  if(dTop==-282){
+  if(dTop==-280){
   $('.autoSlide > .slideUp > li:first-child').insertAfter('.autoSlide > .slideUp li:last-child');
   }else if(dTop==-560){
     dTop=-280;
@@ -28,7 +28,7 @@ $('.autoSlide > .slideUp').hover(function(){
 let dBottom = 280;
 function moveBottom(){
 
-  $('.autoSlide> .slideDown').css('margin-bottom',dBottom);
+  $('.autoSlide> .slideDown').css('margin-top',dBottom);
   dBottom += 2; 
   // console.log(dBottom);
 
