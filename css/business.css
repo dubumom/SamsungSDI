@@ -89,6 +89,8 @@ h2{
   .prev,
   .next{
     position: absolute;
+    background: #fff;
+    border: none;
   }
   .prev{
     left: 480px;

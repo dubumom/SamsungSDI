@@ -7,9 +7,9 @@ let wrapper = $('.slidewrapper'),
 
   controlBtn.click((e)=>{
     let slides = slideContainer.find('.slide');
-    e.target.matches('.next') && slideContainer.append(slides.eq(0));
+    e.target.matches('.next img') && slideContainer.append(slides.eq(0));
     
-    e.target.matches('.prev') && slideContainer.prepend(slides.eq(slides.length -1)); 
+    e.target.matches('.prev img') && slideContainer.prepend(slides.eq(slides.length -1)); 
 
    
   })
