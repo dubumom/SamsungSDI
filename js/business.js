@@ -11,5 +11,5 @@ let wrapper = $('.slidewrapper'),
     
     e.target.matches('.prev') && slideContainer.prepend(slides.eq(slides.length -1)); 
 
-   
+  
   })

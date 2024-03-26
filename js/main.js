@@ -1,50 +1,44 @@
 //prcenter
-// 위로
-let dTop = -280;
+let slideUpwrapper = $('.slideUp');
+let slideCount = slideUpwrapper.find('li').length;
+let slideHeight = slideUpwrapper.find('li').eq(0).height() + 30;
 
-function moveTop(){
+let slideUpwrapper2 = $('.slideDown');
 
-  $('.autoSlide > .slideUp').css('margin-top',dTop);
-  dTop-=2; 
+function slideUp(){
+  slideUpwrapper.animate({top: `-${slideHeight}px`}, 5000, 'linear', function(){
+    $(this).find('li').eq(0).appendTo(this); // 첫 번째 슬라이드를 마지막으로 이동합니다.
+    $(this).css({top: 0}); // top 위치를 초기화합니다.
+    slideUp(); // 다음 슬라이드 애니메이션을 자동으로 시작합니다.
+  });
+}
 
-  if(dTop==-280){
-  $('.autoSlide > .slideUp > li:first-child').insertAfter('.autoSlide > .slideUp li:last-child');
-  }else if(dTop==-560){
-    dTop=-280;
-  }
-};
+slideUp(); // 최초 실행
 
-let Timer02 = setInterval(moveTop, 60);
+function slideDown(){
+  slideUpwrapper2.animate({top: `${slideHeight}px`}, 5000, 'linear', function(){
+    $(this).find('li').eq(slideCount-1).prependTo(this); // 첫 번째 슬라이드를 마지막으로 이동합니다.
+    $(this).css({top: 0}); // top 위치를 초기화합니다.
+    slideDown(); // 다음 슬라이드 애니메이션을 자동으로 시작합니다.
+  });
+}
 
-//마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-$('.autoSlide > .slideUp').hover(function(){
-  clearInterval(Timer02);
-},function(){
-  clearInterval(Timer02);
-  Timer02 = setInterval(moveTop,60);
-});
+slideDown(); // 최초 실행
 
-//아래로 
-let dBottom = 280;
-function moveBottom(){
 
-  $('.autoSlide> .slideDown').css('margin-top',dBottom);
-  dBottom += 2; 
-  // console.log(dBottom);
+//esg 텍스트 슬라이드
+/*
+let wrapper = $('.slidewrapper'),
+  slideContainer = wrapper.find('.slide-container'),
+  slideWidth = 200,
+  slideGap = 20,
+  controlBtn = $('.controls button'),
+  currentIdx = 0;
 
-  if(dBottom == 282){
-  $('.autoSlide> .slideDown > li:last-child').insertBefore('.autoSlide > .slideDown li:first-child');
-  }else if(dBottom == 560){
-    dBottom = 280;
-  }
-};
-
-let Timer03 = setInterval(moveBottom, 60);
-
-//마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-$('.autoSlide> .slideDown').hover(function(){
-  clearInterval(Timer03);
-},function(){
-  clearInterval(Timer03);
-  Timer03 = setInterval(moveBottom,60);
-});
+  controlBtn.click((e)=>{
+    let slides = slideContainer.find('.slide');
+    e.target.matches('.next') && slideContainer.append(slides.eq(0));
+    
+  
+  })
+*/

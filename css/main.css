@@ -253,7 +253,7 @@ prcenter
   width: 386px;
 }
 .prcenter .slideUp{right: 416px;}
-.prcenter .slideDown{right: 0;}
+.prcenter .slideDown{right: 0; transform: translateY(-280px);}
 .prcenter li {
   width: 100%;
 }
