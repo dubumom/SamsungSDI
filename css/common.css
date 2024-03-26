@@ -104,14 +104,14 @@ body {
 /* 
 link button
 */
-.readmore {
+/* .readmore {
   display: block;
   width: 93px;
   height: 14px;
 }
 .readmore img{
   width: 100%;
-}
+} */
 
 /* HEADER */
 header {
@@ -322,6 +322,7 @@ main.container {
 }
 
 /*footer*/
+
 /*공지사항*/
 .footer_top{
   padding-top: 50px;
@@ -348,19 +349,24 @@ main.container {
 .footer_navi{
   padding: 30px;
 }
-.customer_li img{
+/* .customer {
   width: 300px;
-}
+} */
 .customer_div{
   display: flex;
-  flex-direction: column;
-  a{
-    display: flex;
-  }
+  /* flex-direction: column; */
+  width: 100%;
+  gap: 74px;
 }
+
 /*고객문의*/
 .customer{
   padding-top: 50px;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.customer_li {
+  width: 640px;
 }
 .customer_li .batteryimg{
   width: 189px;
@@ -396,6 +402,38 @@ main.container {
 .mm_menu ul{
   gap: 30px;
 }
+.notice_2st {
+  position: relative;
+}
+.customer_div {border: 1px solid red;}
+.readmore {
+  display: block;
+}
+.readmore span {
+  margin-right: 70px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.readmore img {
+  width: 50%;
+  object-fit: cover;
+}
+.inquery_pager {
+  position: absolute; left: 110px; top: 5px;
+  height: 20px;
+}
+.inquery_pager ul{
+  height: 100%;
+  gap: 10px;
+}
+.inquery_pager li{
+  width: 20px; height: 20px;
+  background: var(--light-gray);
+  border-radius: 50%;
+}
+.inquery_pager li.inquery_pager_active{background: var(--main-color);}
+
 
 /* modal */
 .modal {
