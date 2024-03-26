@@ -1,16 +1,16 @@
 //prcenter
 // 위로
-let dTop = -250;
+let dTop = -280;
 
 function moveTop(){
 
   $('.autoSlide > .slideUp').css('margin-top',dTop);
   dTop-=2; 
 
-  if(dTop==-252){
+  if(dTop==-282){
   $('.autoSlide > .slideUp > li:first-child').insertAfter('.autoSlide > .slideUp li:last-child');
-  }else if(dTop==-500){
-    dTop=-250;
+  }else if(dTop==-560){
+    dTop=-280;
   }
 };
 
@@ -25,19 +25,17 @@ $('.autoSlide > .slideUp').hover(function(){
 });
 
 //아래로 
-
-let dBottom = -250;
-
+let dBottom = 280;
 function moveBottom(){
 
   $('.autoSlide> .slideDown').css('margin-bottom',dBottom);
-  dBottom -= 2; 
+  dBottom += 2; 
   // console.log(dBottom);
 
-  if(dBottom == -252){
+  if(dBottom == 282){
   $('.autoSlide> .slideDown > li:last-child').insertBefore('.autoSlide > .slideDown li:first-child');
-  }else if(dBottom == -500){
-    dBottom = -250;
+  }else if(dBottom == 560){
+    dBottom = 280;
   }
 };
 
