@@ -86,7 +86,16 @@ h2{
     left:1160px;
   }
 
- 
+  .prev,
+  .next{
+    position: absolute;
+  }
+  .prev{
+    left: 480px;
+  }
+  .next{
+    right: 500px;
+  }
 /* .swiper {
     width: 100%;
     height: 810px;
