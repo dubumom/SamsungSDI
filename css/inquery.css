@@ -2,4 +2,25 @@
 /* member-you */
 @import url(common.css);
 
+.inquiry_icon{
+
+}
+.inquery_li{
+    width: 170px;
+    height: 156px;
+    border: 1px solid var(--medium-gray);
+    margin: auto;
+}
+
+
+.cho_cho,
+label,
+.join{
+    font-weight: bold;
+}
+textarea{
+    resize: none;
+    width: 1120px;
+    height: 287px;
+}
 리사이즈 +  노사이즈
