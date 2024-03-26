@@ -101,10 +101,14 @@ h2{
     font-weight: bold;
     margin: 0 10px;
   }
+  .controls{
+    position: absolute;
+    left: 50%;
+  }
 
   .prev,
   .next{
-    position: absolute;
+    /* position: absolute; */
     background: #fff;
     border: none;
   }
