@@ -1,3 +1,17 @@
+
+// business
+
+let notepad = $('.notepads');
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 300){
+    notepad.addClass('active');
+  }else{
+    notepad.removeClass('active');
+  }
+});
+
+
 //prcenter
 let slideUpwrapper = $('.slideUp');
 let slideCount = slideUpwrapper.find('li').length;
