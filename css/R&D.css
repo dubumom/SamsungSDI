@@ -15,15 +15,20 @@ main header {
   box-shadow: none;
   z-index: 1;
 }
+#sub_header .sHeaderActive {
+  position: absolute;
+	width: 250px;
+	top:-50px;
+	left:0;
+	bottom:0;
+	background:#000;
+	transition:0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
 #sub_header li +li {
   margin-top: 20px;
 }
 #sub_header li a {padding: 10px 20px;}
-#sub_header li.sHeaderActive a {
-  background: var(--sub-color);
-  border-radius: 50px;
-  color: var(--white);
-}
 .sec_content section {
   text-align: center;
   justify-content: space-between;
@@ -33,6 +38,7 @@ main header {
 .sec_content section div {width: 400px;}
 .sec_content section div h3 {margin-bottom: var(--row);}
 .sec_content section div p {line-height: 30px;}
+.sec_content section img {border-radius: 25px;}
 #sec1 div {order: 2;}
 #sec1 p {order: 1;}
 #sec3 div {order: 2;}

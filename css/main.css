@@ -102,17 +102,17 @@ business
   content: '';
   display: block;
   width: 1px;
-  height: 954px;
+  height: 1100px;
   background: var(--dark-gray);
-  position: absolute; left: -132px; top: -537px;
+  position: absolute; left: -132px; top: -600px;
 }
 .business .container ul li:last-child::before{
   content: '';
   display: block;
   width: 1px;
-  height: 954px;
+  height: 1100px;
   background: var(--dark-gray);
-  position: absolute; left: 192px; top: -537px;
+  position: absolute; left: 192px; top: -600px;
 }
 .business .container ul a {
   display: flex;
