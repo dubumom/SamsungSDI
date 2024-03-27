@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* member-you */
 @import url(common.css);
-
+/*상단 아이콘*/
 .inquery_li{
     width: 170px;
     height: 156px;
@@ -15,25 +15,27 @@
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+    width: 100%;
 }
 .inquery_li:nth-child(5) a{
     padding-top: 24px;
     gap: 20px;
 }
-.cho_cho,
-label,
-.join{
-    font-weight: bold;
+.inquery_li a:hover svg path{
+    stroke: var(--main-color);
 }
+/* radio-list */
+.radio-list {
+    gap: 24px;
+}
+
 textarea{
     resize: none;
     width: 1120px;
     height: 287px;
 }
-.test{
-    padding-bottom: 20px;
-}
 input{
+
     border: none;
     border: 1px solid var( --medium-gray) ;
     border-color: transparent transparent var( --medium-gray) transparent;
@@ -41,3 +43,26 @@ input{
 input:focus{
     border: none;
 }
+/* tr*/
+/* form-list */
+.form-list {display: flex; flex-direction: column; gap: 24px; margin-top: 10px;}
+.form-list > li {display: flex; gap: 24px; justify-content: space-between;}
+.form-list .item {min-width: 96px; min-width: 96px; line-height: var(--line-height); font-weight: 700;}
+.form-list .item:after {content:'*'; margin-left:4px; color: #ED3A3F;}
+.form-list .item.option:after {content:'(선택)'; margin-left: 4px; color: #666; font-size: 14px;}
+.form-list .data {width:100%;}
+
+/* check-list */
+.check-list {display: flex; align-items: center; flex-wrap: wrap;}
+.check-list > li {flex: 0 1 20%; margin-top: 24px;}
+/* email */
+.form-list .data.email {display: flex; justify-content: space-between; align-items: center; gap:8px;}
+
+/* 첨부파일 */
+.form-list .data.file {display: flex; gap: 24px; justify-content: space-between; align-items: center;position: relative;}
+.data.file .ipt-wrap:last-child {width: 97px;}
+.data.file .file-name.on {display:block; position: absolute; top: 5px; left: 16px;}
+
+/* 약관 */
+.terms-area {margin-top: 24px;}
+.terms-area > .ipt-wrap {display: flex; gap: 24px; align-items: center;}
