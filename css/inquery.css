@@ -8,8 +8,18 @@
     border: 1px solid var(--medium-gray);
     margin: auto;
 }
-
-
+.inquery_li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.inquery_li:nth-child(5) a{
+    padding-top: 24px;
+    gap: 20px;
+}
 .cho_cho,
 label,
 .join{
