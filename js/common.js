@@ -56,20 +56,20 @@ function headerJs(){
 }
 
 // 모바일 토글 
-// let mobileToggle = $('.mobileToggle');
-// let mainMenu = $('.main_menu');
+let mobileToggle = $('.mobileToggle');
+let mainMenu = $('.main_menu');
 
-// $(document).on('click','.mobileToggle',function(){
-//     $('header').toggleClass("open");
-// });
+$(document).on('click','.mobileToggle',function(){
+    $('header').toggleClass("open");
+});
 
-// mainMenu.click(function(){
-//     if($(window).width() <= 600){
-//         $(this).find('ul').slideToggle();
-//         $(this).siblings().find('ul').slideUp();
-//     }
+mainMenu.click(function(){
+    if($(window).width() <= 600){
+        $(this).find('ul').slideToggle();
+        $(this).siblings().find('ul').slideUp();
+    }
 
-// })
+})
 
 
 

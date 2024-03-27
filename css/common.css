@@ -186,7 +186,7 @@ header .container {
   cursor: pointer;
 }
 /* 햄버거 버튼 */
-/* 
+
  .mobileToggle {
   position: fixed;
   top: 30px;
@@ -277,7 +277,7 @@ header .container {
 }
 .open .mobileToggle span{
   background: #fff;
-}  */
+} 
 
 
 
