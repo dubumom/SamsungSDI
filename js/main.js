@@ -1,13 +1,13 @@
 
 // business
 
-let notepad = $('.notepads');
+let business = $('.business');
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 300){
-    notepad.addClass('active');
+  if($(this).scrollTop() > 500){
+    business.addClass('lineActive');
   }else{
-    notepad.removeClass('active');
+    business.removeClass('lineActive');
   }
 });
 
