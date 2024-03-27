@@ -186,14 +186,16 @@ header .container {
   cursor: pointer;
 }
 /* 햄버거 버튼 */
-
+/* 
  .mobileToggle {
-  position: relative;
+  position: fixed;
+  top: 30px;
+  right: 0;
   width: 30px;
   border:none;
   margin: 0;
   background: none;
-  /* display: none; */
+  display: none;
 }
 .mobileToggle i{
   position: fixed;
@@ -261,9 +263,6 @@ header .container {
       }
       
     }
-    .depth_3{
-      display: none;
-    }
   }
   .mobileToggle {
     display: block;
@@ -278,7 +277,7 @@ header .container {
 }
 .open .mobileToggle span{
   background: #fff;
-} */
+}  */
 
 
 

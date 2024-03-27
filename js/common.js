@@ -56,20 +56,20 @@ function headerJs(){
 }
 
 // 모바일 토글 
-let mobileToggle = $('.mobileToggle');
-let mainMenu = $('.depth_2')
+// let mobileToggle = $('.mobileToggle');
+// let mainMenu = $('.main_menu');
 
-mobileToggle.click(function(){
-    $('header').toggleClass("open");
-});
+// $(document).on('click','.mobileToggle',function(){
+//     $('header').toggleClass("open");
+// });
 
-mainmenu.click(function(){
-    if($(window).width() <= 600){
-        $(this).find('ul').slideToggle();
-        $(this).siblings().find('ul').slideUp();
-    }
+// mainMenu.click(function(){
+//     if($(window).width() <= 600){
+//         $(this).find('ul').slideToggle();
+//         $(this).siblings().find('ul').slideUp();
+//     }
 
-})
+// })
 
 
 
