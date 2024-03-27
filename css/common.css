@@ -40,7 +40,8 @@
 */
 
 .container {
-  width: 1300px;
+  max-width: 1300px;
+  width: 90%;
   margin: 0 auto;
 }
 .d-flex {display: flex;}
@@ -184,6 +185,101 @@ header .container {
   padding: 10px;
   cursor: pointer;
 }
+/* 햄버거 버튼 */
+
+ .mobileToggle {
+  position: relative;
+  width: 30px;
+  border:none;
+  margin: 0;
+  background: none;
+  /* display: none; */
+}
+.mobileToggle i{
+  position: fixed;
+  left: 0;
+  top: -9999px;  
+  
+}
+.mobileToggle span{
+  position: absolute;
+  left: 0;
+  width: 30px;  
+  height: 6px;
+  border-radius:3px;
+  background: #121212;
+  transition:.3s
+}
+.mobileToggle span:first-of-type{
+  top:0;
+}
+.mobileToggle span:nth-of-type(2),
+.mobileToggle span:nth-of-type(3){
+  top:10px;
+}
+.mobileToggle span:last-of-type{
+  top:20px;
+}
+
+.open span:first-of-type,
+.open span:last-of-type{
+  opacity: 0;
+}
+
+.open span:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+.open span:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+
+@media (min-width:768px){
+  header nav > ul > li:hover ul{
+      display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.8);
+    opacity: 0;
+    transition: 0.3s;
+    visibility: hidden;
+    ul{
+      width: 100px;
+      flex-direction: column;
+      li{
+          color: #fff;
+      }
+      
+    }
+    .depth_3{
+      display: none;
+    }
+  }
+  .mobileToggle {
+    display: block;
+  }
+  header nav > ul {
+      position: relative;
+  }
+}
+.open nav{
+  opacity: 1;
+  visibility: visible;
+}
+.open .mobileToggle span{
+  background: #fff;
+} */
+
 
 
 /* depth */
@@ -210,7 +306,7 @@ header .container {
   font-size: 18px;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .container {
     width: 100%;
     padding: 0 20px;
@@ -286,17 +382,17 @@ header .container {
   .language_menu:hover ul {
     display: none;
   }
-
+} */
   /* 모바일에서 헤더 크기 조정 */
-  header {
+  /* header {
     height: auto;
     padding: 10px 0;
   }
 
   .logo a {
-    width: 150px; /* 로고 크기 축소 */
-  }
-}
+    width: 150px;
+  } */ */
+
 
 /* sub common */
 main.container {
