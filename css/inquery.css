@@ -2,4 +2,42 @@
 /* member-you */
 @import url(common.css);
 
-리사이즈 +  노사이즈
+.inquery_li{
+    width: 170px;
+    height: 156px;
+    border: 1px solid var(--medium-gray);
+    margin: auto;
+}
+.inquery_li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.inquery_li:nth-child(5) a{
+    padding-top: 24px;
+    gap: 20px;
+}
+.cho_cho,
+label,
+.join{
+    font-weight: bold;
+}
+textarea{
+    resize: none;
+    width: 1120px;
+    height: 287px;
+}
+.test{
+    padding-bottom: 20px;
+}
+input{
+    border: none;
+    border: 1px solid var( --medium-gray) ;
+    border-color: transparent transparent var( --medium-gray) transparent;
+}
+input:focus{
+    border: none;
+}

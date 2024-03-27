@@ -36,14 +36,6 @@ function headerJs(){
 		   header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 	 });
 	
-	// $(".main_menu .depth_2").on("click", function() {
-	
-	// 		let submenu = $(this).find(".depth_3");
-	// 		if (submenu.length) { 
-	// 				submenu.slideToggle();
-	// 		}
-	// });
-	
 	$(".depth_2 > li > a").click(function (event) {
 		event.preventDefault();
 		$(this).parent().toggleClass("active");
@@ -62,6 +54,25 @@ function headerJs(){
 	});
 	
 }
+
+// 모바일 토글 
+let mobileToggle = $('.mobileToggle');
+let mainMenu = $('.main_menu');
+
+$(document).on('click','.mobileToggle',function(){
+    $('header').toggleClass("open");
+});
+
+mainMenu.click(function(){
+    if($(window).width() <= 600){
+        $(this).find('ul').slideToggle();
+        $(this).siblings().find('ul').slideUp();
+    }
+
+})
+
+
+
 
 //푸터 제이쿼리 작동 함수
 function footerJs(){
