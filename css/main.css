@@ -214,7 +214,7 @@ career
 }
 .career h2,
 .career p {text-align: center;}
-.career p {margin-bottom: calc(var(--row) * 5);}
+.career_left, .career_right {margin-top: calc(var(--row) * 5);}
 .career::after{
   content: '';
   display: block;
@@ -265,8 +265,16 @@ career
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 30px;
   color: var(--white);
+}
+.career_right .detail {
+  width: 70%;
+}
+.career .sellphone > img {
+  width: 50%;
+  object-fit: cover;
 }
 .career .career_right li {
   font-weight: 500;

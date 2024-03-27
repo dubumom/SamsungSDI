@@ -11,6 +11,33 @@ $(window).scroll(function(){
   }
 });
 
+// career
+let prList = $('.pr_list > li').find('a');
+const prImg = $('.pr_imges');
+const carrer = $('.career_Recruitment');
+const prLocation = $('.pr_location');
+const period = $('.period');
+const detail = $('.detail');
+
+
+  prList.click(function(e){
+    e.preventDefault();
+    let a = $(this).attr('data-career');
+    let b = $(this).attr('data-location');
+    let c = $(this).attr('data-period');
+    let d = $(this).find('img').attr('src');
+    let f = $(this).attr('data-detail');
+    
+    console.log(d)
+    carrer.text(a)
+    prLocation.text(b)
+    period.text(c)
+    detail.text(f)
+
+    detail.append(`<img src="${d}">`);
+  });
+  
+
 
 //prcenter 자동슬라이드
 
