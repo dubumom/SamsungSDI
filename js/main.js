@@ -1,43 +1,36 @@
 
 // business
 
-let notepad = $('.notepads');
+let business = $('.business');
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 300){
-    notepad.addClass('active');
+  if($(this).scrollTop() > 500){
+    business.addClass('lineActive');
   }else{
-    notepad.removeClass('active');
+    business.removeClass('lineActive');
   }
 });
 
 
-//prcenter
-let slideUpwrapper = $('.slideUp');
-let slideCount = slideUpwrapper.find('li').length;
-let slideHeight = slideUpwrapper.find('li').eq(0).height() + 30;
+//prcenter 자동슬라이드
 
-let slideUpwrapper2 = $('.slideDown');
+function slide(targetEl, direction) {
+  let target = $(targetEl);
+  let slideHeight = target.find('li').eq(0).height() + 30;
 
-function slideUp(){
-  slideUpwrapper.animate({top: `-${slideHeight}px`}, 5000, 'linear', function(){
-    $(this).find('li').eq(0).appendTo(this); // 첫 번째 슬라이드를 마지막으로 이동합니다.
-    $(this).css({top: 0}); // top 위치를 초기화합니다.
-    slideUp(); // 다음 슬라이드 애니메이션을 자동으로 시작합니다.
+  target.animate({top: direction === 'up' ? `-${slideHeight}px` : `${slideHeight}px`}, 6000, 'linear', function() {
+    if (direction === 'up') {      
+			$(this).find('li').eq(0).appendTo(this);
+    } else {      
+			$(this).find('li').last().prependTo(this);
+    }
+    $(this).css({top: 0});
+    slide(targetEl, direction); // 재귀 호출로 애니메이션 반복
   });
 }
 
-slideUp(); // 최초 실행
-
-function slideDown(){
-  slideUpwrapper2.animate({top: `${slideHeight}px`}, 5000, 'linear', function(){
-    $(this).find('li').eq(slideCount-1).prependTo(this); // 첫 번째 슬라이드를 마지막으로 이동합니다.
-    $(this).css({top: 0}); // top 위치를 초기화합니다.
-    slideDown(); // 다음 슬라이드 애니메이션을 자동으로 시작합니다.
-  });
-}
-
-slideDown(); // 최초 실행
+slide('.slideDown', 'down'); 
+slide('.slideUp', 'up');
 
 
 //esg 텍스트 슬라이드
