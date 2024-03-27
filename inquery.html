@@ -101,7 +101,7 @@
     </section>
     <form action="">
       <fieldset class="p-row">
-       <div class="cho d-flex">
+        <div class="cho d-flex test">
           <h6 class="cho_cho h6">항목 선택</h6>
           <label for="samll_battery">소형배터리</label>
           <input type="radio" name="samll_battery" id="samll_battery" value="소형배터리" checked>
@@ -112,23 +112,25 @@
           <label for="EM">전자재료</label>
           <input type="radio" name="EM" id="EM" value="전자재료">
        </div>
-        <p>
+        <p class="test">
           <label class="h6" for="username">제목</label>
           <input type="text" name="username" id="username" required minlength="2" maxlength="20" autofocus>
         </p>
-        <p>
+        <p class="test">
           <label class="h6" for="msg">문의 내용</label>
           <textarea name="msg" id="msg" cols="30" rows="5" placeholder="내용을 입력해 주세요"></textarea>
         </p>
-        <p>
-          <label class="h6" for="username">이름:</label>
-          <input type="text" name="username" id="username" required minlength="2" maxlength="5" autofocus>
-        </p>
-        <p>
-          <label class="h6" for="useremail">이메일:</label>
-          <input type="email" name="useremail" id="useremail" required>
-        </p>
-        <p>
+        <div class="test d-flex">
+          <p>
+            <label class="h6" for="username">이름</label>
+            <input type="text" name="username" id="username" required minlength="2" maxlength="5" autofocus>
+          </p>
+          <p>
+            <label class="h6" for="useremail">이메일</label>
+            <input type="email" name="useremail" id="useremail" required>
+          </p>
+        </div>
+        <p class="test">
           <label class="h6" for="addfile">첨부파일</label>
           <input type="file" id="addfile" accept="image/*">
         </p>

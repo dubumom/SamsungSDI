@@ -2,9 +2,6 @@
 /* member-you */
 @import url(common.css);
 
-.inquiry_icon{
-
-}
 .inquery_li{
     width: 170px;
     height: 156px;
@@ -23,4 +20,14 @@ textarea{
     width: 1120px;
     height: 287px;
 }
-리사이즈 +  노사이즈
+.test{
+    padding-bottom: 20px;
+}
+input{
+    border: none;
+    border: 1px solid var( --medium-gray) ;
+    border-color: transparent transparent var( --medium-gray) transparent;
+}
+input:focus{
+    border: none;
+}
