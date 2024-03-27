@@ -189,12 +189,14 @@ header .container {
 /* 햄버거 버튼 */
 
  .mobileToggle {
-  position: relative;
+  position: fixed;
+  top: 30px;
+  right: 0;
   width: 30px;
   border:none;
   margin: 0;
   background: none;
-  /* display: none; */
+  display: none;
 }
 .mobileToggle i{
   position: fixed;
@@ -241,12 +243,16 @@ header .container {
 }
 
 @media screen and (max-width: 768px) {
+  .logo{
+    left: 20px;
+  }
   nav{
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,11 +265,11 @@ header .container {
       flex-direction: column;
       li{
           color: #fff;
+          ul{
+            display: none;
+          }
       }
       
-    }
-    .depth_3{
-      display: none;
     }
   }
   .mobileToggle {
@@ -279,7 +285,7 @@ header .container {
 }
 .open .mobileToggle span{
   background: #fff;
-} */
+} 
 
 
 

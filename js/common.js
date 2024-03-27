@@ -57,13 +57,13 @@ function headerJs(){
 
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
-let mainMenu = $('.depth_2')
+let mainMenu = $('.main_menu');
 
-mobileToggle.click(function(){
+$(document).on('click','.mobileToggle',function(){
     $('header').toggleClass("open");
 });
 
-mainmenu.click(function(){
+mainMenu.click(function(){
     if($(window).width() <= 600){
         $(this).find('ul').slideToggle();
         $(this).siblings().find('ul').slideUp();
