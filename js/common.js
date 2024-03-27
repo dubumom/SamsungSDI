@@ -18,11 +18,16 @@ function headerJs(){
 	let headerHeight = tallestHeight + initHeight + 100;
 	
 	mainMenu.mouseover(function(){ 
-		header.stop().animate({height:`${headerHeight}px`});
+		if($(window).width() > 768){
+			header.stop().animate({height:`${headerHeight}px`});
+		}
+		
 	})
 	
 	header.mouseleave(function(){
+		if($(window).width() > 768){
 		header.stop().animate({height:`${initHeight}px`});
+		}
 	 });
 	 
 	 $(".main_menu .depth_2 > li").on("click", function() {
