@@ -60,7 +60,7 @@
 }
 .p-row {padding: calc(var(--row)) 0;}
 
-.w-px{width: 1120px;}
+.w-px{width: 1110px;}
 /* 
 typography
 */
@@ -276,6 +276,8 @@ main.container {
 .sub_common img {
   clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
+  width: 100%;
+  object-fit: cover;
 }
 @keyframes img {
   0%{}
@@ -470,13 +472,11 @@ input[type="checkbox"]:checked {
             display: none;
           }
       }
-      
     }
   }
   .mobileToggle {
     display: block;
     padding-right: 50px;
-    
   }
   header nav > ul {
       position: relative;
@@ -491,6 +491,9 @@ input[type="checkbox"]:checked {
   }
 
   .form_2{
+    display: block;
+  }
+  button{
     display: block;
   }
   
