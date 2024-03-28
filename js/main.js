@@ -12,7 +12,7 @@ $(window).scroll(function(){
 });
 
 // career
-let prList = $('.pr_list > li').find('a');
+let prList = $('.pr_list > li');
 const prImg = $('.pr_imges').find('img');
 const carrer = $('.career_Recruitment');
 const prLocation = $('.pr_location');
@@ -27,25 +27,21 @@ prList.click(function(e){
   let c = $(this).attr('data-period');
   let d = $(this).find('img').attr('src');
   let f = $(this).attr('data-detail');
-  
-  
   carrer.text(a)
   prLocation.text(b)
   period.text(c)
   detail.text(f)
-  prImg.attr('src',d); // 왜 안나오죠,,,? 콘솔에서는 경로가 잘 잡힙니당!
+  prImg.attr('src',d);
   
-  // detail.append(`<img src="${d}">`).css({width:'50px'});
-});
-
-$('.pr_list > li').click(function(){
   $(this).css({left:'320px', zIndex:6});
   let others = $(this).siblings();
   others.each(function(idx){
     let newLeft = idx * 80 + 'px';
     $(this).css({left:newLeft, zIndex:idx});
   });
-})
+  $('.pr_imges').toggleClass('animate__zoomInLeft');
+});
+
 
 //prcenter 자동슬라이드
 

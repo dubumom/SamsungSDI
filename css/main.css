@@ -284,19 +284,41 @@ career
   width: 50%;
   object-fit: cover;
 }
-.career .career_right li {
+
+.career_right li em {
+  font-weight: 600;
+}
+.career_right li span {
+  margin-left: 40px;
+
+}
+.career_right .career_Recruitment {margin-left: 90px;}
+.career_right .pr_location {margin-left: 105px;}
+.career_right li {
+  display: flex;
   font-weight: 500;
   line-height: calc(var(--row) * 2);
+  position: relative;
+  text-align: center;
 }
-.career .career_right li::after {
+.career_right li::after {
+  position: absolute;
+  bottom: 0px;
   content: '';
   display: block;
-  width: 270px;
+  width: 100%;
   height: 1px;
-  background: var(--dark-gray);
+  background: var(--light-gray);
 }
-.career .career_right ul {
+.career_right ul {
   transform: translateY(20%);
+}
+.sellphone .pr_imges {
+  width: 190px;
+}
+.pr_imges> img {
+  width: 100%;
+  object-fit: cover;
 }
 .career .career_right .readmore {
   position: absolute;
