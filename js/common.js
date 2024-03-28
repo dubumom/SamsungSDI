@@ -1,99 +1,101 @@
 
-	$('#header').load('header.html', headerJs);
-	$('#footer').load('footer.html', footerJs);
+$('#header').load('header.html', headerJs);
+$('#footer').load('footer.html', footerJs);
 
 // 헤데 제이쿼리 작동 함수
 function headerJs(){
-	const mainMenu = $('.main_menu');
-	const header = $('#header');
-	const initHeight = header.outerHeight();
-	let tallestHeight = 0;
-	
-	$('.depth_2').each(function(){
-		if($(this).outerHeight() > tallestHeight){
-			tallestHeight = $(this).outerHeight();
-		}	
-	});
-	
-	let headerHeight = tallestHeight + initHeight + 100;
-	
-	mainMenu.mouseover(function(){ 
-		if($(window).width() > 768){
-			header.stop().animate({height:`${headerHeight}px`});
+const mainMenu = $('.main_menu');
+const header = $('#header');
+const initHeight = header.outerHeight();
+let tallestHeight = 0;
+
+$('.depth_2').each(function(){
+	if($(this).outerHeight() > tallestHeight){
+		tallestHeight = $(this).outerHeight();
+	}	
+});
+
+let headerHeight = tallestHeight + initHeight + 100;
+
+mainMenu.mouseover(function(){ 
+	if($(window).width() > 768){
+		header.stop().animate({height:`${headerHeight}px`});
+	}		
+})
+
+header.mouseleave(function(){
+	if($(window).width() > 768){
+	header.stop().animate({height:`${initHeight}px`});
+	$('.depth_3').hide();
+	}
+ });
+ 
+ $(".main_menu .depth_2 > li").on("click", function() {
+	if($(window).width() > 768){
+	   let submenu = $(this).find(".depth_3");
+	   console.log(submenu);
+	   let submenuHeight = submenu.outerHeight();
+	   if (submenu.length) { 
+			 submenu.slideToggle();
+	   }
+	   header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 		}
-		
-	})
-	
-	header.mouseleave(function(){
-		if($(window).width() > 768){
-		header.stop().animate({height:`${initHeight}px`});
-		}
-	 });
-	 if($(window).width() > 768){
-	 $(".main_menu .depth_2 > li").on("click", function() {
-	 
-		   let submenu = $(this).find(".depth_3");
-		   console.log(submenu);
-		   let submenuHeight = submenu.outerHeight();
-		   if (submenu.length) { 
-				 submenu.slideToggle();
-		   }
-		   header.stop().animate({height:`${headerHeight + submenuHeight}px`});
-	 });
-	
-	$(".depth_2 > li > a").click(function (event) {
-		event.preventDefault();
-		$(this).parent().toggleClass("active");
-		if ($(this).parent().hasClass("active")) {
-		$(this).find(".material-symbols-outlined").text("arrow_drop_up");
-		} else {
-		$(this).find(".material-symbols-outlined").text("arrow_drop_down");
-		}
-	});
-	$(".depth_2").mouseenter(function() {
-			$(this).children(".depth_3").show();
-	});
-	
-	$(".depth_2").mouseleave(function() {
-			$(this).children(".depth_3").hide();
-	});
-}
-	if($(window).width() < 768){
-		$(".main_menu > li").on("click", function() {
-	 
+ });
+
+$(".depth_2 > li > a").click(function (event) {
+	event.preventDefault();
+	$(this).parent().toggleClass("active");
+	if ($(this).parent().hasClass("active")) {
+	$(this).find(".material-symbols-outlined").text("arrow_drop_up");
+	} else {
+	$(this).find(".material-symbols-outlined").text("arrow_drop_down");
+	}
+});
+
+	$(".main_menu > li").on("click", function() {
+		if($(window).width() < 768){		
 			let submenu = $(this).find(".depth_2");
 			console.log(submenu);
 			let submenuHeight = submenu.outerHeight();
 			if (submenu.length) { 
-				  submenu.slideToggle();
+					submenu.slideToggle();
 			}
-			header.stop().animate({height:`${headerHeight + submenuHeight}px`});
-	  });
-	 
-	 $(".depth_2").click(function (event) {
-		 event.preventDefault();
-		//  $(this).parent().toggleClass("active");
-		 if ($(this).parent().hasClass("active")) {
-		 $(this).find(".material-symbols-outlined").text("arrow_drop_up");
-		 } else {
-		 $(this).find(".material-symbols-outlined").text("arrow_drop_down");
-		 }
-	 });
-	 $(".depth_2").mouseenter(function() {
-			 $(this).children(".depth_3").show();
-	 });
-	 
-	 $(".depth_2").mouseleave(function() {
-			 $(this).children(".depth_3").hide();
-	 });
-	 
+
+		}
+  });
+ 
+ $(".depth_2").click(function (event) {
+	if($(window).width() < 768){	
+	 event.preventDefault();
+	//  $(this).parent().toggleClass("active");
+	 if ($(this).parent().hasClass("active")) {
+	 $(this).find(".material-symbols-outlined").text("arrow_drop_up");
+	 } else {
+	 $(this).find(".material-symbols-outlined").text("arrow_drop_down");
+	 }
+	 $('.depth_2').hide();
 	}
+ }); 
 }
 
+$(window).resize(function(){
+	if($(this).width() > 768){
+		$('.depth_2').show();
+		// $('.depth_3').show();
+	}
+});
+$(window).resize(function(){
+	if($(this).width() < 768){
+		$('.depth_2').hide();
+		// $('.depth_3').show();
+	}
+});
+
+
 // 검색 기능
-$('.search_box').click(function(){
-    $(this).next('input#search').css('opacity', '1'); // 아이콘 클릭 시 검색 입력 필드 표시
-  });
+$('.b').click(function(){
+	$('.form').css({opacity: '1'}); 
+});
 
 
 
@@ -102,16 +104,18 @@ let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu');
 
 $(document).on('click','.mobileToggle',function(){
-    $('header').toggleClass("open");
+$('header').toggleClass("open");
 });
 
 mainMenu.click(function(){
-    if($(window).width() <= 600){
-        $(this).find('ul').slideToggle();
-        $(this).siblings().find('ul').slideUp();
-    }
+if($(window).width() <= 600){
+	$(this).find('ul').slideToggle();
+	$(this).siblings().find('ul').slideUp();
+}
 
 })
+
+
 
 
 
@@ -129,41 +133,42 @@ const modal_close =modal.querySelector('.modal_close');
 
 
 modal_close.addEventListener('click',(e)=>{
-  e.preventDefault();
-  // console.log(in5660put.checked);
-  if(input.checked){
-    //쿠키생성
-    setCookie('Portfolio','samsung', 1);
-  }else{
-    //쿠키삭제
-    delCookie('Portfolio');
-  }
-  modal.classList.add('hide');
+e.preventDefault();
+// console.log(in5660put.checked);
+if(input.checked){
+//쿠키생성
+setCookie('Portfolio','samsung', 1);
+}else{
+//쿠키삭제
+delCookie('Portfolio');
+}
+modal.classList.add('hide');
 });
 function setCookie(name, val, day){
-    let date = new Date();
-    date.setDate(date.getDate()+day);
-    document.cookie = `${name}=${val};Expires=${date}`;
-  }
-  function delCookie(name){
-    let date = new Date();
-    date.setDate(date.getDate()-1);
-    document.cookie = `${name}='';Expires=${date}`;
-  }
+let date = new Date();
+date.setDate(date.getDate()+day);
+document.cookie = `${name}=${val};Expires=${date}`;
+}
+function delCookie(name){
+let date = new Date();
+date.setDate(date.getDate()-1);
+document.cookie = `${name}='';Expires=${date}`;
+}
 
-  function checkCookie(name){
-    let cookieArr = document.cookie.split(';');
-    let visited = false;
+function checkCookie(name){
+let cookieArr = document.cookie.split(';');
+let visited = false;
 
-    for(let cookie of cookieArr){
-      if(cookie.indexOf(name) > -1) {
-        visited = true;
-      }
-    }
-    if(visited) {
-      modal.classList.add('hide');
-    } else {
-      modal.classList.remove('hide');
-    }
+for(let cookie of cookieArr){
+  if(cookie.indexOf(name) > -1) {
+	visited = true;
   }
-  checkCookie('samsung');
+}
+if(visited) {
+  modal.classList.add('hide');
+} else {
+  modal.classList.remove('hide');
+}
+}
+checkCookie('samsung');
+
