@@ -70,8 +70,9 @@ slide('.slideUp', 'up');
 
 //esg 텍스트 슬라이드
 
+let esgTextCantain = $('.esgText ul');
 setInterval(() => {
   let esgText = $('.esgText ul').find('li');
-  esgText.append(esgText.eq(0));
-}, 200);
+  esgTextCantain.append(esgText.eq(0));
+}, 3000);
 
