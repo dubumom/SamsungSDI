@@ -90,6 +90,13 @@ function headerJs(){
 	}
 }
 
+// 검색 기능
+$('.search_box').click(function(){
+    $(this).next('input#search').css('opacity', '1'); // 아이콘 클릭 시 검색 입력 필드 표시
+  });
+
+
+
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu');
