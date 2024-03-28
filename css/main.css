@@ -316,6 +316,9 @@ career
 .sellphone .pr_imges {
   width: 190px;
 }
+.animate__animated {
+  animation-duration: 0.8s;
+}
 .pr_imges> img {
   width: 100%;
   object-fit: cover;

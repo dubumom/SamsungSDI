@@ -19,14 +19,14 @@ const prLocation = $('.pr_location');
 const period = $('.period');
 const detail = $('.detail');
 
-
 prList.click(function(e){
   e.preventDefault();
-  let a = $(this).attr('data-career');
-  let b = $(this).attr('data-location');
-  let c = $(this).attr('data-period');
-  let d = $(this).find('img').attr('src');
-  let f = $(this).attr('data-detail');
+  let $this = $(this).find('a');
+  let a = $this.attr('data-career');
+  let b = $this.attr('data-location');
+  let c = $this.attr('data-period');
+  let d = $this.find('img').attr('src');
+  let f = $this.attr('data-detail');
   carrer.text(a)
   prLocation.text(b)
   period.text(c)
@@ -39,9 +39,13 @@ prList.click(function(e){
     let newLeft = idx * 80 + 'px';
     $(this).css({left:newLeft, zIndex:idx});
   });
-  $('.pr_imges').toggleClass('animate__zoomInLeft');
+  $('.pr_imges').removeClass('animate__zoomInLeft');
+  $('.pr_imges').css({opacity:'0'});
+  setTimeout(()=>{
+    $('.pr_imges').addClass('animate__zoomInLeft');
+    $('.pr_imges').css({opacity:'1'});
+  },800)
 });
-
 
 //prcenter 자동슬라이드
 
