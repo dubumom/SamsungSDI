@@ -69,18 +69,9 @@ slide('.slideUp', 'up');
 
 
 //esg 텍스트 슬라이드
-/*
-let wrapper = $('.slidewrapper'),
-  slideContainer = wrapper.find('.slide-container'),
-  slideWidth = 200,
-  slideGap = 20,
-  controlBtn = $('.controls button'),
-  currentIdx = 0;
 
-  controlBtn.click((e)=>{
-    let slides = slideContainer.find('.slide');
-    e.target.matches('.next') && slideContainer.append(slides.eq(0));
-    
-  
-  })
-*/
+setInterval(() => {
+  let esgText = $('.esgText ul').find('li');
+  esgText.append(esgText.eq(0));
+}, 200);
+

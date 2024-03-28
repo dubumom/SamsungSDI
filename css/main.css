@@ -412,8 +412,18 @@ esg
 }
 .esg .esgText ul{
   margin-top: 25%;
+  text-align: center;
   /* color: var(--dark-gray); */
 }
-.esg .esgText li + li {
-  margin-top: 60px;
+.esg .esgText li {
+  position: absolute;
+  left: 60%; transform: translateX(-50%); 
 }
+
+.esg .esgText li:first-child {top: 200px; opacity: 0.2;}
+.esg .esgText li:nth-child(2) {top: 300px; opacity: 0.5;}
+.esg .esgText li:nth-child(3) {top: 400px; opacity: 0.7;}
+.esg .esgText li:nth-child(4) {top: 500px; opacity: 1; font-size: 40px;}
+.esg .esgText li:nth-child(5) {top: 600px; opacity: 0.7;}
+.esg .esgText li:nth-child(6) {top: 700px; opacity: 0.2;}
+.esg .esgText li:last-child {top: 800px; opacity: 0;}

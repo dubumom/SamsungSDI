@@ -300,6 +300,8 @@ main.container {
 .sub_common img {
   clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
+  width: 100%;
+  object-fit: cover;
 }
 @keyframes img {
   0%{}
