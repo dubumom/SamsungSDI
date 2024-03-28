@@ -12,32 +12,40 @@ $(window).scroll(function(){
 });
 
 // career
-let prList = $('.pr_list > li').find('a');
-const prImg = $('.pr_imges');
+let prList = $('.pr_list > li');
+const prImg = $('.pr_imges').find('img');
 const carrer = $('.career_Recruitment');
 const prLocation = $('.pr_location');
 const period = $('.period');
 const detail = $('.detail');
 
-
-  prList.click(function(e){
-    e.preventDefault();
-    let a = $(this).attr('data-career');
-    let b = $(this).attr('data-location');
-    let c = $(this).attr('data-period');
-    let d = $(this).find('img').attr('src');
-    let f = $(this).attr('data-detail');
-    
-    console.log(d)
-    carrer.text(a)
-    prLocation.text(b)
-    period.text(c)
-    detail.text(f)
-
-    detail.append(`<img src="${d}">`);
-  });
+prList.click(function(e){
+  e.preventDefault();
+  let $this = $(this).find('a');
+  let a = $this.attr('data-career');
+  let b = $this.attr('data-location');
+  let c = $this.attr('data-period');
+  let d = $this.find('img').attr('src');
+  let f = $this.attr('data-detail');
+  carrer.text(a)
+  prLocation.text(b)
+  period.text(c)
+  detail.text(f)
+  prImg.attr('src',d);
   
-
+  $(this).css({left:'320px', zIndex:6});
+  let others = $(this).siblings();
+  others.each(function(idx){
+    let newLeft = idx * 80 + 'px';
+    $(this).css({left:newLeft, zIndex:idx});
+  });
+  $('.pr_imges').removeClass('animate__zoomInLeft');
+  $('.pr_imges').css({opacity:'0'});
+  setTimeout(()=>{
+    $('.pr_imges').addClass('animate__zoomInLeft');
+    $('.pr_imges').css({opacity:'1'});
+  },800)
+});
 
 //prcenter 자동슬라이드
 
@@ -61,18 +69,9 @@ slide('.slideUp', 'up');
 
 
 //esg 텍스트 슬라이드
-/*
-let wrapper = $('.slidewrapper'),
-  slideContainer = wrapper.find('.slide-container'),
-  slideWidth = 200,
-  slideGap = 20,
-  controlBtn = $('.controls button'),
-  currentIdx = 0;
 
-  controlBtn.click((e)=>{
-    let slides = slideContainer.find('.slide');
-    e.target.matches('.next') && slideContainer.append(slides.eq(0));
-    
-  
-  })
-*/
+setInterval(() => {
+  let esgText = $('.esgText ul').find('li');
+  esgText.append(esgText.eq(0));
+}, 200);
+
