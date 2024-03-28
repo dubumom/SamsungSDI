@@ -163,7 +163,7 @@ header .container {
 .search-bar form{
  display: none;
 }
-.right_menu.search .search-bar form{
+.right_menu.search .search-bar .form_2{
   display: block;
 }
 button{
@@ -175,6 +175,9 @@ button{
   height: 26px;
   position: absolute;
   right: 150px;
+  background: #ebebeb;
+  border:none;
+  border-radius: 10px;
 }
 
 /* 검색 */
@@ -486,26 +489,9 @@ input[type="checkbox"]:checked {
     transform: translate(-50%,-50%);
     font-size: 18px;
   }
-  .right_menu.search .searchformToggle{
+
+  .form_2{
     display: block;
-  }
-  .search-bar form{
-   display: block;
-  }
-  .right_menu.search .search-bar form{
-    display: block;
-  }
-  button{
-    background: #1C5CB0;
-    border:none;
-  }
-  #search{
-    width: 200px;
-    height: 26px;
-    position: absolute;
-    right: 150px;
-    top: 140px;
-    z-index: 99;
   }
   
 }
