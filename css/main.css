@@ -207,6 +207,10 @@ business
 MAIN
 career
 */
+/* 
+MAIN
+career
+*/
 .career {
   padding-top: calc(var(--row) * 3);
   height: 900px;
@@ -239,17 +243,21 @@ career
 }
 .career .career_left ul {
   margin-top: 150px;
+  position: relative;
+  height: 150px;
 }
 .career .career_left li {
-  width: 50%;
-  position: relative;
-  right: 15%;
+  width: 25%;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
 }
-.career .career_left li:first-child{transform: translateX(80px);}
-.career .career_left li:nth-child(2){transform: translateX(60px);}
-.career .career_left li:nth-child(3){transform: translateX(40px);}
-.career .career_left li:nth-child(4){transform: translateX(20px);}
-.career .career_left li:last-child{transform: translateX(0px);}
+.career .career_left li:nth-child(1){left: 0;}
+.career .career_left li:nth-child(2){left: 80px;}
+.career .career_left li:nth-child(3){left: 160px;}
+.career .career_left li:nth-child(4){left: 240px;}
+.career .career_left li:nth-child(5){left: 320px;}
+
 .career .career_left li img{
   width: 100%;
 }

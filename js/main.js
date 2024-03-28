@@ -13,31 +13,39 @@ $(window).scroll(function(){
 
 // career
 let prList = $('.pr_list > li').find('a');
-const prImg = $('.pr_imges');
+const prImg = $('.pr_imges').find('img');
 const carrer = $('.career_Recruitment');
 const prLocation = $('.pr_location');
 const period = $('.period');
 const detail = $('.detail');
 
 
-  prList.click(function(e){
-    e.preventDefault();
-    let a = $(this).attr('data-career');
-    let b = $(this).attr('data-location');
-    let c = $(this).attr('data-period');
-    let d = $(this).find('img').attr('src');
-    let f = $(this).attr('data-detail');
-    
-    console.log(d)
-    carrer.text(a)
-    prLocation.text(b)
-    period.text(c)
-    detail.text(f)
-
-    detail.append(`<img src="${d}">`);
-  });
+prList.click(function(e){
+  e.preventDefault();
+  let a = $(this).attr('data-career');
+  let b = $(this).attr('data-location');
+  let c = $(this).attr('data-period');
+  let d = $(this).find('img').attr('src');
+  let f = $(this).attr('data-detail');
   
+  
+  carrer.text(a)
+  prLocation.text(b)
+  period.text(c)
+  detail.text(f)
+  prImg.attr('src',d); // 왜 안나오죠,,,? 콘솔에서는 경로가 잘 잡힙니당!
+  
+  // detail.append(`<img src="${d}">`).css({width:'50px'});
+});
 
+$('.pr_list > li').click(function(){
+  $(this).css({left:'320px', zIndex:6});
+  let others = $(this).siblings();
+  others.each(function(idx){
+    let newLeft = idx * 80 + 'px';
+    $(this).css({left:newLeft, zIndex:idx});
+  });
+})
 
 //prcenter 자동슬라이드
 
