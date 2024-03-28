@@ -137,11 +137,11 @@ function footerJs(){
     }
 	function updateSlide(){
 		//페이저 활성화
-		footerpager.find('a').removeClass('active');
-		footerpager.find('a').eq(footercurrentIdx).addClass('active');
+		footerpager.find('a').removeClass('inquery_pager_active');
+		footerpager.find('a').eq(footercurrentIdx).addClass('inquery_pager_active');
 		//슬라이드 활성화
-		footerslides.removeClass('active');
-		footerslides.eq(footercurrentIdx).addClass('active');
+		footerslides.removeClass('inquery_pager_active');
+		footerslides.eq(footercurrentIdx).addClass('inquery_pager_active');
 	}  
     footerpager.find('a').click(function(e){
 	e.preventDefault();
