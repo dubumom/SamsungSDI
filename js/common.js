@@ -29,7 +29,7 @@ function headerJs(){
 		header.stop().animate({height:`${initHeight}px`});
 		}
 	 });
-	 
+	 if($(window).width() > 768){
 	 $(".main_menu .depth_2 > li").on("click", function() {
 	 
 		   let submenu = $(this).find(".depth_3");
@@ -57,8 +57,45 @@ function headerJs(){
 	$(".depth_2").mouseleave(function() {
 			$(this).children(".depth_3").hide();
 	});
-	
 }
+	if($(window).width() < 768){
+		$(".main_menu > li").on("click", function() {
+	 
+			let submenu = $(this).find(".depth_2");
+			console.log(submenu);
+			let submenuHeight = submenu.outerHeight();
+			if (submenu.length) { 
+				  submenu.slideToggle();
+			}
+			header.stop().animate({height:`${headerHeight + submenuHeight}px`});
+	  });
+	 
+	 $(".depth_2").click(function (event) {
+		 event.preventDefault();
+		//  $(this).parent().toggleClass("active");
+		 if ($(this).parent().hasClass("active")) {
+		 $(this).find(".material-symbols-outlined").text("arrow_drop_up");
+		 } else {
+		 $(this).find(".material-symbols-outlined").text("arrow_drop_down");
+		 }
+	 });
+	 $(".depth_2").mouseenter(function() {
+			 $(this).children(".depth_3").show();
+	 });
+	 
+	 $(".depth_2").mouseleave(function() {
+			 $(this).children(".depth_3").hide();
+	 });
+	 
+	}
+}
+
+// 검색 기능
+$('.search_box').click(function(){
+    $(this).next('input#search').css('opacity', '1'); // 아이콘 클릭 시 검색 입력 필드 표시
+  });
+
+
 
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
