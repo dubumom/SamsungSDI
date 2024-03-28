@@ -123,7 +123,7 @@ if($(window).width() <= 600){
 
 //푸터 제이쿼리 작동 함수
 function footerJs(){
-
+ 
 }
 
 /* ---------- modal : cookie ---------- */

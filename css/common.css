@@ -315,7 +315,7 @@ main.container {
 /* .customer {
   width: 300px;
 } */
-.customer_div{
+.ft_customer_div{
   display: flex;
   /* flex-direction: column; */
   width: 100%;
@@ -323,15 +323,15 @@ main.container {
 }
 
 /*고객문의*/
-.customer{
+.ft_customer{
   padding-top: 50px;
   border: 1px solid red;
   overflow: hidden;
 }
-.customer_li {
+.ft_slide {
   width: 640px;
 }
-.customer_li .batteryimg{
+.ft_slide .batteryimg{
   width: 189px;
   height: 89px;
 }
