@@ -1,3 +1,62 @@
+// banner slide
+
+let bannerWrapper = $('.bannerWrapper'),
+    slideContainer = bannerWrapper.find('.slidecontainer'),
+    slides = slideContainer.find('li'),
+    pager = bannerWrapper.find('.pager'),
+    currentIdx = 0;
+
+//slideContainer의 너비 지정
+slideWidth = bannerWrapper.outerWidth();
+slideContainer.css({width:bannerWrapper.outerWidth()*slides.length + 'px'})
+
+//pager 생성 / slide 마다 할일 pager의 내용의 뒤에 추가
+// slides.each(function(idx){
+//   pager.append(`<a href="#">${idx}</a>`)
+// });
+
+//slideContainer.animate({transform:`translateX(-${slideWidth})px`}) -> 슬라이드 움직이기
+
+function moveSlide(num){
+  let moveAmount = -num * slideWidth
+  slideContainer.animate({transform:`translateX(${moveAmount})px`});
+  currentIdx = num;
+  updateSlide();
+}
+
+
+function updateSlide(){
+  //페이저 활성화
+  pager.find('a').removeClass('bannerActive');
+  pager.find('a').eq(currentIdx).addClass('bannerActive');
+  //슬라이드 활성화
+  slides.removeClass('bannerActive');
+  slides.eq(currentIdx).addClass('bannerActive');
+}
+updateSlide();
+
+// //페이저를 클릭하면 순번으로 이동
+pager.find('a').click(function(e){
+  e.preventDefault();
+  let targetIdx = $(this).index();
+  moveSlide(targetIdx)
+});
+
+let timer;
+function autoSlide(){
+  timer = setInterval(function(){
+    let nextIdx = (currentIdx +1) % slides.length;
+    moveSlide(nextIdx);
+  },3000)
+};
+
+bannerWrapper.mouseenter(function(){
+  clearInterval(timer);
+});
+bannerWrapper.mouseleave(function(){
+  autoSlide();
+});
+autoSlide();
 
 // business
 
