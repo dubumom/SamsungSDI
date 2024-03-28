@@ -99,13 +99,13 @@
         </li>
       </ul>
     </section>
-    <div class="wrapper">
+    <div class="container">
       <main id="content">
         <div class="section">
-          <div class="container">
-            <p class="body_s">표기된 항목은 필수 입력 사항입니다.</p>
-            <ul class="form-list">
-              <li>
+          <div class="">
+            <form class="form-list">
+              <p class="body_s">표기된 항목은 필수 입력 사항입니다.</p>
+              <div class="d-flex gap">
                 <div class="item">항목 선택</div>
                 <div class="data">
                   <ul class="radio-list d-flex aic">
@@ -127,7 +127,7 @@
                     </li>
                   </ul>
                 </div>
-              </li>
+              </div>
               <li>
                 <div class="item">제목</div>
                 <div class="data">
@@ -164,53 +164,50 @@
                 <div class="item option">첨부파일</div>
                 <div class="data file">
                   <div class="ipt-wrap">
-                    <input type="text" class="ipt" readonly>
-                  </div>
-                  <div class="ipt-wrap">
                     <input type="file" id="file" class="ipt blind" title="첨부하기" accept="image/*">
                     <label for="file" class="btn-s s"></label>
                     <span class="file-name"></span>
-                  </div>
+                  </div> 
                 </div>
               </li>
-            </ul>
+            </form>
           </div>
-          <form action="" id="joinForm">
-            <h6 class="join h6">개인정보 수집, 이용, 제공 등 동의</h6>
-            <ul class="join_box">
-              <li class="join_box check01">
-                <div name="" id="">
-                  1. 개인정보의 수집 및 이용 목적
-                  문의 및 요청사항에 대한 서비스를 지원하기 위해 개인정보를 수집하고 있으며, 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.
-                  
-                  2. 개인정보의 보유 및 이용기간
-                  원칙적으로 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다. 다만 발송내역의 자료를 확인하기 위해 1년간 보유합니다. 
+          <form action="">
+            <fieldset>
+              <legend>개인정보 수집, 이용, 제공 등 동의</legend>
+              <div class="join_list">
+                <h2> 1. 개인정보의 수집 및 이용 목적</h2>
+                <div>
+                 문의 및 요청사항에 대한 서비스를 지원하기 위해 개인정보를 수집하고 있으며, 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.
+                </div>
+                <h2>2. 개인정보의 보유 및 이용기간</h2>
+                <div>원칙적으로 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다. <br>
+                  다만 발송내역의 자료를 확인하기 위해 1년간 보유합니다. <br>
                   다른 법령에 따라 보존하여야 하는 경우에는 보유 및 이용기간이 경과한 개인정보를 파기하지 아니하고 보유할 수 있습니다.
-                  
-                  3. 수집하는 개인정보의 항목    
-                  항목 : 국가, 이름, 성, 이메일, 회사/조직, 부서, 전화번호
-                  보유기간 : 1년간 보관 후 파기
-                  보유목적 : 기술 관련 문의 및 요청사항에 대한 서비스 지원    
-                  자동수집항목 : IP, 쿠키(Cookie), 접속 로그
-                  ※ 귀하께서는 개인정보 수집 동의를 거부할 권리가 있으나 거부 시에는 요청하신 서비스가 제한될 수 있습니다.
+                </div>
+                <h2>3. 수집하는 개인정보의 항목 </h2>
+                <div>항목 : 국가, 이름, 성, 이메일, 회사/조직, 부서, 전화번호<br>
+                  보유기간 : 1년간 보관 후 파기<br>
+                  보유목적 : 기술 관련 문의 및 요청사항에 대한 서비스 지원 <br>   
+                  자동수집항목 : IP, 쿠키(Cookie), 접속 로그<br>
+                  ※ 귀하께서는 개인정보 수집 동의를 거부할 권리가 있으나 거부 시에는 요청하신 서비스가 제한될 수 있습니다.<br>
                   상기 내용을 읽고 수집 및 이용에 동의합니다. 
                 </div>
-              </li>
-            </ul>
+              </div>
+            </fieldset>
             <div class="terms-area">
               <div class="ipt-wrap">
                 <input type="checkbox" id="check" class="ipt blind">
                 <label for="check">(필수) 개인정보 수집 및 이용에 관한동의</label>
-                <a href="#" class="links">전문보기</a>
               </div>
             </div>
-          </div>
+          </form>
           <div class="btn-area bottom">
             <button type="button" class="btn-p m">
               <span>등록하기</span>
-             </button>
-          </div> 
-          </form>
+              </button>
+           </div> 
+          </div>
       </main>
     </div>
   </main>

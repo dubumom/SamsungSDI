@@ -28,7 +28,57 @@
 .radio-list {
     gap: 24px;
 }
-
+.gap{
+    gap: 24px;
+}
+/* form-list */
+.form-list {
+    display: flex; 
+    flex-direction: column; 
+    gap: 50px; 
+    margin-top: 50px;
+}
+.form-list > li {
+    display: flex; 
+    gap: 24px; 
+    justify-content: space-between;
+}
+.form-list .item {
+    min-width: 96px; 
+    line-height: var(--medium-gray); 
+    font-weight: 700;
+}
+.form-list .item:after {
+    content:'*'; 
+    margin-left:4px; 
+    color: #ED3A3F;
+}
+.form-list .item.option:after {
+    content:'(선택)'; 
+    margin-left: 4px; 
+    color: #666; 
+    font-size: 14px;
+}
+.form-list .data {
+    width:100%;
+}
+/* 첨부파일 */
+.form-list .data.file {
+    display: flex; 
+    gap: 24px; 
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+}
+.data.file .ipt-wrap:last-child {
+    width: 97px;
+}
+.data.file .file-name.on {
+    display:block; 
+    position: absolute; 
+    top: 5px; 
+    left: 16px;
+}
 textarea{
     resize: none;
     width: 1120px;
@@ -43,26 +93,18 @@ input{
 input:focus{
     border: none;
 }
-/* tr*/
-/* form-list */
-.form-list {display: flex; flex-direction: column; gap: 24px; margin-top: 10px;}
-.form-list > li {display: flex; gap: 24px; justify-content: space-between;}
-.form-list .item {min-width: 96px; min-width: 96px; line-height: var(--line-height); font-weight: 700;}
-.form-list .item:after {content:'*'; margin-left:4px; color: #ED3A3F;}
-.form-list .item.option:after {content:'(선택)'; margin-left: 4px; color: #666; font-size: 14px;}
-.form-list .data {width:100%;}
 
-/* check-list */
-.check-list {display: flex; align-items: center; flex-wrap: wrap;}
-.check-list > li {flex: 0 1 20%; margin-top: 24px;}
-/* email */
-.form-list .data.email {display: flex; justify-content: space-between; align-items: center; gap:8px;}
+/*개인정보*/
+.join_list{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 200px;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid var( --medium-gray);
+    background-color: #f8f8f8;
+}
 
-/* 첨부파일 */
-.form-list .data.file {display: flex; gap: 24px; justify-content: space-between; align-items: center;position: relative;}
-.data.file .ipt-wrap:last-child {width: 97px;}
-.data.file .file-name.on {display:block; position: absolute; top: 5px; left: 16px;}
-
-/* 약관 */
+/* 약관
 .terms-area {margin-top: 24px;}
-.terms-area > .ipt-wrap {display: flex; gap: 24px; align-items: center;}
+.terms-area > .ipt-wrap {display: flex; gap: 24px; align-items: center;} */
