@@ -91,14 +91,11 @@ $(window).resize(function(){
 	}
 });
 
-
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
 	console.log('검색');
 	$('.right_menu').addClass('search');
  });
-
-
 
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
@@ -115,10 +112,6 @@ if($(window).width() <= 600){
 }
 
 })
-
-
-
-
 
 
 //푸터 제이쿼리 작동 함수
