@@ -116,7 +116,55 @@ if($(window).width() <= 600){
 
 //푸터 제이쿼리 작동 함수
 function footerJs(){
- 
+	let footerslideWrapper = $('.ft_customer'),
+        footerslideContainer = footerslideWrapper.find('.ft_customer_ul'),
+        footerslides = footerslideContainer.find('li'),
+		footerpager = $('.inquery_pager'),
+        footercurrentIdx = 0; 
+
+	footerslideWidth = footerslideWrapper.outerWidth();
+	footerslideContainer.css({width:footerslideWrapper.outerWidth()*footerslides.length + 'px'})
+
+	footerslides.each(function(idx){
+		footerpager.append(`<a href="#">${idx}</a>`)
+	  });
+
+	function moveSlide(num){
+       let moveAmount = -num * footerslideWidth
+       footerslideContainer.animate({transform:`translateX(${moveAmount})px`});
+       footercurrentIdx = num;
+       updateSlide();
+    }
+	function updateSlide(){
+		//페이저 활성화
+		footerpager.find('a').removeClass('active');
+		footerpager.find('a').eq(footercurrentIdx).addClass('active');
+		//슬라이드 활성화
+		footerslides.removeClass('active');
+		footerslides.eq(footercurrentIdx).addClass('active');
+	}  
+    footerpager.find('a').click(function(e){
+	e.preventDefault();
+	let targetIdx = $(this).index();
+	moveSlide(targetIdx)
+	});
+	
+	let timer6;
+function autoSlide(){
+  timer6 = setInterval(function(){
+    let nextIdx = (footercurrentIdx +1) % footerslides.length;
+    moveSlide(nextIdx);
+  },3000)
+};
+
+footerslideWrapper.mouseenter(function(){
+  clearInterval(timer6);
+});
+footerslideWrapper.mouseleave(function(){
+  autoSlide();
+});
+autoSlide();
+		
 }
 
 /* ---------- modal : cookie ---------- */

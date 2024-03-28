@@ -315,7 +315,7 @@ main.container {
 /* .customer {
   width: 300px;
 } */
-.ft_customer_div{
+.ft_contents{
   display: flex;
   /* flex-direction: column; */
   width: 100%;
@@ -328,16 +328,18 @@ main.container {
   border: 1px solid red;
   overflow: hidden;
 }
-.ft_slide {
+.ft_contents {
   width: 640px;
 }
-.ft_slide .batteryimg{
+.ft_contents .batteryimg{
   width: 189px;
   height: 89px;
 }
+/*정보구조설계*/
 .footer_bottom{
   color: #fff;
   background: #FFFFFF;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
 }
