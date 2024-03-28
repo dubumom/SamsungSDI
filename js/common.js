@@ -93,9 +93,10 @@ $(window).resize(function(){
 
 
 // 검색 기능
-$('.b').click(function(){
-	$('.form').css({opacity: '1'}); 
-});
+$('header').on('click','.searchformToggle', function(){
+	console.log('검색');
+	$('.right_menu').addClass('search');
+ });
 
 
 
