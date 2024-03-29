@@ -548,7 +548,7 @@ input[type="checkbox"]:checked {
     position: relative;
     top: 20px;
   }
-  
+
   header {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px);
@@ -578,11 +578,11 @@ input[type="checkbox"]:checked {
     right: 40px;
     width: 140px;
   }
-  input{
+  /* input{
     display: block;
-  }
-  
+  } */
 }
+
 .open nav{
   opacity: 1;
   visibility: visible;
@@ -604,12 +604,17 @@ input[type="checkbox"]:checked {
   display: none;
 }
 
+.open .form_2{
+  display: block;
+}
+
 .open #search{
   right: 90px;
   width: 140px;
   opacity: 1;
   background: #1A5AAD;
 }
+
 .open .form_2 span{
   display: block;
 }
@@ -617,6 +622,15 @@ input[type="checkbox"]:checked {
 .open .right_menu span:last-of-type{
   opacity: 1;
 }
+
 .open .main_menu{
   transform: none;
+}
+
+.open .b.searchformToggle{
+  display: none;
+}
+
+.open button{
+  color: #1A5AAD;
 }
