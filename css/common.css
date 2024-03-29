@@ -463,7 +463,28 @@ main.container {
 }
 .inquery_pager li.inquery_pager_active{background: var(--main-color);}
 
-
+.mm_menu > ul > li:hover{
+  border-bottom: solid #fff;
+}
+/*푸터 반응형*/
+@media screen and (max-width: 768px) {
+  .footer_top {
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer_top article {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+  .footer_bottom{
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer_bottom article {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+}
 /* modal */
 .modal {
   position: fixed; 
