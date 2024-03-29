@@ -463,7 +463,28 @@ main.container {
 }
 .inquery_pager li.inquery_pager_active{background: var(--main-color);}
 
-
+.mm_menu > ul > li:hover{
+  border-bottom: solid #fff;
+}
+/*푸터 반응형*/
+@media screen and (max-width: 768px) {
+  .footer_top {
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer_top article {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+  .footer_bottom{
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer_bottom article {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+}
 /* modal */
 .modal {
   position: fixed; 
@@ -551,8 +572,8 @@ input[type="checkbox"]:checked {
     gap: 53px;
     position: absolute;
     left: 120px;
-    top: 400px;
-    transform: translate(-50%,-50%);
+    top: 150px;
+    /* transform: translate(-50%,-50%); */
     font-size: 18px;
   }
   .searchformToggle span{
@@ -560,7 +581,9 @@ input[type="checkbox"]:checked {
   }
   .main_nav > ul > li > ul{
     position: relative;
+    top: 20px;
   }
+
   header {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px);
@@ -590,11 +613,11 @@ input[type="checkbox"]:checked {
     right: 40px;
     width: 140px;
   }
-  input{
+  /* input{
     display: block;
-  }
-  
+  } */
 }
+
 .open nav{
   opacity: 1;
   visibility: visible;
@@ -616,16 +639,33 @@ input[type="checkbox"]:checked {
   display: none;
 }
 
+.open .form_2{
+  display: block;
+}
+
 .open #search{
   right: 90px;
   width: 140px;
   opacity: 1;
   background: #1A5AAD;
 }
+
 .open .form_2 span{
   display: block;
 }
 
 .open .right_menu span:last-of-type{
   opacity: 1;
+}
+
+.open .main_menu{
+  transform: none;
+}
+
+.open .b.searchformToggle{
+  display: none;
+}
+
+.open button{
+  color: #1A5AAD;
 }
