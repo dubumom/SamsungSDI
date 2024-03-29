@@ -90,7 +90,11 @@ $(window).resize(function(){
 		// $('.depth_3').show();
 	}
 });
-
+$(window).resize(function(){
+	if($(this).width() > 768){
+		$('open').remove();
+	}
+});
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
 	console.log('검색');
@@ -102,7 +106,10 @@ let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu');
 
 $(document).on('click','.mobileToggle',function(){
+	if($(window).width() < 768){
 $('header').toggleClass("open");
+$('.search-bar').toggleClass("open");
+}
 });
 
 mainMenu.click(function(){
@@ -116,6 +123,47 @@ if($(window).width() <= 600){
 
 //푸터 제이쿼리 작동 함수
 function footerJs(){
+
+	let footerslideWrapper = $('.ft_customer_ul');
+	let footerslides = footerslideWrapper.find('li');
+	let footerslideCount = footerslides.length;
+	let footercurrentIdx = 0;
+	let footerPager = $('.inquery_pager');
+	let footertimer ;
+	
+	footerslides.each(function(idx){
+		footerPager.append(`<a href="">${idx}</a>`);
+	});
+  
+	let footerpagerbtn = footerPager.find('a');
+  
+	footerpagerbtn.click(function(e){
+	  e.preventDefault();
+	  fadeSlide($(this).index());
+	});
+  
+	footerslides.eq(0).fadeIn();
+  
+	function autoNews(){
+		footertimer = setInterval(()=>{
+		let footernextIdx = (footercurrentIdx + 1) % footerslideCount;
+		fadeSlide(footernextIdx);
+	  }, 4000);
+	}
+  
+	function fadeSlide(footernextIdx){
+		footerslides.eq(footercurrentIdx).fadeOut();
+		footerslides.eq(footernextIdx).fadeIn();
+		footercurrentIdx = footernextIdx;
+	}
+	autoNews();
+	footerslideWrapper.mouseenter(function(){
+	  clearInterval(footertimer);
+	});
+	footerslideWrapper.mouseleave(function(){
+	  autoNews()
+	});
+	/*
 	let footerslideWrapper = $('.ft_customer'),
         footerslideContainer = footerslideWrapper.find('.ft_customer_ul'),
         footerslides = footerslideContainer.find('li'),
@@ -164,6 +212,8 @@ footerslideWrapper.mouseleave(function(){
   autoSlide();
 });
 autoSlide();
+*/
+
 		
 }
 
