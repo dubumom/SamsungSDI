@@ -566,7 +566,8 @@ input[type="checkbox"]:checked {
     position: absolute;
     left: 370px;
     z-index: 100;
-    opacity: 0;
+    display: none;
+    top: 100px;
   }
   .right_menu li:first-child{
     opacity: 0;
@@ -574,10 +575,9 @@ input[type="checkbox"]:checked {
   #search{
     right: 40px;
     width: 140px;
-    opacity: 0;
   }
-  .right_menu li:last-child{
-    
+  input{
+    display: block;
   }
   
 }
@@ -585,29 +585,33 @@ input[type="checkbox"]:checked {
   opacity: 1;
   visibility: visible;
 }
+
 .open .mobileToggle span{
   background: #1A5AAD;
 } 
+
 .open .right_menu{
-  left: 100px;
   position: absolute;
   left: 370px;
   z-index: 1000;
-  opacity: 1;
+  display: flex;
+  top: 100px;
 }
+
 .open .right_menu li:first-child{
-  opacity: 1;
+  display: none;
 }
+
 .open #search{
   right: 90px;
   width: 140px;
   opacity: 1;
   background: #1A5AAD;
-  top: 80px;
 }
 .open .form_2 span{
   display: block;
 }
-.open .b{
-  
+
+.open .right_menu span:last-of-type{
+  opacity: 1;
 }
