@@ -362,11 +362,11 @@ main.container {
 /*고객문의*/
 .ft_customer{
   padding-top: 50px;
-  border: 1px solid red;
   overflow: hidden;
 }
 .ft_contents {
   width: 640px;
+  padding-top: 30px;
 }
 .ft_contents .batteryimg{
   width: 189px;
@@ -375,7 +375,7 @@ main.container {
 .ft_list2{
   float: right;
 }
-.pager a{
+.inquery_page a{
   width: 10px;
   height: 10px;
   margin: 0 10px;
