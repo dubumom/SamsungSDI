@@ -60,7 +60,6 @@
 }
 .p-row {padding: calc(var(--row)) 0;}
 
-.w-px{width: 1110px;}
 /* 
 typography
 */
@@ -401,6 +400,7 @@ main.container {
 }
 .body_s span{
   vertical-align: middle;
+  color: #7BADF3;
 }
 .footer-last{
   padding: 50px;
@@ -420,9 +420,9 @@ main.container {
 .footer_3th > ul > li > ul{
   margin-top: 20px;
 }
-.material-symbols-outlined{
+/* .ft_bt > span{
   color: #7BADF3;
-}
+} */
 .mm_menu{
   flex-direction: column;
   text-align: center;
