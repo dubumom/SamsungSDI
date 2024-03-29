@@ -45,12 +45,15 @@ banner
 
 .bannerWrapper .pager{
   position: absolute;
-  left: 0;
-  right: 0; 
+  left: 50%; transform: translateX(-50%);
   bottom: 20px;
   justify-content: center;
   gap: 15px;
   z-index:10;
+}
+.bannerWrapper .pager .play {
+  position: absolute;
+  bottom: 20px;
 }
 .bannerWrapper .pager a{
   width: 150px;
@@ -58,19 +61,36 @@ banner
   background: var(--light-gray);
   position: relative;
 }
-.bannerWrapper .pager a span{
+.bannerWrapper .pager a::after {
+  position: absolute;
+  left: 0; top: 0;
+  content: '';
+  width: 0px;
+  height: 8px;
+  background:var(--sub-color);
+  z-index: 2;
+}
+.bannerWrapper .pager a> span{
   position: absolute;
   top: -25px; left: 0;
   color: var(--light-gray);
 }
-.bannerWrapper .pager a.bannerActive{
-  background: var(--sub-color);
-  /* animation: bgcolor 3s forwards; */
+.bannerWrapper .pager > span {
+  color: var(--light-gray);
+  position: absolute; left: calc(100% + 15px); top: -10px;
 }
-/* @keyframes bgcolor {
-  0% {background-color:var(--light-gray);}
-  100% {background-color:#11359A}
-} */
+.bannerPlay {display: none;}
+.bannerWrapper .pager a.bannerActive{
+  /* background: var(--sub-color); */
+  
+}
+.bannerWrapper .pager a.bannerActive::after {
+animation: width 5s linear forwards;
+}
+@keyframes width {
+  0% {}
+  100% {width: 150px;}
+}
 .bannerWrapper .pager a.bannerActive span {
   color: var(--sub-color);
 }
