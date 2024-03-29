@@ -27,19 +27,19 @@ header.mouseleave(function(){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
- });
- 
- $(".main_menu .depth_2 > li").on("click", function() {
-	if($(window).width() > 768){
-	   let submenu = $(this).find(".depth_3");
-	   console.log(submenu);
-	   let submenuHeight = submenu.outerHeight();
-	   if (submenu.length) { 
-			 submenu.slideToggle();
-	   }
-	   header.stop().animate({height:`${headerHeight + submenuHeight}px`});
+});
+
+$(".main_menu .depth_2 > li").on("click", function() {
+if($(window).width() > 768){
+		let submenu = $(this).find(".depth_3");
+		console.log(submenu);
+		let submenuHeight = submenu.outerHeight();
+		if (submenu.length) { 
+			submenu.slideToggle();
 		}
- });
+		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
+	}
+});
 
 $(".depth_2 > li > a").click(function (event) {
 	event.preventDefault();

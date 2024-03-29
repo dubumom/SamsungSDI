@@ -17,14 +17,15 @@ main header {
 }
 #sub_header .sHeaderActive {
   position: absolute;
-	width: 250px;
-  height: 50px;
-	top:-50px;
+	width: 239px;
+  height: 60px;
+	top: 0px;
 	left:0;
 	bottom:0;
 	background:#000;
 	transition:0.4s cubic-bezier(0.65, 0, 0.35, 1);
   z-index: -1;
+  border-radius: 25px;
 }
 #sub_header li +li {
   margin-top: 20px;
