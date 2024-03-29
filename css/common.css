@@ -530,9 +530,11 @@ input[type="checkbox"]:checked {
     display: block;
     right: 20px;
   }
+  
   header nav > ul {
       position: relative;
   }
+
   .main_menu{
     gap: 53px;
     position: absolute;
@@ -541,12 +543,22 @@ input[type="checkbox"]:checked {
     /* transform: translate(-50%,-50%); */
     font-size: 18px;
   }
+
   .searchformToggle span{
     display: block;
   }
+
   .main_nav > ul > li > ul{
     position: relative;
     top: 20px;
+  }
+
+  .depth_2 .material-symbols-outlined{
+    position: absolute;
+    left: 110px;
+    padding-top: 15px;
+    align-items: center;
+    font-size: 18px;
   }
 
   header {
