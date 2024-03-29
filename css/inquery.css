@@ -85,6 +85,11 @@ textarea{
     width: 1120px;
     height: 287px;
 }
+textarea:focus{
+    border: none;
+    outline: none;
+    border: 1px solid var( --medium-gray) ;
+}
 input{
 
     border: none;
@@ -93,6 +98,9 @@ input{
 }
 input:focus{
     border: none;
+    outline: none;
+    border: 1px solid var( --medium-gray) ;
+    border-color: transparent transparent var( --medium-gray) transparent;
 }
 
 /*개인정보*/
@@ -108,6 +116,21 @@ input:focus{
 form.list_p {
     padding: 20px 0 20px 0;
 }
+.btn-area {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .btn-area .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .btn-area .button:hover {
+        background-color: #888;
+    }
 /* 약관
 .terms-area {margin-top: 24px;}
 .terms-area > .ipt-wrap {display: flex; gap: 24px; align-items: center;} */
