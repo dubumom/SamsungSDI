@@ -102,7 +102,6 @@
     <div class="container">
       <main id="content">
         <div class="section">
-          <div class="">
             <form class="form-list">
               <p class="body_s">표기된 항목은 필수 입력 사항입니다.</p>
               <div class="d-flex gap">
@@ -110,19 +109,19 @@
                 <div class="data">
                   <ul class="radio-list d-flex aic">
                     <li>
-                      <input type="radio" name="samll_battery" id="samll_battery" class="ipt blind" checked>
+                      <input type="radio" name="type" id="samll_battery" class="ipt blind" checked>
                       <label for="samll_battery">소형배터리</label>
                     </li>
                     <li>
-                      <input type="radio" name="car_battery" id="car_battery" class="ipt blind">
+                      <input type="radio" name="type" id="car_battery" class="ipt blind">
                       <label for="car_battery">자동차 배터리</label>
                     </li>
                     <li>
-                      <input type="radio" name="ESS" id="ESS" class="ipt blind">
+                      <input type="radio" name="type" id="ESS" class="ipt blind">
                       <label for="ESS">ESS</label>
                     </li>
                     <li>
-                      <input type="radio" name="EM" id="EM" class="ipt blind">
+                      <input type="radio" name="type" id="EM" class="ipt blind">
                       <label for="EM">전자재료</label>
                     </li>
                   </ul>
@@ -164,14 +163,13 @@
                 <div class="item option">첨부파일</div>
                 <div class="data file">
                   <div class="ipt-wrap">
-                    <input type="file" id="file" class="ipt blind" title="첨부하기" accept="image/*">
                     <label for="file" class="btn-s s"></label>
                     <span class="file-name"></span>
+                    <input type="file" id="file" class="ipt blind" title="첨부하기" accept="image/*">
                   </div> 
                 </div>
               </div>
             </form>
-          </div>
           <form action="" class="list_p">
             <fieldset>
               <legend>개인정보 수집, 이용, 제공 등 동의</legend>
