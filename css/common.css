@@ -154,9 +154,12 @@ header .container {
 .right_menu{
   gap: 45px;
 }
+
+/* 검색 */
 .right_menu.search li:first-child{
   display: none;
 }
+
 .right_menu.search .searchformToggle{
   display: none;
 }
@@ -165,6 +168,23 @@ header .container {
 }
 .right_menu.search .search-bar .form_2{
   display: block;
+}
+label{
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  visibility:hidden;
+  transition:0.4s;
+}
+.form_2:focus-within label{
+  opacity:1;
+  visibility:visible;
+  top:-20px;
+  color:#000;
+}
+.form_2:focus-within input::placeholder{
+  opacity:0;
 }
 button{
   background: #fff;
@@ -180,7 +200,7 @@ button{
   border-radius: 10px;
 }
 
-/* 검색 */
+
 
 /* 햄버거 버튼 */
 
@@ -290,6 +310,9 @@ main.container {
 .footer_top{
   padding-top: 50px;
   padding-bottom: 50px;
+  h2{
+    font-weight: bold;
+  }
 }
 .notice{
   padding-top: 20px;
@@ -309,13 +332,27 @@ main.container {
   color: aliceblue;
   padding: 5px;
 }
+.footer_data{
+  margin-top: 50px;
+}
 .footer_navi{
   padding: 30px;
 }
+.footer_navi_title{
+  color: var(--main-color);
+  font-weight: bold;
+}
+.footer_navi_p{
+  color: var(--medium-grays);
+}
+.footer_navi div{
+  padding-bottom: 20px;
+}
+
 /* .customer {
   width: 300px;
 } */
-.ft_customer_div{
+.ft_contents{
   display: flex;
   /* flex-direction: column; */
   width: 100%;
@@ -328,16 +365,31 @@ main.container {
   border: 1px solid red;
   overflow: hidden;
 }
-.ft_slide {
+.ft_contents {
   width: 640px;
 }
-.ft_slide .batteryimg{
+.ft_contents .batteryimg{
   width: 189px;
   height: 89px;
 }
+.ft_list2{
+  float: right;
+}
+.pager a{
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #ccc;
+  text-indent: -9999em;
+  cursor: pointer;
+  display: inline-block;
+}
+/*정보구조설계*/
 .footer_bottom{
   color: #fff;
   background: #FFFFFF;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
 }
@@ -472,13 +524,11 @@ input[type="checkbox"]:checked {
             display: none;
           }
       }
-      
     }
   }
   .mobileToggle {
     display: block;
     padding-right: 50px;
-    
   }
   header nav > ul {
       position: relative;
