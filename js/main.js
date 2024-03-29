@@ -52,16 +52,15 @@ autoSlide();
 
 // business animation
 
-let business = $('.business');
+let business = $('.business').offset().top;
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 500){
+  if($(this).scrollTop() > business - 200){
     business.addClass('lineActive');
   }else{
     business.removeClass('lineActive');
   }
 });
-
 // career click event
 let prList = $('.pr_list > li');
 const prImg = $('.pr_imges').find('img');
