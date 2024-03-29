@@ -498,8 +498,8 @@ input[type="checkbox"]:checked {
 
 @media screen and (max-width: 768px) {
 .logo{
-  padding-left: 20px;
-  z-index: 1000;
+  padding-left: 10px;
+  z-index: 90;
 }
   nav{
     position: fixed;
@@ -528,7 +528,7 @@ input[type="checkbox"]:checked {
   }
   .mobileToggle {
     display: block;
-    padding-right: 50px;
+    right: 20px;
   }
   header nav > ul {
       position: relative;
