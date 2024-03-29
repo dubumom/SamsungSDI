@@ -48,4 +48,4 @@ main header {
 .patent {padding: calc(var(--row) * 3) 0;}
 .patent h2.h1{line-height: 55px;}
 .patent img {margin-top: var(--row);}
-.patent .explan {text-align: center;}
+.patent .explan {text-align: center;} 

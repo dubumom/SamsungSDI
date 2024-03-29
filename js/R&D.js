@@ -1,48 +1,70 @@
-const menu =  document.querySelectorAll('#sub_header ul li');
-const section =  document.querySelectorAll('.sec_content > section');
+/*
+const $tabMenu = $('#sub_header ul li');
+const $tabContent = $('.sec_content > section');
+const $highLight = $('.sHeaderActive');
 
-for(let m of menu){
-  m.addEventListener('click',(e)=>{
-    e.preventDefault();
-    let targetId = m.querySelector('a').getAttribute('href');
-    let targetSection = document.querySelector(targetId);
-    let targetOST = targetSection.offsetTop;
-    window.scrollTo({left:0, top: targetOST, behavior:'smooth' });
-  });
-}
-
-// window.addEventListener('scroll',()=>{
-//   section.forEach((item,idx)=>{
-//     if(item.offsetTop <= window.scrollY){
-//       for(let mm of menu){
-//         mm.classList.remove('sHeaderActive');
-//       }
-//       menu[idx].classList.add('sHeaderActive');
-//     }
-//   })
-// });
-// const tabMenu = document.querySelectorAll('.tab-menu li');
-const tabContent = document.querySelectorAll('#tab-content > div');
-const highLight = document.querySelector('.sHeaderActive');
-console.log(tabContent);
-
-menu.forEach(function(item, idx){
-	item.addEventListener('click', function(e){
+$tabMenu.each(function(idx) {
+	$(this).click(function(e) {
 		e.preventDefault();
-		showContent(idx);
-		moveHightlight(idx);
+		scrollToSection(idx);
+		moveHighlight(idx);
 	});
 });
-function showContent(num){
-	section.forEach(function(item){
-		item.style.display = 'none';
+
+$(window).scroll(function() {
+	const scrollTop = $(window).scrollTop();
+	$tabContent.each(function(idx) {
+		if ($(this).offset().top <= scrollTop) {
+			moveHighlight(idx);
+		}
 	});
-	section[num].style.display = 'block';
+});
+
+function scrollToSection(num) {
+	const targetSection = $tabContent.eq(num);
+	const targetOST = targetSection.offset().top;
+	$('html, body').animate({scrollTop: targetOST}, 'slow');
 }
-function moveHightlight(num){
-	const newLeft = menu[num].offsetLeft;
-	const newWidth = menu[num].offsetWidth;
-	console.log(newWidth);
-	highLight.style.left = newLeft + 'px';
-	highLight.style.width = newWidth + 'px';
+
+function moveHighlight(num) {
+	const newTop = $tabMenu.eq(num).position().top;
+	$highLight.css({
+		'top': newTop + 'px',
+	});
+}
+*/
+const $tabMenu = $('#sub_header ul li');
+const $tabContent = $('.sec_content > section');
+const $highLight = $('.sHeaderActive');
+
+$tabMenu.each(function(idx) {
+	$(this).click(function(e) {
+		e.preventDefault();
+		scrollToSection(idx);
+		moveHighlight(idx);
+	});
+});
+
+$(window).scroll(function() {
+	const scrollTop = $(window).scrollTop();
+	$tabContent.each(function(idx) {
+		const sectionTop = $(this).offset().top;
+		const sectionBottom = sectionTop + $(this).outerHeight();
+		if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+			moveHighlight(idx);
+		}
+	});
+});
+
+function scrollToSection(num) {
+	const targetSection = $tabContent.eq(num);
+	const targetOST = targetSection.offset().top;
+	$('html, body').animate({scrollTop: targetOST}, 'slow');
+}
+
+function moveHighlight(num) {
+	const newTop = $tabMenu.eq(num).position().top;
+	$highLight.css({
+		'top': newTop + 'px',
+	});
 }

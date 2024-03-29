@@ -18,7 +18,7 @@
 */
 
 /* 
-  variants
+   ==================== variants ==================== 
 */
 
 :root {
@@ -36,7 +36,7 @@
 }
 
 /* 
-  layout
+   ==================== layout ==================== 
 */
 
 .container {
@@ -62,7 +62,7 @@
 
 .w-px{width: 1110px;}
 /* 
-typography
+ ==================== typography ==================== 
 */
 
 body {
@@ -103,19 +103,8 @@ body {
 .h6{font-size: calc(var(--font) * 1.125);}
 .body_s{font-size: calc(var(--font) * 0.875);}
 .body_xs{font-size: calc(var(--font) * 0.75);}
-/* 
-link button
-*/
-/* .readmore {
-  display: block;
-  width: 93px;
-  height: 14px;
-}
-.readmore img{
-  width: 100%;
-} */
 
-/* HEADER */
+/*  ==================== HEADER : 임시원 ====================  */
 header {
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px);
@@ -279,252 +268,8 @@ button{
   font-size: 18px;
 }
 
-/* sub common */
-main.container {
-  padding-top:calc(var(--row) * 3);
-}
-.sub_common {
-  padding: calc(var(--row) * 3) 0 calc(var(--row) * 2) 0;
-}
-.align {padding-bottom: var(--row);}
-.align ul {
-  gap: 10px;
-  color: var(--main-color);
-  /* opacity: 0.7; */
-}
 
-.sub_common img {
-  clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
-  animation: img 3s forwards;
-  width: 100%;
-  object-fit: cover;
-}
-@keyframes img {
-  0%{}
-  100% {clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
-}
-
-/*footer*/
-.slide_readmore {
-  display: block;
-}
-.slide_readmore span {
-  margin-right: 70px;
-  font-weight: bold;
-  color: var(--main-color);
-  font-size: 20px;
-}
-.slide_readmore img {
-  width: 150px;
-  object-fit: cover;
-}
-/*공지사항*/
-.footer_top{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  h2{
-    font-weight: bold;
-  }
-}
-.notice{
-  padding-top: 20px;
-}
-.notice_1st,
-.notice_2st{
-  width: 640px;
-  /* height: 260px; */
-}
-.footer_data span{
-  display: block;
-  height: 30px;
-  text-align: center;
-}
-.footer_data span:last-child{
-  background: var( --main-color);
-  color: aliceblue;
-  padding: 5px;
-}
-.footer_data{
-  margin-top: 50px;
-}
-.footer_navi{
-  padding: 30px;
-}
-.footer_navi_title{
-  color: var(--main-color);
-  font-weight: bold;
-}
-.footer_navi_p{
-  color: var(--medium-grays);
-}
-.footer_navi div{
-  padding-bottom: 20px;
-}
-
-/* .customer {
-  width: 300px;
-} */
-.ft_contents{
-  display: flex;
-  /* flex-direction: column; */
-  width: 100%;
-  gap: 74px;
-}
-
-/*고객문의*/
-.ft_customer{
-  padding-top: 50px;
-  overflow: hidden;
-}
-.ft_contents {
-  width: 640px;
-  padding-top: 30px;
-}
-.ft_contents .batteryimg{
-  width: 189px;
-  height: 89px;
-}
-.ft_list2{
-  float: right;
-}
-.inquery_pager a {
-  position: absolute;
-  left: -9999px;
-}
-/*정보구조설계*/
-.footer_bottom{
-  color: #fff;
-  background: #FFFFFF;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
-}
-.body_s span{
-  vertical-align: middle;
-}
-.footer-last{
-  padding: 50px;
-}
-.samsungwhitelogo{
-  width: 137px;
-  height: 37px;
-}
-.footer_3th{
-  padding: 20px 0;
-}
-.footer_3th > ul {
-  display: flex;
-  /* gap: 5px; */
-  justify-content: space-between;
-}
-.footer_3th > ul > li > ul{
-  margin-top: 20px;
-}
-.material-symbols-outlined{
-  color: #7BADF3;
-}
-.mm_menu{
-  flex-direction: column;
-  text-align: center;
-  gap: 20px;
-}
-.mm_menu ul{
-  gap: 30px;
-}
-.notice_2st {
-  position: relative;
-}
-.customer_div {border: 1px solid red;}
-.readmore {
-  display: block;
-}
-.readmore span {
-  margin-right: 70px;
-  font-weight: bold;
-  color: var(--main-color);
-  font-size: 20px;
-}
-.readmore img {
-  width: 50%;
-  object-fit: cover;
-}
-.inquery_pager {
-  position: absolute; left: 110px; top: 5px;
-  height: 20px;
-}
-.inquery_pager ul{
-  height: 100%;
-  gap: 10px;
-}
-.inquery_pager li{
-  width: 20px; height: 20px;
-  background: var(--light-gray);
-  border-radius: 50%;
-}
-.inquery_pager li.inquery_pager_active{background: var(--main-color);}
-
-.mm_menu > ul > li:hover{
-  border-bottom: solid #fff;
-}
-/*푸터 반응형*/
-@media screen and (max-width: 768px) {
-  .footer_top {
-    flex-direction: column;
-    align-items: center; 
-  }
-  .footer_top article {
-    width: 100%; 
-    margin-bottom: 20px;
-  }
-  .footer_bottom{
-    flex-direction: column;
-    align-items: center; 
-  }
-  .footer_bottom article {
-    width: 100%; 
-    margin-bottom: 20px;
-  }
-}
-/* modal */
-.modal {
-  position: fixed; 
-  left: 5%; top: 15%;
-  z-index: 999999999;
-}
-.modal.hide{
-  display: none;
-}
-.modal img {vertical-align: bottom; width: 100%;}
-.modal p {
-  position: relative;
-  padding: 8px 2%;
-  background-color: var(--highlight);
-  border: 1px solid #000;
-  border-top: none;
-  font-size: 14px;
-  background: #000;
-  color: var(--white);
-}
-#checkbox {
-  width: 13px;
-  height: 13px;
-  border: 1px solid var(--white);
-  border-radius: 50%;
-  vertical-align: middle;
-  appearance: none;
-  cursor: pointer;
-  margin: 3px 3px 3px 3px;
-}
-input[type="checkbox"]:checked {
-  background: var(--main-color);
-}
-.modal label {cursor: pointer;}
-.modal .modal_close {
-  position: absolute;
-  right: 10px;
-  cursor: pointer;
-}
-
+/*  ==================== header : media ==================== */
 @media (min-width:768px){
   header nav > ul > li:hover ul{
       display: block;
@@ -668,4 +413,255 @@ input[type="checkbox"]:checked {
 
 .open button{
   color: #1A5AAD;
+}
+
+/* ==================== footer : 유부현 ==================== */
+
+.slide_readmore {
+  display: block;
+}
+.slide_readmore span {
+  margin-right: 70px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.slide_readmore img {
+  width: 150px;
+  object-fit: cover;
+}
+/*공지사항*/
+.footer_top{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h2{
+    font-weight: bold;
+  }
+}
+.notice{
+  padding-top: 20px;
+}
+.notice_1st,
+.notice_2st{
+  width: 640px;
+  /* height: 260px; */
+}
+.footer_data span{
+  display: block;
+  height: 30px;
+  text-align: center;
+}
+.footer_data span:last-child{
+  background: var( --main-color);
+  color: aliceblue;
+  padding: 5px;
+}
+.footer_data{
+  margin-top: 50px;
+}
+.footer_navi{
+  padding: 30px;
+}
+.footer_navi_title{
+  color: var(--main-color);
+  font-weight: bold;
+}
+.footer_navi_p{
+  color: var(--medium-grays);
+}
+.footer_navi div{
+  padding-bottom: 20px;
+}
+
+/* .customer {
+  width: 300px;
+} */
+.ft_contents{
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  gap: 74px;
+}
+
+/*고객문의*/
+.ft_customer{
+  padding-top: 50px;
+  overflow: hidden;
+}
+.ft_contents {
+  width: 640px;
+  padding-top: 30px;
+}
+.ft_contents .batteryimg{
+  width: 189px;
+  height: 89px;
+}
+.ft_list2{
+  float: right;
+}
+.inquery_pager a {
+  position: absolute;
+  left: -9999px;
+}
+/*정보구조설계*/
+.footer_bottom{
+  color: #fff;
+  background: #FFFFFF;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
+}
+.body_s span{
+  vertical-align: middle;
+}
+.footer-last{
+  padding: 50px;
+}
+.samsungwhitelogo{
+  width: 137px;
+  height: 37px;
+}
+.footer_3th{
+  padding: 20px 0;
+}
+.footer_3th > ul {
+  display: flex;
+  /* gap: 5px; */
+  justify-content: space-between;
+}
+.footer_3th > ul > li > ul{
+  margin-top: 20px;
+}
+.material-symbols-outlined{
+  color: #7BADF3;
+}
+.mm_menu{
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.mm_menu ul{
+  gap: 30px;
+}
+.notice_2st {
+  position: relative;
+}
+.customer_div {border: 1px solid red;}
+.readmore {
+  display: block;
+}
+.readmore span {
+  margin-right: 70px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.readmore img {
+  width: 50%;
+  object-fit: cover;
+}
+
+/* 인쿼리 부분으로 이동시키기!!!!!!! */
+.inquery_pager {
+  position: absolute; left: 110px; top: 5px;
+  height: 20px;
+}
+.inquery_pager ul{
+  height: 100%;
+  gap: 10px;
+}
+.inquery_pager li{
+  width: 20px; height: 20px;
+  background: var(--light-gray);
+  border-radius: 50%;
+}
+.inquery_pager li.inquery_pager_active{background: var(--main-color);}
+
+.mm_menu > ul > li:hover{
+  border-bottom: solid #fff;
+}
+/* ==================== footer : media 유부현  ==================== */
+@media screen and (max-width: 768px) {
+  .footer_top {
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer_top article {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+  .footer_bottom{
+    flex-direction: column;
+    align-items: center; 
+  }
+  .footer_bottom article {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ==================== modal ====================  */
+.modal {
+  position: fixed; 
+  left: 5%; top: 15%;
+  z-index: 999999999;
+}
+.modal.hide{
+  display: none;
+}
+.modal img {vertical-align: bottom; width: 100%;}
+.modal p {
+  position: relative;
+  padding: 8px 2%;
+  background-color: var(--highlight);
+  border: 1px solid #000;
+  border-top: none;
+  font-size: 14px;
+  background: #000;
+  color: var(--white);
+}
+#checkbox {
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+  margin: 3px 3px 3px 3px;
+}
+input[type="checkbox"]:checked {
+  background: var(--main-color);
+}
+.modal label {cursor: pointer;}
+.modal .modal_close {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+/*  ==================== sub common ====================  */
+main.container {
+  padding-top:calc(var(--row) * 3);
+}
+.sub_common {
+  padding: calc(var(--row) * 3) 0 calc(var(--row) * 2) 0;
+}
+.align {padding-bottom: var(--row);}
+.align ul {
+  gap: 10px;
+  color: var(--main-color);
+  /* opacity: 0.7; */
+}
+
+.sub_common img {
+  clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
+  animation: img 3s forwards;
+  width: 100%;
+  object-fit: cover;
+}
+@keyframes img {
+  0%{}
+  100% {clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
 }
