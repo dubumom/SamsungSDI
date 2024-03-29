@@ -290,6 +290,9 @@ main.container {
 .footer_top{
   padding-top: 50px;
   padding-bottom: 50px;
+  h2{
+    font-weight: bold;
+  }
 }
 .notice{
   padding-top: 20px;
@@ -309,9 +312,23 @@ main.container {
   color: aliceblue;
   padding: 5px;
 }
+.footer_data{
+  margin-top: 50px;
+}
 .footer_navi{
   padding: 30px;
 }
+.footer_navi_title{
+  color: var(--main-color);
+  font-weight: bold;
+}
+.footer_navi_p{
+  color: var(--medium-grays);
+}
+.footer_navi div{
+  padding-bottom: 20px;
+}
+
 /* .customer {
   width: 300px;
 } */
@@ -334,6 +351,19 @@ main.container {
 .ft_contents .batteryimg{
   width: 189px;
   height: 89px;
+}
+.ft_list2{
+  float: right;
+}
+.pager a{
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #ccc;
+  text-indent: -9999em;
+  cursor: pointer;
+  display: inline-block;
 }
 /*정보구조설계*/
 .footer_bottom{
