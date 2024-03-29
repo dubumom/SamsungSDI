@@ -452,7 +452,6 @@ button{
 .notice_1st,
 .notice_2st{
   width: 640px;
-  /* height: 260px; */
 }
 .footer_data span{
   display: block;
@@ -481,12 +480,8 @@ button{
   padding-bottom: 20px;
 }
 
-/* .customer {
-  width: 300px;
-} */
 .ft_contents{
   display: flex;
-  /* flex-direction: column; */
   width: 100%;
   gap: 74px;
 }
