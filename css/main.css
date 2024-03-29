@@ -127,10 +127,10 @@ business
 .business .container ul span {
   opacity: 0;
 }
-.business .container ul li:first-child span {animation:opacity 0.5s 0.5s linear forwards;}
-.business .container ul li:nth-child(2) span {animation:opacity 0.5s 1.5s linear forwards;}
-.business .container ul li:nth-child(3) span {animation:opacity 0.5s 2.5s linear forwards;}
-.business .container ul li:last-child span {animation:opacity 0.5s 3.5s linear forwards;}
+.business.lineActive .container ul li:first-child span {animation:opacity 0.5s 0.5s linear forwards;}
+.business.lineActive .container ul li:nth-child(2) span {animation:opacity 0.5s 1.5s linear forwards;}
+.business.lineActive .container ul li:nth-child(3) span {animation:opacity 0.5s 2.5s linear forwards;}
+.business.lineActive .container ul li:last-child span {animation:opacity 0.5s 3.5s linear forwards;}
 @keyframes opacity {
   from{opacity: 0%;}
 	to{opacity: 100%;}	
@@ -143,7 +143,7 @@ business
   background: var(--dark-gray);
   position: absolute; left: 50%; top:0; bottom: 0;
 }
-.business .container ul li:first-child::after{
+.business.lineActive .container ul li:first-child::after{
   margin-left: -657px;
   animation:after 0.5s linear forwards;
 }
@@ -151,13 +151,13 @@ business
 	from{height: 0%;}
 	to{height: 100%;}	
 }
-.st1{
+.business.lineActive .st1{
   stroke-dasharray:78px;
   stroke-dashoffset:78px;
   animation:line 0.5s 0.5s linear forwards;
 }
 .business svg .st_item1 {opacity: 0;}
-.business svg .st_item2 {
+.business.lineActive svg .st_item2 {
   opacity: 0;
   animation:opacity 0.5s 3.5s linear forwards;
 }
@@ -168,33 +168,33 @@ business
 	from{ stroke-dashoffset:78px;}
 	to{ stroke-dashoffset:0px;}	
 }
-.business .container ul li:nth-child(2)::after{
+.business.lineActive .container ul li:nth-child(2)::after{
   margin-left: -305px;
   animation:after 0.5s 1s linear forwards;
 }
-.st2{
+.business.lineActive .st2{
   stroke-dasharray:78px;
   stroke-dashoffset:78px;
   animation:line 0.5s 1.5s linear forwards;
 }
-.business .container ul li:nth-child(3)::after {
+.business.lineActive .container ul li:nth-child(3)::after {
   animation:after 0.5s 2s linear forwards;
 }
-.st3{
+.business.lineActive .st3{
   stroke-dasharray:78px;
   stroke-dashoffset:78px;
   animation:line 0.5s 2.5s linear forwards;
 }
-.business .container ul li:nth-child(4)::after{
+.business.lineActive .container ul li:nth-child(4)::after{
   margin-left: 328px;
   animation:after 0.5s 3s linear forwards;
 }
-.st4{
+.business.lineActive .st4{
   stroke-dasharray:78px;
   stroke-dashoffset:78px;
   animation:line 0.5s 3.5s linear forwards;
 }
-.business .container ul li:last-child::before{
+.business.lineActive .container ul li:last-child::before{
   content: '';
   display: block;
   width: 1px;
@@ -207,9 +207,6 @@ business
 /* .business.lineActive li::after{
   height: 100%;
 } */
-
-
-
 
 .business .container ul a {
   display: flex;

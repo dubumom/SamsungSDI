@@ -30,19 +30,23 @@ pager.find('a').click(function(e){
   moveSlide(targetIdx)
 });
 
-let timer;
+let timer = undefined;
 function autoSlide(){
-  timer = setInterval(function(){
-    let nextIdx = (currentIdx +1) % slides.length;
-    moveSlide(nextIdx);
-  },5000)
+  if(timer == undefined){
+    timer = setInterval(function(){
+      let nextIdx = (currentIdx +1) % slides.length;
+      moveSlide(nextIdx);
+    },5000)
+  }
 };
 
 $('.bannerPause').click(function(){
   clearInterval(timer);
+  timer = undefined;
   $(this).css({display:'none'});
   $('.bannerPlay').css({display:'block'});
 });
+
 $('.bannerPlay').click(function(){
   $(this).css({display:'none'});
   $('.bannerPause').css({display:'block'});
@@ -55,10 +59,10 @@ autoSlide();
 let business = $('.business').offset().top;
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > business - 200){
-    business.addClass('lineActive');
+  if($(this).scrollTop() > business - 500){
+    $('.business').addClass('lineActive');
   }else{
-    business.removeClass('lineActive');
+    $('.business').removeClass('lineActive');
   }
 });
 // career click event
