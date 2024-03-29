@@ -426,16 +426,18 @@ esg
 .esg .esgText {
   background: rgb(255,255,255);
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(124,149,88,1) 35%, rgba(124,149,88,1) 100%);
-  width: 50%;
+  width: 60%;
   position: absolute;
   right: 0; top: 0; bottom: 0;
 }
 .esg .esgText ul{
+  width: 100%;
   margin-top: 25%;
   text-align: center;
   /* color: var(--dark-gray); */
 }
 .esg .esgText li {
+  width: 100%;
   position: absolute;
   left: 60%; transform: translateX(-50%); 
   transition: 0.3s;
@@ -444,7 +446,7 @@ esg
 .esg .esgText li:first-child {top: 200px; opacity: 0.2;}
 .esg .esgText li:nth-child(2) {top: 300px; opacity: 0.5;}
 .esg .esgText li:nth-child(3) {top: 400px; opacity: 0.7;}
-.esg .esgText li:nth-child(4) {top: 500px; opacity: 1; font-size: 30px; line-height: 55px;}
+.esg .esgText li:nth-child(4) {top: 500px; opacity: 1; font-size: 40px; line-height: 55px;}
 .esg .esgText li:nth-child(5) {top: 650px; opacity: 0.7;}
 .esg .esgText li:nth-child(6) {top: 750px; opacity: 0.2;}
 .esg .esgText li:last-child {top: 850px; opacity: 0;}
