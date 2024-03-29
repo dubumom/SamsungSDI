@@ -1,7 +1,7 @@
 $('#header').load('header.html', headerJs);
 $('#footer').load('footer.html', footerJs);
 
-// 헤데 제이쿼리 작동 함수
+// 헤더 제이쿼리 작동 함수
 function headerJs(){
 const mainMenu = $('.main_menu');
 const header = $('#header');
@@ -66,7 +66,6 @@ $(".depth_2 > li > a").click(function (event) {
  $(".depth_2").click(function (event) {
 	if($(window).width() < 768){	
 	 event.preventDefault();
-	//  $(this).parent().toggleClass("active");
 	 if ($(this).parent().hasClass("active")) {
 	 $(this).find(".material-symbols-outlined").text("arrow_drop_up");
 	 } else {
@@ -80,13 +79,11 @@ $(".depth_2 > li > a").click(function (event) {
 $(window).resize(function(){
 	if($(this).width() > 768){
 		$('.depth_2').show();
-		// $('.depth_3').show();
 	}
 });
 $(window).resize(function(){
 	if($(this).width() < 768){
 		$('.depth_2').hide();
-		// $('.depth_3').show();
 	}
 });
 $(window).resize(function(){
@@ -94,12 +91,14 @@ $(window).resize(function(){
 		$('open').remove();
 	}
 });
+
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
 	console.log('검색');
 	$('.right_menu').addClass('search');
  });
 
+ 
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu');
