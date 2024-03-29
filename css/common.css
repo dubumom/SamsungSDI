@@ -537,8 +537,8 @@ input[type="checkbox"]:checked {
     gap: 53px;
     position: absolute;
     left: 120px;
-    top: 400px;
-    transform: translate(-50%,-50%);
+    top: 150px;
+    /* transform: translate(-50%,-50%); */
     font-size: 18px;
   }
   .searchformToggle span{
@@ -546,7 +546,9 @@ input[type="checkbox"]:checked {
   }
   .main_nav > ul > li > ul{
     position: relative;
+    top: 20px;
   }
+  
   header {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px);
@@ -614,4 +616,7 @@ input[type="checkbox"]:checked {
 
 .open .right_menu span:last-of-type{
   opacity: 1;
+}
+.open .main_menu{
+  transform: none;
 }
