@@ -305,7 +305,19 @@ main.container {
 }
 
 /*footer*/
-
+.slide_readmore {
+  display: block;
+}
+.slide_readmore span {
+  margin-right: 70px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.slide_readmore img {
+  width: 150px;
+  object-fit: cover;
+}
 /*공지사항*/
 .footer_top{
   padding-top: 50px;
@@ -320,7 +332,7 @@ main.container {
 .notice_1st,
 .notice_2st{
   width: 640px;
-  height: 260px;
+  /* height: 260px; */
 }
 .footer_data span{
   display: block;
@@ -375,15 +387,9 @@ main.container {
 .ft_list2{
   float: right;
 }
-.inquery_page a{
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background: #ccc;
-  text-indent: -9999em;
-  cursor: pointer;
-  display: inline-block;
+.inquery_pager a {
+  position: absolute;
+  left: -9999px;
 }
 /*정보구조설계*/
 .footer_bottom{
@@ -406,8 +412,16 @@ main.container {
 .footer_3th{
   padding: 20px 0;
 }
-.footer_3th ul{
-  gap: 5px;
+.footer_3th > ul {
+  display: flex;
+  /* gap: 5px; */
+  justify-content: space-between;
+}
+.footer_3th > ul > li > ul{
+  margin-top: 20px;
+}
+.material-symbols-outlined{
+  color: #7BADF3;
 }
 .mm_menu{
   flex-direction: column;
