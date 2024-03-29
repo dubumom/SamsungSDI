@@ -10,13 +10,6 @@ let bannerWrapper = $('.bannerWrapper'),
 slideWidth = bannerWrapper.outerWidth();
 slideContainer.css({width:bannerWrapper.outerWidth()*slides.length + 'px'})
 
-//pager 생성 / slide 마다 할일 pager의 내용의 뒤에 추가
-// slides.each(function(idx){
-//   pager.append(`<a href="#">${idx}</a>`)
-// });
-
-//slideContainer.animate({transform:`translateX(-${slideWidth})px`}) -> 슬라이드 움직이기
-
 function moveSlide(num){
   let moveAmount = -num * slideWidth
   slideContainer.animate({transform:`translateX(${moveAmount})px`});
@@ -28,7 +21,7 @@ function moveSlide(num){
 function updateSlide(){
   //페이저 활성화
   pager.find('a').removeClass('bannerActive');
-  pager.find('a').eq(currentIdx).addClass('bannerActive');
+  pager.find('a').eq(currentIdx).addClass('bannerActive').animate([{wdith:'100%'},3000]);
   //슬라이드 활성화
   slides.removeClass('bannerActive');
   slides.eq(currentIdx).addClass('bannerActive');
@@ -47,13 +40,17 @@ function autoSlide(){
   timer = setInterval(function(){
     let nextIdx = (currentIdx +1) % slides.length;
     moveSlide(nextIdx);
-  },3000)
+  },5000)
 };
 
-bannerWrapper.mouseenter(function(){
+$('.bannerPause').click(function(){
   clearInterval(timer);
+  $(this).css({display:'none'});
+  $('.bannerPlay').css({display:'block'});
 });
-bannerWrapper.mouseleave(function(){
+$('.bannerPlay').click(function(){
+  $(this).css({display:'none'});
+  $('.bannerPause').css({display:'block'});
   autoSlide();
 });
 autoSlide();
