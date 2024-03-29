@@ -18,7 +18,7 @@ main header {
 #sub_header .sHeaderActive {
   position: absolute;
 	width: 250px;
-  /* height: 50px; */
+  height: 50px;
 	top:-50px;
 	left:0;
 	bottom:0;
