@@ -154,9 +154,12 @@ header .container {
 .right_menu{
   gap: 45px;
 }
+
+/* 검색 */
 .right_menu.search li:first-child{
   display: none;
 }
+
 .right_menu.search .searchformToggle{
   display: none;
 }
@@ -165,6 +168,23 @@ header .container {
 }
 .right_menu.search .search-bar .form_2{
   display: block;
+}
+label{
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  visibility:hidden;
+  transition:0.4s;
+}
+.form_2:focus-within label{
+  opacity:1;
+  visibility:visible;
+  top:-20px;
+  color:#000;
+}
+.form_2:focus-within input::placeholder{
+  opacity:0;
 }
 button{
   background: #fff;
@@ -180,7 +200,7 @@ button{
   border-radius: 10px;
 }
 
-/* 검색 */
+
 
 /* 햄버거 버튼 */
 
@@ -504,13 +524,11 @@ input[type="checkbox"]:checked {
             display: none;
           }
       }
-      
     }
   }
   .mobileToggle {
     display: block;
     padding-right: 50px;
-    
   }
   header nav > ul {
       position: relative;
