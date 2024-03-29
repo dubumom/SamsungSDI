@@ -38,7 +38,7 @@
     gap: 50px; 
     margin-top: 50px;
 }
-.form-list > li {
+.form-list > div {
     display: flex; 
     gap: 24px; 
     justify-content: space-between;
