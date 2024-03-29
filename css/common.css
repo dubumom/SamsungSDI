@@ -375,7 +375,7 @@ main.container {
 .ft_list2{
   float: right;
 }
-.pager a{
+.inquery_page a{
   width: 10px;
   height: 10px;
   margin: 0 10px;
