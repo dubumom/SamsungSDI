@@ -5,8 +5,6 @@ let bannerWrapper = $('.bannerWrapper'),
     slides = slideContainer.find('li'),
     pager = bannerWrapper.find('.pager'),
     currentIdx = 0;
-
-//slideContainer의 너비 지정
 slideWidth = bannerWrapper.outerWidth();
 slideContainer.css({width:bannerWrapper.outerWidth()*slides.length + 'px'})
 
@@ -17,18 +15,15 @@ function moveSlide(num){
   updateSlide();
 }
 
-
 function updateSlide(){
-  //페이저 활성화
   pager.find('a').removeClass('bannerActive');
   pager.find('a').eq(currentIdx).addClass('bannerActive').animate([{wdith:'100%'},3000]);
-  //슬라이드 활성화
+
   slides.removeClass('bannerActive');
   slides.eq(currentIdx).addClass('bannerActive');
 }
 updateSlide();
 
-// //페이저를 클릭하면 순번으로 이동
 pager.find('a').click(function(e){
   e.preventDefault();
   let targetIdx = $(this).index();
@@ -55,7 +50,7 @@ $('.bannerPlay').click(function(){
 });
 autoSlide();
 
-// business
+// business animation
 
 let business = $('.business');
 
@@ -67,7 +62,7 @@ $(window).scroll(function(){
   }
 });
 
-// career
+// career click event
 let prList = $('.pr_list > li');
 const prImg = $('.pr_imges').find('img');
 const carrer = $('.career_Recruitment');
@@ -103,7 +98,7 @@ prList.click(function(e){
   },800)
 });
 
-//prcenter 자동슬라이드
+//prcenter autoslide
 
 function slide(targetEl, direction) {
   let target = $(targetEl);
@@ -116,15 +111,22 @@ function slide(targetEl, direction) {
 			$(this).find('li').last().prependTo(this);
     }
     $(this).css({top: 0});
-    slide(targetEl, direction); // 재귀 호출로 애니메이션 반복
+    slide(targetEl, direction);
+  });
+}
+
+for (let i = 1; i <= 8; i++) {
+  $('.pr_img' + i).click(function(e) {
+      e.preventDefault();
+      $('.prcenter_txt').find('div').removeClass('prcenterActive');
+      $('.txt' + i).addClass('prcenterActive');
   });
 }
 
 slide('.slideDown', 'down'); 
 slide('.slideUp', 'up');
 
-
-//esg 텍스트 슬라이드
+//esg text slide
 
 let esgTextCantain = $('.esgText ul');
 setInterval(() => {

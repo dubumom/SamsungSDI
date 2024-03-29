@@ -90,7 +90,11 @@ $(window).resize(function(){
 		// $('.depth_3').show();
 	}
 });
-
+$(window).resize(function(){
+	if($(this).width() > 768){
+		$('open').remove();
+	}
+});
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
 	console.log('검색');
@@ -102,7 +106,10 @@ let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu');
 
 $(document).on('click','.mobileToggle',function(){
+	if($(window).width() < 768){
 $('header').toggleClass("open");
+$('.search-bar').toggleClass("open");
+}
 });
 
 mainMenu.click(function(){
