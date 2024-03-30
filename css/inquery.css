@@ -4,6 +4,16 @@
 
 /*----------section inquiry_icon----------*/
 
+/*inquery 폰트*/
+.inquery_icon_h2{
+    text-align: center  !important; 
+    font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: calc(var(--font) * 1.75);
+    line-height: 40px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    color: var(--text-black);
+}
 /*inquery svg 아이콘*/
 .inquery_icon_li{
     width: 170px;
@@ -27,15 +37,37 @@
 .inquery_icon_li a:hover svg path{
     stroke: var(--main-color);
 }
-.inquery_icon_h2{
-    text-align: center  !important; 
-    font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    font-size: calc(var(--font) * 1.75);
-    line-height: 40px;
+.inquery_icon_li > a > span{
+    font-size: calc(var(--font) * 1.125);
     font-weight: bold;
-    padding-bottom: 30px;
-    color: var(--text-black);
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+    line-height: 40px;
+    &::after{
+        content: '';
+        width: 0%;
+        left: 50%;
+        height: 1px;
+        display: block;
+        position: absolute;
+        margin-top: 3px;
+        border-bottom: solid 2px var(--main-color);
+        transition:all .3s ease;
+    }
 }
+.inquery_icon_li > a:hover > span::after{
+    content: '';
+    width: 100%;
+    left: 0px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    margin-top: 3px;
+    border-bottom: solid 2px var(--main-color);
+    transition: .3s ease;
+} 
+
 /*hr 안먹음*/
 #inquery_icon_hr{
     border-width: 2px;
@@ -43,6 +75,7 @@
 }
 
 /*----------section inquiry_from----------*/
+
 
 /* 항목선택 */
 .radio-list {
