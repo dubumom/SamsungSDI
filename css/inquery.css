@@ -1,14 +1,31 @@
 @charset "utf-8";
 /* member-you */
 @import url(common.css);
-/*상단 아이콘*/
-.inquery_li{
+
+/*----------section inquiry_icon----------*/
+
+/*inquery 폰트*/
+.inquery_icon_h2{
+    text-align: center  !important; 
+    font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: calc(var(--font) * 1.75);
+    line-height: 40px;
+    font-weight: bold;
+    /* padding-bottom: 30px; */
+    color: var(--text-black);
+}
+/*inquery svg 아이콘*/
+.inquery_ul{
+    /* padding-top: 30px; */
+    padding-bottom: 30px;
+}
+.inquery_icon_li{
     width: 170px;
     height: 156px;
     border: 1px solid var(--medium-gray);
     margin: auto;
 }
-.inquery_li a{
+.inquery_icon_li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,35 +34,62 @@
     margin-top: 10px;
     width: 100%;
 }
-.inquery_li:nth-child(5) a{
+.inquery_icon_li:nth-child(5) a{
     padding-top: 24px;
     gap: 20px;
 }
-.inquery_li a:hover svg path{
+.inquery_icon_li a:hover svg path{
     stroke: var(--main-color);
 }
+.inquery_icon_li > a > span {
+    position: relative; 
+  }
+.inquery_icon_li a:hover span{
+    color: var(--main-color);
+}  
+.inquery_icon_li > a > span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    background-color: var(--main-color); 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; 
+  }
+.inquery_icon_li > a:hover > span::before {
+    width: 100%; 
+  }
 
-/* radio-list */
-.radio-list {
-    gap: 24px;
+#inquery_icon_hr{
+  border: 0;
+  border-bottom: 0.0625rem solid #bbb;
+  margin: 3rem 0;
 }
-.gap{
-    gap: 24px;
-}
-/* form-list */
-.w-px{
-    width: 100%;
+
+/*----------section inquiry_from----------*/
+.inquery_form_p{
+    font-weight: 500;
 }
 .form-list {
     display: flex; 
     flex-direction: column; 
-    gap: 50px; 
-    margin-top: 50px;
+    gap: 30px; 
+}
+.radio-list {
+    gap: 24px;
+    display: flex;
+    align-items: center;
+}
+.from_type{
+    font-size: calc(var(--font) * 1.125);
+    white-space : nowrap;
+    font-weight: 700;
 }
 .form-list > div {
     display: flex; 
     gap: 24px; 
-    justify-content: space-between;
+    justify-content: center;
 }
 .form-list .item {
     min-width: 96px; 
@@ -57,37 +101,21 @@
     margin-left:4px; 
     color: #ED3A3F;
 }
-.form-list .item.option:after {
-    content:'(선택)'; 
-    margin-left: 4px; 
-    color: #666; 
-    font-size: 14px;
+.item_option{
+    min-width: 96px; 
+    line-height: var(--medium-gray); 
+    font-weight: 700;
 }
-.form-list .data {
-    width:100%;
+.inquery_list input,
+.inquery_list textarea{
+    width: 100%;
 }
-
-/* 첨부파일 */
-.form-list .data.file {
-    display: flex; 
-    gap: 24px; 
-    justify-content: space-between; 
-    align-items: center;
-    position: relative;
-}
-.data.file .ipt-wrap:last-child {
-    width: 97px;
-}
-.data.file .file-name.on {
-    display:block; 
-    position: absolute; 
-    top: 5px; 
-    left: 16px;
-} 
+/*textare + input box*/
 textarea{
     resize: none;
     width: 100%;
     height: 287px;
+    border: 1px solid var( --medium-gray) ;
 }
 textarea:focus{
     border: none;
@@ -95,7 +123,6 @@ textarea:focus{
     border: 1px solid var( --medium-gray) ;
 }
 input{
-
     border: none;
     border: 1px solid var( --medium-gray) ;
     border-color: transparent transparent var( --medium-gray) transparent;
@@ -104,7 +131,14 @@ input:focus{
     border: none;
     outline: none;
     border: 1px solid var( --medium-gray) ;
-    border-color: transparent transparent var( --medium-gray) transparent;
+    border-color: transparent transparent var( --main-color) transparent;
+}
+#file{
+    border: none;
+}
+legend{
+    font-size: calc(var(--font) * 1.125);
+    font-weight: 700;
 }
 
 /*개인정보*/
@@ -117,42 +151,69 @@ input:focus{
     border: 1px solid var( --medium-gray);
     background-color: #f8f8f8;
 }
-form.list_p {
-    padding: 20px 0 20px 0;
+/*버튼*/
+.inquery_btn{
+   text-align: center;
 }
-.btn-area {
-        text-align: center;
-        margin-top: 50px;
-    }
-    .btn-area .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
-    .btn-area .button:hover {
-        background-color: #888;
-    }
-.inquery_pager {
-  position: absolute; left: 110px; top: 5px;
-  height: 20px;
-}
-.inquery_pager ul{
-  height: 100%;
-  gap: 10px;
-}
-.inquery_pager li{
-  width: 20px; height: 20px;
-  background: var(--light-gray);
-  border-radius: 50%;
-}
-.inquery_pager li.inquery_pager_active{background: var(--main-color);}
+.inquery_btn button{
+    width: 142px;
+    height: 43px;
+    border-radius: 15px / 15px;
+    display :inline-block;
+    font-size: calc(var(--font) * 1.125);
+    background: var(--main-color);
+    color: #fff;
+    border: 0.25rem solid var(--main-color);
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden; 
+    z-index:1;
+  }
+.inquery_btn button:after{
+    content:'';
+    position: absolute;
+    background: #ecf0f1;
+    padding:5px;
+    z-index:-1;
+    left: -1px; 
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    transition:0.3s;
+    transform:translateX(-100%);
+  }
+button:hover{
+    color: #3498db;
+  }
 
-.mm_menu > ul > li:hover{
-  border-bottom: solid #fff;
+/*오류메시지*/
+span.bad-input{
+    background: var(--main-color);
+    border-radius:5px;
+    padding: 3px 10px;
+    color:#fff;
+    position: absolute;
+    white-space: nowrap;
+    margin-left:50px;
+    opacity: 0;
+    animation:fadeIn 0.5s forwards;
 }
+@keyframes fadeIn {
+    0% {opacity: 0; margin-left: 50px;}	
+    100% {opacity: 1; margin-left: 10px;}	
+}
+span.bad-input:before{
+    content:'';
+    position: absolute;
+    border-style:solid;
+    border-width:6px;
+    border-color:transparent var(--main-color) transparent transparent;
+    right:100%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
 /* 약관
 .terms-area {margin-top: 24px;}
 .terms-area > .ipt-wrap {display: flex; gap: 24px; align-items: center;} */
