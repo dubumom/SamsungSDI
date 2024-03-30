@@ -443,7 +443,7 @@ esg
 .esg .esgText li:nth-child(6) {top: 750px; opacity: 0.2;}
 .esg .esgText li:last-child {top: 850px; opacity: 0;}
 
-/* ==================== footer : media 우예지  ==================== */
+/* ==================== main : media 우예지  ==================== */
 @media screen and (max-width: 768px) {
   .bannerWrapper {
     height: auto;
