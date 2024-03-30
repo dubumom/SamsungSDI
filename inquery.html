@@ -99,12 +99,12 @@
       </ul>
     </section>
     <section class="inquery_form">
-      <form action="" method="post" novalidate id="msgForm">
-        <p class="body_s">표기된 항목은 필수 입력 사항입니다.</p>
-        <div class="d-flex gap">
-          <div class="item">항목 선택</div>
+      <form class="form-list" action="" method="post" novalidate id="msgForm">
+        <p class="inquery_form_p body_s">표기된 항목은 필수 입력 사항입니다.</p>
+        <div class="inquery_form_type">
+          <div class="from_type item">항목 선택</div>
           <div class="data">
-            <ul class="radio-list d-flex aic">
+            <ul class="radio-list">
               <li>
                 <input type="radio" name="type" id="samll_battery" class="ipt blind" checked>
                 <label for="samll_battery">소형배터리</label>
@@ -124,26 +124,26 @@
             </ul>
           </div>
         </div>
-        <p>
-          <label for="inquery_title">제목</label>
-          <input type="text" name="inquery_title" id="inquery_title" minlength="2" placeholder="제목을 입력해주세요." required>
-        </p>
-        <p>
-          <label for="msg">문의 내용</label>
-				  <textarea name="msg" id="msg" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
-        </p>
-        <p>
-          <label for="name">이름</label>
-          <input type="text" id="name" name="username" minlength="2" placeholder="이름을 입력해주세요." required>
-        </p>
-        <p>
-          <label for="email">이메일</label>
-          <input type="email" id="email" name="useremail" placeholder="abc@gmail.com" required>
-        </p>
-        <p>
-          <label for="item_option">첨부파일</label>
-          <input type="file" id="file" title="첨부하기" accept="image/*">
-        </p>
+          <div class="inquery_list">
+            <div class="item"><label for="inquery_title">제목</label></div>
+            <input type="text" name="inquery_title" id="inquery_title" minlength="2" placeholder="제목을 입력해주세요." required>
+          </div>
+          <div class="inquery_list">
+            <div class="item"><label for="msg">문의 내용</label></div>
+  				  <textarea name="msg" id="msg" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+          </div>
+          <div class="inquery_list">
+            <div class="item"><label for="name">이름</label></div>
+            <input type="text" id="name" name="username" minlength="2" placeholder="이름을 입력해주세요." required>
+          </div>
+          <div class="inquery_list">
+            <div class="item"><label for="email">이메일</label></div>
+            <input type="email" id="email" name="useremail" placeholder="abc@gmail.com" required>
+          </div>
+          <div class="inquery_list">
+            <div class="item_option"><label for="item_option">첨부파일</label></div>
+            <input type="file" id="file" title="첨부하기" accept="image/*">
+          </div>
         <fieldset>
           <legend>개인정보 수집, 이용, 제공 등 동의</legend>
           <div class="join_list">
@@ -174,114 +174,6 @@
         </button>
       </form>
     </section>
-    <!-- <div class="container">
-      <div class="content">
-        <div class="section">
-
-            <form class="form-list">
-              <p class="body_s">표기된 항목은 필수 입력 사항입니다.</p>
-              <div class="d-flex gap">
-                <div class="item">항목 선택</div>
-                <div class="data">
-                  <ul class="radio-list d-flex aic">
-                    <li>
-                      <input type="radio" name="type" id="samll_battery" class="ipt blind" checked>
-                      <label for="samll_battery">소형배터리</label>
-                    </li>
-                    <li>
-                      <input type="radio" name="type" id="car_battery" class="ipt blind">
-                      <label for="car_battery">자동차 배터리</label>
-                    </li>
-                    <li>
-                      <input type="radio" name="type" id="ESS" class="ipt blind">
-                      <label for="ESS">ESS</label>
-                    </li>
-                    <li>
-                      <input type="radio" name="type" id="EM" class="ipt blind">
-                      <label for="EM">전자재료</label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <div class="item">제목</div>
-                <div class="data">
-                  <div class="ipt-wrap1">
-                    <input class="w-px" type="text"  placeholder="제목을 입력해주세요.">
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="item">문의 내용</div>
-                <div class="data">
-                  <div class="ipt-wrap2">
-                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
-                    </div>
-                </div>
-              </div>
-              <div>
-              <div class="item">이름             </div>
-                <div class="data">
-                  <div class="ipt-wrap3">
-                    <input class="w-px" type="text" placeholder="이름을 입력해주세요.">
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="item">이메일</div>
-                <div class="data">
-                  <div class="ipt-wrap4">
-                    <input class="w-px" type="email" placeholder="abc@gmail.com">
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="item option">첨부파일</div>
-                <div class="data file">
-                  <div class="ipt-wrap5">
-                    <input type="file" id="file" title="첨부하기" accept="image/*">
-                  </div> 
-                </div>
-              </div>
-            </form>
-          <form action="#" class="list_p">
-            <fieldset>
-              <legend>개인정보 수집, 이용, 제공 등 동의</legend>
-              <div class="join_list">
-                <h2> 1. 개인정보의 수집 및 이용 목적</h2>
-                <div>
-                 문의 및 요청사항에 대한 서비스를 지원하기 위해 개인정보를 수집하고 있으며, 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.
-                </div>
-                <h2>2. 개인정보의 보유 및 이용기간</h2>
-                <div>원칙적으로 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다. <br>
-                  다만 발송내역의 자료를 확인하기 위해 1년간 보유합니다. <br>
-                  다른 법령에 따라 보존하여야 하는 경우에는 보유 및 이용기간이 경과한 개인정보를 파기하지 아니하고 보유할 수 있습니다.
-                </div>
-                <h2>3. 수집하는 개인정보의 항목 </h2>
-                <div>항목 : 국가, 이름, 성, 이메일, 회사/조직, 부서, 전화번호<br>
-                  보유기간 : 1년간 보관 후 파기<br>
-                  보유목적 : 기술 관련 문의 및 요청사항에 대한 서비스 지원 <br>   
-                  자동수집항목 : IP, 쿠키(Cookie), 접속 로그<br>
-                  ※ 귀하께서는 개인정보 수집 동의를 거부할 권리가 있으나 거부 시에는 요청하신 서비스가 제한될 수 있습니다.<br>
-                  상기 내용을 읽고 수집 및 이용에 동의합니다. 
-                </div>
-              </div>
-            </fieldset>
-            <div class="terms-area">
-              <div class="ipt-wrap">
-                <input type="checkbox" id="check">
-                <label for="check">(필수) 개인정보 수집 및 이용에 관한동의</label>
-              </div>
-            </div>
-            <div class="btn-area">
-              <button type="button" class="btn-p m">
-                <span>등록하기</span>
-                </button>
-             </div> 
-            </form>
-          </div>
-        </div>
-    </div> -->
   </main>
   <footer id="footer"></footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

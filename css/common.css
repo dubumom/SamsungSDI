@@ -486,7 +486,7 @@ button{
   gap: 74px;
 }
 
-/*고객문의*/
+/*공지사항*/
 .ft_customer{
   padding-top: 50px;
   overflow: hidden;
@@ -505,6 +505,25 @@ button{
 .inquery_pager a {
   position: absolute;
   left: -9999px;
+}
+/*고객문의*/
+.inquery_pager {
+  position: absolute; left: 110px; top: 5px;
+  height: 20px;
+}
+.inquery_pager ul{
+  height: 100%;
+  gap: 10px;
+}
+.inquery_pager li{
+  width: 20px; height: 20px;
+  background: var(--light-gray);
+  border-radius: 50%;
+}
+.inquery_pager li.inquery_pager_active{background: var(--main-color);}
+
+.mm_menu > ul > li:hover{
+  border-bottom: solid #fff;
 }
 /*정보구조설계*/
 .footer_bottom{
