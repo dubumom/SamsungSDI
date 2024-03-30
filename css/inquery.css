@@ -1,14 +1,17 @@
 @charset "utf-8";
 /* member-you */
 @import url(common.css);
-/*상단 아이콘*/
-.inquery_li{
+
+/*----------section inquiry_icon----------*/
+
+/*inquery svg 아이콘*/
+.inquery_icon_li{
     width: 170px;
     height: 156px;
     border: 1px solid var(--medium-gray);
     margin: auto;
 }
-.inquery_li a{
+.inquery_icon_li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,15 +20,31 @@
     margin-top: 10px;
     width: 100%;
 }
-.inquery_li:nth-child(5) a{
+.inquery_icon_li:nth-child(5) a{
     padding-top: 24px;
     gap: 20px;
 }
-.inquery_li a:hover svg path{
+.inquery_icon_li a:hover svg path{
     stroke: var(--main-color);
 }
+.inquery_icon_h2{
+    text-align: center  !important; 
+    font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: calc(var(--font) * 1.75);
+    line-height: 40px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    color: var(--text-black);
+}
+/*hr 안먹음*/
+#inquery_icon_hr{
+    border-width: 2px;
+    color: var( --medium-gray) !important;
+}
 
-/* radio-list */
+/*----------section inquiry_from----------*/
+
+/* 항목선택 */
 .radio-list {
     gap: 24px;
 }
