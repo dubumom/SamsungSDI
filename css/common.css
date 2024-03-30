@@ -658,6 +658,7 @@ main.container {
   /* opacity: 0.7; */
 }
 
+<<<<<<< Updated upstream
 .sub_common img {
   clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
@@ -667,4 +668,41 @@ main.container {
 @keyframes img {
   0%{}
   100% {clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
+=======
+
+/*footer*/
+.footer_top{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.notice_sub{
+  padding: 20px;
+}
+.footer_data span{
+  display: block;
+  height: 30px;
+  text-align: center;
+}
+.footer_data span:last-child{
+  background: var( --main-color);
+  color: aliceblue;
+  padding: 5px;
+}
+.footer_navi{
+  padding: 30px;
+}
+.customer_li .batteryimg{
+  width: 189px;
+}
+.footer_bottom{
+  background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
+}
+.footer_bottom nav{
+  height: 326px;
+}
+.footer_bottom_last{
+  display: flex;
+>>>>>>> Stashed changes
 }
