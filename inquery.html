@@ -99,7 +99,7 @@
       </ul>
     </section>
     <section class="inquery_form">
-      <form class="form-list" action="" method="post" novalidate id="msgForm">
+      <form class="form-list" action="#" method="post" novalidate id="msgForm">
         <p class="inquery_form_p body_s">표기된 항목은 필수 입력 사항입니다.</p>
         <article class="inquery_form_type">
           <div class="from_type item">항목 선택</div>
@@ -130,7 +130,7 @@
           </div>
           <div class="inquery_list">
             <div class="item"><label for="msg">문의 내용</label></div>
-  				  <textarea name="msg" id="msg" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+  				  <textarea name="msg" id="msg" cols="30" rows="10" minlength="10" placeholder="내용을 입력해주세요."></textarea>
           </div>
           <div class="inquery_list">
             <div class="item"><label for="name">이름</label></div>
@@ -179,6 +179,8 @@
   </main>
   <footer id="footer"></footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
   <script src="js/common.js"></script>
 </body>
 
