@@ -657,8 +657,6 @@ main.container {
   color: var(--main-color);
   /* opacity: 0.7; */
 }
-
-<<<<<<< Updated upstream
 .sub_common img {
   clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
@@ -668,8 +666,7 @@ main.container {
 @keyframes img {
   0%{}
   100% {clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
-=======
-
+}
 /*footer*/
 .footer_top{
   padding-top: 50px;
