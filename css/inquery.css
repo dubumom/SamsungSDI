@@ -68,6 +68,9 @@
 }
 
 /*----------section inquiry_from----------*/
+.inquery_form_type{
+    display: flex;
+}
 .inquery_form_p{
     font-weight: 500;
 }
