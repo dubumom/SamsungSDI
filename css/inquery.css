@@ -89,6 +89,7 @@
 .form-list > div {
     display: flex; 
     gap: 24px; 
+    justify-content: center;
 }
 .form-list .item {
     min-width: 96px; 
@@ -188,7 +189,7 @@ button:hover{
 
 /*오류메시지*/
 span.bad-input{
-    background: #3498db;
+    background: var(--main-color);
     border-radius:5px;
     padding: 3px 10px;
     color:#fff;
@@ -207,7 +208,7 @@ span.bad-input:before{
     position: absolute;
     border-style:solid;
     border-width:6px;
-    border-color:transparent #3498db transparent transparent;
+    border-color:transparent var(--main-color) transparent transparent;
     right:100%;
     top:50%;
     transform:translateY(-50%);
