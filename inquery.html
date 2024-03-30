@@ -106,19 +106,19 @@
           <div class="data">
             <ul class="radio-list">
               <li>
-                <input type="radio" name="type" id="samll_battery" class="ipt blind" checked>
+                <input type="radio" name="type" id="samll_battery" class="ipt blind" checked  required>
                 <label for="samll_battery">소형배터리</label>
               </li>
               <li>
-                <input type="radio" name="type" id="car_battery" class="ipt blind">
+                <input type="radio" name="type" id="car_battery" class="ipt blind"  required>
                 <label for="car_battery">자동차 배터리</label>
               </li>
               <li>
-                <input type="radio" name="type" id="ESS" class="ipt blind">
+                <input type="radio" name="type" id="ESS" class="ipt blind"  required>
                 <label for="ESS">ESS</label>
               </li>
               <li>
-                <input type="radio" name="type" id="EM" class="ipt blind">
+                <input type="radio" name="type" id="EM" class="ipt blind"  required>
                 <label for="EM">전자재료</label>
               </li>
             </ul>
@@ -146,6 +146,7 @@
           </div>
         <fieldset>
           <legend>개인정보 수집, 이용, 제공 등 동의</legend>
+          <br>
           <div class="join_list">
             <h2> 1. 개인정보의 수집 및 이용 목적</h2>
             <div>
@@ -169,14 +170,16 @@
         <p>
           <input type="checkbox" id="check">
           <label for="check">(필수) 개인정보 수집 및 이용에 관한동의</label>
-        </p>
-        <button type="button" class="btn-p m"><span>등록하기</span>
-        </button>
+        </p>          
+        <div class="inquery_btn">
+          <button type="button">등록하기</button>
+        </div>
       </form>
     </section>
   </main>
   <footer id="footer"></footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/package-lock.json"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/common.js"></script>
 </body>

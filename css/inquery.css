@@ -11,12 +11,12 @@
     font-size: calc(var(--font) * 1.75);
     line-height: 40px;
     font-weight: bold;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     color: var(--text-black);
 }
 /*inquery svg 아이콘*/
 .inquery_ul{
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-bottom: 30px;
 }
 .inquery_icon_li{
@@ -60,10 +60,11 @@
 .inquery_icon_li > a:hover > span::before {
     width: 100%; 
   }
-/*hr 안먹음*/
+
 #inquery_icon_hr{
-    border-width: 2px;
-    color: var( --medium-gray) !important;
+  border: 0;
+  border-bottom: 0.0625rem solid #bbb;
+  margin: 3rem 0;
 }
 
 /*----------section inquiry_from----------*/
@@ -129,7 +130,7 @@ input:focus{
     border: none;
     outline: none;
     border: 1px solid var( --medium-gray) ;
-    border-color: transparent transparent var( --medium-gray) transparent;
+    border-color: transparent transparent var( --main-color) transparent;
 }
 #file{
     border: none;
@@ -150,6 +151,67 @@ legend{
     background-color: #f8f8f8;
 }
 /*버튼*/
+.inquery_btn{
+   text-align: center;
+}
+.inquery_btn button{
+    width: 142px;
+    height: 43px;
+    border-radius: 15px / 15px;
+    display :inline-block;
+    font-size: calc(var(--font) * 1.125);
+    background: var(--main-color);
+    color: #fff;
+    border: 0.25rem solid var(--main-color);
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden; 
+    z-index:1;
+  }
+.inquery_btn button:after{
+    content:'';
+    position: absolute;
+    background: #ecf0f1;
+    padding:5px;
+    z-index:-1;
+    left: -1px; 
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    transition:0.3s;
+    transform:translateX(-100%);
+  }
+button:hover{
+    color: #3498db;
+  }
+
+/*오류메시지*/
+span.bad-input{
+    background: #3498db;
+    border-radius:5px;
+    padding: 3px 10px;
+    color:#fff;
+    position: absolute;
+    white-space: nowrap;
+    margin-left:50px;
+    opacity: 0;
+    animation:fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+    0% {opacity: 0; margin-left: 50px;}	
+    100% {opacity: 1; margin-left: 10px;}	
+}
+span.bad-input:before{
+    content:'';
+    position: absolute;
+    border-style:solid;
+    border-width:6px;
+    border-color:transparent #3498db transparent transparent;
+    right:100%;
+    top:50%;
+    transform:translateY(-50%);
+}
 
 /* 약관
 .terms-area {margin-top: 24px;}
