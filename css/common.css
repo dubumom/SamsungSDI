@@ -436,7 +436,7 @@ button{
 .open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; right: 160px;
   top: 7px;
 color: #000;}
-.open .main_menu {transform: none;}
+.open .main_menu {transform: none; align-items: start;}
 .open .b.searchformToggle ,
 .opne .b{display: none;}
 .open button {color: #1A5AAD; position: absolute;  background: none;}
