@@ -53,7 +53,7 @@
     width: 0;
     height: 2px; 
     background-color: var(--main-color); 
-    bottom: 0;
+    bottom: -3px;
     left: 0;
     transition: width 0.3s ease; 
   }
@@ -157,6 +157,7 @@ legend{
 /*버튼*/
 .inquery_btn{
    text-align: center;
+   line-height: 43px;
 }
 .inquery_btn button{
     width: 142px;
@@ -167,7 +168,6 @@ legend{
     background: var(--main-color);
     color: #fff;
     border: 0.25rem solid var(--main-color);
-    padding: 0.85em 0.75em;
     margin: 1rem;
     position: relative;
     overflow: hidden; 
@@ -189,7 +189,9 @@ legend{
 button:hover{
     color: #3498db;
   }
-
+.main .container{
+    position: relative;
+}
 /*오류메시지*/
 span.bad-input{
     background: var(--main-color);
@@ -201,6 +203,7 @@ span.bad-input{
     margin-left:50px;
     opacity: 0;
     animation:fadeIn 0.5s forwards;
+    right: 15%;
 }
 @keyframes fadeIn {
     0% {opacity: 0; margin-left: 50px;}	
