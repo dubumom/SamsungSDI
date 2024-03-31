@@ -488,47 +488,36 @@ esg
   }
 
   /*prcenter*/
-  .prcenter .container {
-    position: relative;
-    width: 100%;
-  }
-  .prcenter .container h2{
-    padding-top: calc(var(--row) * 3);  
-    text-align: center;
-  }
+  .prcenter .container {width: 100%;}
+  .prcenter .container h2 {text-align: center;}
   .prcenter .container p {text-align: center;}
   .prcenter_txt div{
     position: absolute;
-    top: 190%; left: 3%;
+    top: 190%; left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    width: 30%;
+    width: 80%;
     display: none;
-  }
-  .prcenter_txt div.prcenterActive {
-    display: block;
-  }
-  .prcenter .container h3 {
-    color: var(--sub-color);
-    margin-bottom: calc(var(--row) * 2);
-    /* text-align: center; */
   }
   .prcenter ul{
     position: absolute; top: 0;
     width: 386px;
   }
-  .prcenter .slideUp{ 
+  .prcenter .slideUp { 
     display: flex;
+    gap: 30px;
     left: 0; right: 0;
-  
   }
-  .prcenter .slideDown{
+  .prcenter .slideDown {
     display: flex;
-    left: 0; right: 0;}
+    gap: 30px;
+    left: 0; right: 0;
+  }
   .prcenter li {
     width: 100%;
   }
   .prcenter li + li {
-    margin-top: 30px;
+    margin-top: none;
   }
   .prcenter img {
     width: 100%;
