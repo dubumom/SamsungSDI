@@ -489,6 +489,7 @@ esg
   }
   .business .container ul li::after {display: none;}
   .business.lineActive .container ul li:last-child::before {display: none;}
+  
   /* career */
   .career_left {
     width: 100%;
@@ -529,19 +530,23 @@ esg
     width: 80%;
     display: none;
   }
-  .prcenter ul{
-    position: absolute; bottom: 50%;
+  .prcenter ul {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    position: absolute;
+    top: auto; bottom: 0;
     width: 100%;
+    gap: 10px;
+  }
+  .prcenter li + li {
+    margin-top: none;
   }
   .prcenter .slideUp { 
-    display: flex;
-    gap: 30px;
     left: 0; right: 0;
     bottom: 0;
   }
   .prcenter .slideDown {
-    display: flex;
-    gap: 30px;
     left: 0; right: 0;
     bottom: 0;
   }
