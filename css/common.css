@@ -263,7 +263,7 @@ button{
 .main_nav > ul > li {line-height:50px;position: relative; white-space: nowrap;}
 .main_nav > ul > li > a {white-space: nowrap;}
 .main_nav > ul > li > ul{position: absolute; top: 80px; justify-content: space-between;}
-.main_nav > ul > li ul li{white-space:nowrap;}
+.main_nav > ul > li ul li{white-space:nowrap; font-size: 18px;}
 .depth_3 {display: none;}
 .depth_2 li em{font-weight: bold;}
 .main_menu .depth_3 {display: none;}
@@ -300,7 +300,7 @@ button{
     /* background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px); */
     opacity: 0;
     transition: 0.3s;
-    visibility: none;
+    visibility: hidden;
     ul{
       width: 100px;
       flex-direction: column;
@@ -318,17 +318,17 @@ button{
   }
   header nav > ul {position: relative;}
   .main_menu{
-    gap: 43px;
+    gap: 35px;
     position: absolute;
     left: 120px;
-    top: 170px;
+    top: 200px;
     /* transform: translate(-50%,-50%); */
     font-size: 18px;
   }
   .searchformToggle span{display: block;}
   .main_nav > ul > li > ul{
     position: relative;
-    top: 20px;
+    top: 0;
   }
   .depth_2 .material-symbols-outlined{
     position: absolute;
@@ -396,17 +396,17 @@ button{
     display: block;
   }
   .search-bar input[type="search"] {
-    width: 200px; /* 너비 설정 */
-    height: 30px; /* 높이 설정 */
-    border: none; /* 테두리 없음 */
-    outline: none; /* 포커스 효과 제거 */
-    padding: 5px; /* 내부 여백 설정 */
-    margin-right: 5px; /* 우측 마진 설정 */
+    width: 200px; 
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-right: 5px;
   }
   .search-bar button {
-    border: none; /* 테두리 없음 */
+    border: none; 
     background-color: none ;
-    cursor: pointer; /* 커서 스타일 변경 */
+    cursor: pointer;
   }
   
 }
@@ -420,7 +420,7 @@ button{
   left: 370px;
   z-index: 1000;
   display: flex;
-  top: 100px;
+  top: 110px;
 }
 .open .right_menu li:first-child{display: none;}
 .open .form_2{display: block;}
@@ -436,10 +436,22 @@ button{
 .open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; right: 160px;
   top: 7px;
 color: #000;}
-.open .main_menu {transform: none;}
+.open .main_menu {transform: none; align-items: start; left: 60px;}
+.open .depth_2{
+  left: 20px;
+}
+.open .depth_2 li span{
+  opacity: 1;
+}
 .open .b.searchformToggle ,
 .opne .b{display: none;}
 .open button {color: #1A5AAD; position: absolute;  background: none;}
+.open .depth_2 li em{
+  display: none;
+}
+.open .main_nav > ul > li > a{
+  font-weight: bold;
+}
 
 /* ==================== footer : 유부현 ==================== */
 
