@@ -3,7 +3,6 @@
 @import url(common.css);
 
 .sub_business_section1{
-    padding-top:calc(var(--row) * 3);
     margin-bottom: 50px;
 }
 
@@ -128,6 +127,10 @@ h2{
     right: 500px;
   }
   @media screen and (max-width:768px) {
+    .sub_business_section1{
+      padding-top:calc(var(--row) * 3);
+      margin-bottom: 48px;
+  }
     .text_content p {
       display: none; 
     }
@@ -141,7 +144,7 @@ h2{
 
   
     .content_wrapper img {
-      margin-bottom: 20px; 
+      /* margin-bottom: 20px;  */
       left: 0;
     }
   
@@ -149,5 +152,102 @@ h2{
       text-align: center; 
     }
   
+    .slidewrapper{
+      position: relative;
+      margin:2rem auto;
+      overflow:hidden;
+      height: 680px;
+      width: 400px;
+    }
+    .slide-container {
+      width: 400px;
+      height: 420px;
+    }
+    .slidewrapper .slide{
+      position:absolute;
+      width: 140px;
+      height: 400px;
+      transition:all 0.8s;  
+      /* padding-top: 20px; */
+    }
+  
+  .slide p{
+    position: absolute;
+    opacity: 0;    
+    width: 400px; 
+    padding-top: 10px;
+    line-height: 23px;
+    transition:0.1s 0s;
+    text-align: center;
+  }
+    .slide img{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .slidewrapper .slide:nth-child(1){
+      left: -400px;
+    }
+    .slidewrapper .slide:nth-child(2){
+      left: -400px;
+    }
+    .slidewrapper .slide:nth-child(3){
+      left:0;
+      width: 400px;
+      height: 400px;
+      top:20px;
+    }
+    .slidewrapper .slide:nth-child(3) p{
+      opacity: 1;  
+      transition:0.3s 0.3s;
+      padding-top: 100px;
+    }
+    .slidewrapper .slide:nth-child(4){
+      left:980px;
+    }
+    .slidewrapper .slide:nth-child(5){
+      left:1160px;
+    }
+    .slidewrapper .slide:nth-child(6){
+      left:1160px;
+    }
+  
+    .status{
+      justify-content: center;
+      margin-top: 20px;
+      width: 200px;
+      border: 1px solid #ebebeb;
+    }
+  
+    .current-idx,
+    .total-idx{
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    span{
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .controls{
+      position: absolute;
+      left: 180px;
+      top: 380px;
+    }
+  
+    .prev,
+    .next{
+      background: #fff;
+      border: none;
+    }
+    .prev{
+      left: -150px;
+      position: absolute;
 
+    }
+    .next{
+      left: 140px;
+      position: absolute;
+    }
   }
