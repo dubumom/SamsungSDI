@@ -182,4 +182,3 @@ setInterval(() => {
   let esgText = $('.esgText ul').find('li');
   esgTextCantain.append(esgText.eq(0));
 }, 3000);
-
