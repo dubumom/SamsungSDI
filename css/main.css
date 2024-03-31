@@ -85,7 +85,7 @@ banner
   
 }
 .bannerWrapper .pager a.bannerActive::after {
-animation: width 5s linear forwards;
+  animation: width 5s linear forwards;
 }
 @keyframes width {
   0% {}
@@ -445,19 +445,32 @@ esg
 
 /* ==================== main : media 우예지  ==================== */
 @media screen and (max-width: 768px) {
-  .bannerWrapper {
-    height: auto;
-  }
+
+  /* banner */
+  .bannerWrapper {position: relative;}
   .bannerWrapper .slidecontainer .slide-text {
     padding: 15px 10px;
+    width: 65%;
   }
-  .bannerWrapper .pager {
-    bottom: 10px;
+  .bannerWrapper .slidecontainer .slide-text .banner-title{
+    font-size: 1.75rem;
+    line-height: 2.1875rem;
+    margin-bottom: 30px;
   }
-  .bannerWrapper .pager > span {
-    left: 0;
-    top: calc(100% + 5px);
+  .bannerWrapper .slidecontainer .slide-text .h2{
+    font-size: 1.125rem;
+    line-height: 1.25rem;
   }
+  .bannerWrapper .pager {bottom: 30px;}
+  .bannerWrapper .pager > span {left: 0; top: calc(100% + 5px);}
+  .bannerWrapper .pager a{width: 100px;}
+  .bannerPause {display: none;}
+  @keyframes width {
+    0% {}
+    100% {width: 100px;}
+  }
+
+  /* career */
   .career_left {
     width: 100%;
     padding-left: 0;
