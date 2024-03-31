@@ -103,7 +103,7 @@ body {
 .body_xs{font-size: calc(var(--font) * 0.75);}
 
 /*  ==================== typography : media ====================  */
-@media (min-width:768px){
+@media screen and (max-width: 768px){
   .banner-title {
     font-size: 1.75rem;
     line-height: 2.1875rem;

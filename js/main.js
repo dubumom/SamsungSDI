@@ -129,6 +129,7 @@ for (let i = 1; i <= 8; i++) {
 slide('.slideDown', 'down'); 
 slide('.slideUp', 'up');
 
+
 //esg text slide
 
 let esgTextCantain = $('.esgText ul');
