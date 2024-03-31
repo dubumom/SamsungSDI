@@ -138,12 +138,3 @@ setInterval(() => {
   let esgText = $('.esgText ul').find('li');
   esgTextCantain.append(esgText.eq(0));
 }, 3000);
-
-//quickmenu
-$(document).ready(function(){
-  var currentPosition = parseInt($(".quick").css("top"));
-  $(window).scroll(function() {
-    var position = $(window).scrollTop(); 
-    $(".quick").stop().animate({"top":position+currentPosition+"px"},1000);
-  });
-});
