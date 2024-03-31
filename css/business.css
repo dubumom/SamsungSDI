@@ -28,6 +28,12 @@ h2{
     padding-bottom: 20px;
 }
 
+.content_wrapper .readmore-img{
+  width: 100px;
+  height: 20px;
+  border-radius: 0;
+  padding-top: 10px;
+}
 
 .slidewrapper{
     position: relative;
@@ -106,7 +112,8 @@ h2{
   }
   .controls{
     position: absolute;
-    left: 50%;
+    left: 49%;
+    top: 450px;
   }
 
   .prev,
