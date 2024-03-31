@@ -204,10 +204,6 @@ business
   margin-left: 641px;
   animation:after 0.5s 4s linear forwards;
 }
-/* .business.lineActive li::after{
-  height: 100%;
-} */
-
 .business .container ul a {
   display: flex;
   flex-direction: column;
@@ -223,10 +219,6 @@ business
   stroke: var(--white);
 }
 
-/* 
-MAIN
-career
-*/
 /* 
 MAIN
 career
@@ -462,6 +454,41 @@ esg
     100% {width: 100px;}
   }
 
+  /* business */
+  .business {
+    height: 800px;
+    position: relative;
+    color: var(--white);
+    overflow: hidden;
+    justify-content: space-around;
+  }
+  .business video {
+    position: absolute;
+    z-index: -1;
+    left: 0; right: 0; top: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .business .container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  .business .container h3 {
+    margin-top: 30%;
+  }
+  .business .container ul {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .business .container ul li::after {display: none;}
+  .business.lineActive .container ul li:last-child::before {display: none;}
   /* career */
   .career_left {
     width: 100%;
@@ -487,10 +514,13 @@ esg
     transform: translateY(0%);
   }
 
-  /*prcenter*/
+  /*prcenter - 하는 중*/
   .prcenter .container {width: 100%;}
   .prcenter .container h2 {text-align: center;}
   .prcenter .container p {text-align: center;}
+  .prcenter_txt {
+    height: 100%;
+  }
   .prcenter_txt div{
     position: absolute;
     top: 190%; left: 50%;
@@ -500,18 +530,20 @@ esg
     display: none;
   }
   .prcenter ul{
-    position: absolute; top: 0;
-    width: 386px;
+    position: absolute; bottom: 50%;
+    width: 100%;
   }
   .prcenter .slideUp { 
     display: flex;
     gap: 30px;
     left: 0; right: 0;
+    bottom: 0;
   }
   .prcenter .slideDown {
     display: flex;
     gap: 30px;
     left: 0; right: 0;
+    bottom: 0;
   }
   .prcenter li {
     width: 100%;
