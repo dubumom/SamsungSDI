@@ -196,55 +196,21 @@ function footerJs(){
 	footerslideWrapper.mouseleave(function(){
 	  autoNews()
 	});
-	/*
-	let footerslideWrapper = $('.ft_customer'),
-        footerslideContainer = footerslideWrapper.find('.ft_customer_ul'),
-        footerslides = footerslideContainer.find('li'),
-		footerpager = $('.inquery_pager'),
-        footercurrentIdx = 0; 
-
-	footerslideWidth = footerslideWrapper.outerWidth();
-	footerslideContainer.css({width:footerslideWrapper.outerWidth()*footerslides.length + 'px'})
-
-	footerslides.each(function(idx){
-		footerpager.append(`<a href="#">${idx}</a>`)
-	  });
-
-	function moveSlide(num){
-       let moveAmount = -num * footerslideWidth
-       footerslideContainer.animate({transform:`translateX(${moveAmount})px`});
-       footercurrentIdx = num;
-       updateSlide();
-    }
-	function updateSlide(){
-		//페이저 활성화
-		footerpager.find('a').removeClass('inquery_pager_active');
-		footerpager.find('a').eq(footercurrentIdx).addClass('inquery_pager_active');
-		//슬라이드 활성화
-		footerslides.removeClass('inquery_pager_active');
-		footerslides.eq(footercurrentIdx).addClass('inquery_pager_active');
-	}  
-    footerpager.find('a').click(function(e){
-	e.preventDefault();
-	let targetIdx = $(this).index();
-	moveSlide(targetIdx)
-	});
-	
-	let timer6;
-function autoSlide(){
-  timer6 = setInterval(function(){
-    let nextIdx = (footercurrentIdx +1) % footerslides.length;
-    moveSlide(nextIdx);
-  },3000)
-};
-
-footerslideWrapper.mouseenter(function(){
-  clearInterval(timer6);
-});
-footerslideWrapper.mouseleave(function(){
-  autoSlide();
-});
-autoSlide();
-*/
 
 }
+//quickmenu
+
+var currentPosition = parseInt($("#mapbtn").css("top"));
+$(window).scroll(function() {
+	var position = $(window).scrollTop(); 
+	$("#mapbtn").stop().animate({"top":position+currentPosition+"px"},1000);
+});
+
+
+$('#mapbtn').click(function(e) 
+{ e.preventDefault();
+	$('.quickbtn_map').fadeIn(); 
+});
+$('.mapmodal_close').click(function() {
+	$('.quickbtn_map').fadeOut();
+});
