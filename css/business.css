@@ -121,3 +121,23 @@ h2{
   .next{
     right: 500px;
   }
+  @media screen and (max-width:768px) {
+    .text_content p {
+      display: none; /* 모바일 화면에서는 p 요소 숨기기 */
+    }
+  
+    .content_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* 이미지 및 sub-title을 수직 가운데 정렬 */
+    }
+  
+    .content_wrapper img {
+      margin-bottom: 20px; /* 이미지 아래 여백 추가 */
+    }
+  
+    .text_content {
+      text-align: center; /* 텍스트 가운데 정렬 */
+    }
+  
+  }
