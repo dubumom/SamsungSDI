@@ -116,6 +116,7 @@ function slide(targetEl, direction) {
     $(this).css({top: 0});
     slide(targetEl, direction);
   });
+  
 }
 
 for (let i = 1; i <= 8; i++) {

@@ -486,16 +486,17 @@ esg
   .career_right ul {
     transform: translateY(0%);
   }
-  /*  */
-  .prcenter {
-    height: 100vh;
-    overflow: hidden;
-    background: #F2F2F2;
+
+  /*prcenter*/
+  .prcenter .container {
+    position: relative;
+    width: 100%;
   }
-  .prcenter .container {position: relative;}
   .prcenter .container h2{
-    padding-top: calc(var(--row) * 3);
+    padding-top: calc(var(--row) * 3);  
+    text-align: center;
   }
+  .prcenter .container p {text-align: center;}
   .prcenter_txt div{
     position: absolute;
     top: 190%; left: 3%;
@@ -509,6 +510,7 @@ esg
   .prcenter .container h3 {
     color: var(--sub-color);
     margin-bottom: calc(var(--row) * 2);
+    /* text-align: center; */
   }
   .prcenter ul{
     position: absolute; top: 0;
@@ -516,12 +518,12 @@ esg
   }
   .prcenter .slideUp{ 
     display: flex;
-    right: 0;
+    left: 0; right: 0;
   
   }
   .prcenter .slideDown{
     display: flex;
-    right: 0; transform: translateY(-280px);}
+    left: 0; right: 0;}
   .prcenter li {
     width: 100%;
   }
