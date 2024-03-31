@@ -280,7 +280,7 @@ button{
       width: 100px;
       flex-direction: column;
       li{
-          color: #1C5CB0;
+          color: #000;
           ul{
             display: none;
           }
@@ -341,6 +341,10 @@ button{
     right: 40px;
     width: 140px;
   }
+  .main_menu .depth_2.active > a {
+    color: #ccc;
+  }
+  
 }
 .open nav{
   opacity: 1;

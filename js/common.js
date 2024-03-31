@@ -96,6 +96,7 @@ $(window).resize(function(){
 $('header').on('click','.searchformToggle', function(){
 	console.log('검색');
 	$('.right_menu').addClass('search');
+	$('.search_box').css({'right':'50px','opacity':'1'});
  });
 
  
