@@ -123,7 +123,7 @@ textarea{
 textarea:focus{
     border: none;
     outline: none;
-    border: 1px solid var( --medium-gray) ;
+    border: 1px solid var( --main-color) ;
 }
 input{
     border: none;

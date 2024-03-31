@@ -456,6 +456,7 @@ color: #000;}
 }
 /*공지사항*/
 .footer_top{
+  gap: 60px;
   padding-top: 50px;
   padding-bottom: 50px;
   h2{
@@ -486,16 +487,15 @@ color: #000;}
 .ft_contents{
   display: flex;
   width: 100%;
-  gap: 74px;
-}
-/*공지사항*/
-.ft_customer{
-  padding-top: 50px;
-  overflow: hidden;
-}
-.ft_contents {
   width: 640px;
   padding-top: 30px;
+}
+/*공지사항*/
+
+.ft_customer{
+  padding: 50px 20px 0 20px;
+  /* padding-top: 50px; */
+  overflow: hidden;
 }
 .ft_contents .batteryimg{
   width: 189px;
@@ -521,7 +521,10 @@ color: #000;}
   border-radius: 50%;
 }
 .inquery_pager li.inquery_pager_active {background: var(--main-color);}
-.mm_menu > ul > li:hover {border-bottom: solid #fff;}
+.mm_menu > ul > li{
+  border-bottom: 2px solid transparent;
+}
+.mm_menu > ul > li:hover {border-bottom: 2px solid #fff;}
 /*정보구조설계*/
 .footer_bottom{
   color: #fff;
