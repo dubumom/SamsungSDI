@@ -433,7 +433,7 @@ button{
   background: #ebebeb;
 }
 .open .form_2 span {display: block; background: none;}
-.open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; right: 160px;
+.open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; right: 168px;
   top: 7px;
 color: #000;}
 .open .main_menu {transform: none; align-items: start; left: 60px;}

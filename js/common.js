@@ -82,7 +82,7 @@ $(".depth_2 > li > a").click(function (event) {
 		}
   });
 
-  $(".main_menu > li").on("click", function() {
+  $(".main_menu > li > ul > li").on("click", function() {
 	if($(window).width() < 768){		
 		let submenu = $(this).find(".depth_3");
 		console.log(submenu);
