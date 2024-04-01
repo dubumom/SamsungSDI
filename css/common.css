@@ -278,9 +278,6 @@ button{
   align-items: center;
   font-size: 18px;
 }
-.depth_3 a{
-  left: 20px;
-}
 
 /*  ==================== header : media ==================== */
 @media (min-width:768px){
@@ -458,6 +455,10 @@ color: #000;}
 }
 .open .main_nav > ul > li > a{
   font-weight: bold;
+}
+.open .depth_3 {
+  display: block;
+  padding-left: 40px;
 }
 
 /* ==================== footer : 유부현 ==================== */
