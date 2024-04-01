@@ -128,7 +128,7 @@ h2{
   }
   @media screen and (max-width:768px) {
     .sub_business_section1{
-      padding-top:calc(var(--row) * 3);
+      padding-top:calc(var(--row) * 1);
       margin-bottom: 48px;
   }
     .text_content p {
@@ -144,8 +144,7 @@ h2{
 
   
     .content_wrapper img {
-      /* margin-bottom: 20px;  */
-      left: 0;
+      margin-bottom: 20px; 
     }
   
     .text_content {
