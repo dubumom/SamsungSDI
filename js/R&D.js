@@ -99,8 +99,10 @@ function scrollToSection(num) {
 
 function moveHighlight(num) {
 	const newTop = $tabMenu.eq(num).position().top;
+	const newWidth = $tabMenu.eq(num).find('a').width() + 50;
 
 	$highLight.css({
 		 'top': newTop + 'px',
+		 'width': newWidth + 'px',
 	});
 }
