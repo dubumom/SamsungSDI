@@ -84,10 +84,6 @@ banner
   position: absolute; left: calc(100% + 15px); top: -10px;
 }
 .bannerPlay {display: none;}
-.bannerWrapper .pager a.bannerActive{
-  /* background: var(--sub-color); */
-  
-}
 .bannerWrapper .pager a.bannerActive::after {
   animation: width 5s linear forwards;
 }
@@ -293,21 +289,13 @@ career
   gap: 30px;
   color: var(--white);
 }
-.career_right .detail {
-  width: 70%;
-}
+.career_right .detail {width: 70%;}
 .career .sellphone > img {
   width: 50%;
   object-fit: cover;
 }
-
-.career_right li em {
-  font-weight: 600;
-}
-.career_right li span {
-  margin-left: 40px;
-
-}
+.career_right li em {font-weight: 600;}
+.career_right li span {margin-left: 40px;}
 .career_right .career_Recruitment {margin-left: 90px;}
 .career_right .pr_location {margin-left: 105px;}
 .career_right li {
@@ -326,15 +314,9 @@ career
   height: 1px;
   background: var(--light-gray);
 }
-.career_right ul {
-  transform: translateY(20%);
-}
-.sellphone .pr_imges {
-  width: 190px;
-}
-.animate__animated {
-  animation-duration: 0.8s;
-}
+.career_right ul {transform: translateY(20%);}
+.sellphone .pr_imges {width: 190px;}
+.animate__animated {animation-duration: 0.8s;}
 .pr_imges> img {
   width: 100%;
   object-fit: cover;
@@ -354,9 +336,14 @@ prcenter
   overflow: hidden;
   background: #F2F2F2;
 }
-.prcenter .container {position: relative;}
+.prcenter .container {
+  position: relative;
+}
 .prcenter .container h2{
   padding-top: calc(var(--row) * 3);
+}
+.prcenter_txt {
+  width: 100%; height: 100%;
 }
 .prcenter_txt div{
   position: absolute;
@@ -372,12 +359,22 @@ prcenter
   color: var(--sub-color);
   margin-bottom: calc(var(--row) * 2);
 }
+.autoSlide {
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  top: 0; left: 50%;
+  bottom: 0;
+}
 .prcenter ul{
-  position: absolute; top: 0;
+  position: absolute;
+  top: 0;
   width: 386px;
 }
-.prcenter .slideUp{right: 416px;}
-.prcenter .slideDown{right: 0; transform: translateY(-280px);}
+.prcenter .slideUp {left: 0;}
+.prcenter .slideDown {
+  left: 416px;
+  transform: translateY(-280px);}
 .prcenter li {
   width: 100%;
 }
@@ -395,11 +392,12 @@ esg
 */
 .esg {
   width: 100%;
-  height: 100vh;
+  height: 900px;
   background-image: url(../images/main_esg_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 .esg .container {
   padding-top: calc(var(--row) * 3);
@@ -434,7 +432,7 @@ esg
 .esg .esgText li:first-child {top: 200px; opacity: 0.2;}
 .esg .esgText li:nth-child(2) {top: 300px; opacity: 0.5;}
 .esg .esgText li:nth-child(3) {top: 400px; opacity: 0.7;}
-.esg .esgText li:nth-child(4) {top: 500px; opacity: 1; font-size: 40px; line-height: 55px;}
+.esg .esgText li:nth-child(4) {top: 500px; opacity: 1; font-size: 35px; line-height: 55px;}
 .esg .esgText li:nth-child(5) {top: 650px; opacity: 0.7;}
 .esg .esgText li:nth-child(6) {top: 750px; opacity: 0.2;}
 .esg .esgText li:last-child {top: 850px; opacity: 0;}
@@ -558,7 +556,7 @@ esg
   .prcenter .container h2 {text-align: center;}
   .prcenter .container p {text-align: center;}
   .prcenter_txt {
-    height: 100%;
+    height: 30%;
   }
   .prcenter_txt div{
     position: absolute;
@@ -579,16 +577,17 @@ esg
   }
   .prcenter .autoSlide {
     width: 1390px;
+    left: 0;
   }
   .prcenter .slideUp { 
     left: 0; right: 0;
-    bottom:270px;
+    bottom:50px;
     transform: translateX(-220px);
 
   }
   .prcenter .slideDown {
     left: 0; right: 0;
-    bottom: 50px;
+    bottom: 250px;
     transform: translateX(-440px);
   }
   .prcenter li {
