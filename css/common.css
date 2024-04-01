@@ -504,18 +504,26 @@ color: #000;}
 }
 .footer_navi_p{color: var(--medium-grays);}
 .footer_navi div{padding-bottom: 20px;}
+
+/*고객문의*/
 .ft_contents{
   display: flex;
   width: 100%;
-  width: 640px;
+  /* width: 640px; */
   padding-top: 30px;
+  border: 1px solid red;
 }
-/*공지사항*/
+.ft_slide{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .ft_customer{
-  padding: 50px 20px 0 20px;
-  /* padding-top: 50px; */
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .ft_contents .batteryimg{
   width: 189px;
@@ -526,7 +534,7 @@ color: #000;}
   position: absolute;
   left: -9999px;
 }
-/*고객문의*/
+
 .inquery_pager {
   position: absolute; left: 110px; top: 5px;
   height: 20px;
@@ -540,7 +548,11 @@ color: #000;}
   background: var(--light-gray);
   border-radius: 50%;
 }
+.inquery_pager > ul > li > a{
+  width: 100%;
+}
 .inquery_pager li.inquery_pager_active {background: var(--main-color);}
+
 .mm_menu > ul > li{
   border-bottom: 2px solid transparent;
 }
@@ -665,6 +677,10 @@ input[type="checkbox"]:checked {background: var(--main-color);}
   right: 30px;
   bottom: 405px;
   z-index: 9999;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
 }
 .quickbtn_map{
   display:none;
