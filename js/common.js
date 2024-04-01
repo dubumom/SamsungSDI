@@ -220,7 +220,7 @@ $(window).scroll(function() {
 $('#mapbtn').click(function(e) 
 { e.preventDefault();
 	$('.quickbtn_map').fadeIn(); 
-});
+});          
 $('.mapmodal_close').click(function() {
 	$('.quickbtn_map').fadeOut();
 });
