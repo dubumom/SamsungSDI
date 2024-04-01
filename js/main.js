@@ -106,50 +106,13 @@ prList.click(function(e){
 });
 
 //prcenter
-/*
 function slide(targetEl, direction) {
+  console.log(direction);
   let target = $(targetEl);
   let slideHeight = target.find('li').eq(0).height() + 30;
 
-  target.animate({top: direction === 'up' ? `-${slideHeight}px` : `${slideHeight}px`}, 6000, 'linear', function() {
-    if (direction === 'up') {      
-			$(this).find('li').eq(0).appendTo(this);
-    } else {      
-			$(this).find('li').last().prependTo(this);
-    }
-    $(this).css({top: 0});
-    slide(targetEl, direction);
-  });
-
-}
-
-for (let i = 1; i <= 8; i++) {
-  $('.pr_img' + i).click(function(e) {
-      e.preventDefault();
-      $('.prcenter_txt').find('div').removeClass('prcenterActive');
-      $('.txt' + i).addClass('prcenterActive');
-  });
-}
-
-slide('.slideDown', 'down'); 
-slide('.slideUp', 'up');
-*/
-function slide(targetEl, direction) {
-  let target = $(targetEl);
-  let slideWidth = target.find('li').eq(0).width() + 30;
-
-  if ($(window).width() <= 768) {
-    target.animate({left: direction === 'up' ? `-${slideWidth}px` : `${slideWidth}px`}, 6000, 'linear', function() {
-      if (direction === 'up') {      
-        $(this).find('li').eq(0).appendTo(this);
-      } else {      
-        $(this).find('li').last().prependTo(this);
-      }
-      $(this).css({left: 0});
-      slide(targetEl, direction);
-    });
-  } else {
-    target.animate({top: direction === 'up' ? `-${slideWidth}px` : `${slideWidth}px`}, 6000, 'linear', function() {
+  if(direction == 'up' || direction =='down'){
+    target.stop().animate({top: direction === 'up' ? `-${slideHeight}px` : `${slideHeight}px`}, 6000, 'linear', function() {
       if (direction === 'up') {      
         $(this).find('li').eq(0).appendTo(this);
       } else {      
@@ -158,18 +121,20 @@ function slide(targetEl, direction) {
       $(this).css({top: 0});
       slide(targetEl, direction);
     });
+  } else if(direction == 'left' || direction =='right'){
+    target.stop().animate({left: direction === 'left' ? `-${slideHeight}px` : `${slideHeight}px`}, 6000, 'linear', function() {
+      if (direction === 'left') {      
+        $(this).find('li').eq(0).appendTo(this);
+      } else {      
+        $(this).find('li').last().prependTo(this);
+      }
+      $(this).css({left: 0});
+      slide(targetEl, direction);
+    });
   }
 }
 
-for (let i = 1; i <= 8; i++) {
-  $('.pr_img' + i).click(function(e) {
-      e.preventDefault();
-      $('.prcenter_txt').find('div').removeClass('prcenterActive');
-      $('.txt' + i).addClass('prcenterActive');
-  });
-}
-
-$(window).on('load resize', function() {
+$(window).on('resize', function() {
   if ($(window).width() <= 768) {
     slide('.slideDown', 'right'); 
     slide('.slideUp', 'left'); 
@@ -178,6 +143,15 @@ $(window).on('load resize', function() {
     slide('.slideUp', 'up'); 
   }
 });
+$(window).trigger('resize');
+
+for (let i = 1; i <= 8; i++) {
+  $('.pr_img' + i).click(function(e) {
+      e.preventDefault();
+      $('.prcenter_txt').find('div').removeClass('prcenterActive');
+      $('.txt' + i).addClass('prcenterActive');
+  });
+}
 
 //esg text slide
 

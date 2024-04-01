@@ -28,6 +28,9 @@ banner
   text-align: center;
   position: relative;
 }
+.bannerWrapper .slidecontainer li.bannerActive .slide-text {
+  opacity: 1;
+}
 .bannerWrapper img {
   width: 100%;
   height: 100%;
@@ -41,8 +44,9 @@ banner
   transform: translate(-50%, -50%);
   color: var(--white);
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s 0.5s;
 }
-
 .bannerWrapper .pager{
   position: absolute;
   left: 50%; transform: translateX(-50%);
@@ -492,7 +496,6 @@ esg
   
   /* career */
   .career.container {
-    width: 100%;
     position: relative;
     overflow: hidden;
   }
@@ -527,7 +530,7 @@ esg
   .career_right li {position: static;}
   .career_right .sellphone {
     margin-top: none;
-    width: 90%;
+    width: 87%;
     height: 79%;
     object-fit: cover;
     margin-left: auto;
@@ -580,6 +583,8 @@ esg
   .prcenter .slideUp { 
     left: 0; right: 0;
     bottom:270px;
+    transform: translateX(-220px);
+
   }
   .prcenter .slideDown {
     left: 0; right: 0;
