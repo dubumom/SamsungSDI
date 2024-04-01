@@ -36,7 +36,7 @@ function moveHighlight(num) {
 const $tabMenu = $('#sub_header ul li');
 const $tabContent = $('.sec_content > section');
 const $highLight = $('.sHeaderActive');
-
+/*
 $tabMenu.each(function(idx) {
 	$(this).click(function(e) {
 		e.preventDefault();
@@ -66,5 +66,41 @@ function moveHighlight(num) {
 	const newTop = $tabMenu.eq(num).position().top;
 	$highLight.css({
 		'top': newTop + 'px',
+	});
+}
+*/
+
+$tabMenu.click(function(e){
+	e.preventDefault();
+	scrollToSection($(this).index());
+		 //moveHighlight($(this).index());
+})
+
+
+$(window).scroll(function() {
+	const scrollTop = $(window).scrollTop();
+	$tabContent.each(function(idx) {
+		 const sectionTop = $(this).offset().top;
+		 //const sectionBottom = sectionTop + $(this).outerHeight();
+		 if (scrollTop >= sectionTop - 5) {
+				console.log(scrollTop, sectionTop);
+				console.log(idx);
+				moveHighlight(idx);
+		 }
+	});
+});
+
+function scrollToSection(num) {
+	const targetSection = $tabContent.eq(num);
+	const targetOST = targetSection.offset().top;
+	console.log(targetOST);
+	$('html, body').animate({scrollTop: targetOST}, 'swing');
+}
+
+function moveHighlight(num) {
+	const newTop = $tabMenu.eq(num).position().top;
+
+	$highLight.css({
+		 'top': newTop + 'px',
 	});
 }
