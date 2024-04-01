@@ -9,15 +9,22 @@ main header {
   position: sticky;
   left: 0;
   top: 120px;
-  height: 215px;
+  height: 260px;
   background: none;
   color: var(--medium-gray);
   box-shadow: none;
   z-index: 1;
 }
+#sub_header {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  gap: 20px;
+}
+#sub_header li {padding: 10px 5px;}
 #sub_header .sHeaderActive {
   position: absolute;
-	width: 239px;
+	width: 0;
   height: 60px;
 	top: 0px;
 	left:0;
@@ -25,18 +32,17 @@ main header {
 	background: var(--sub-color);
 	transition:0.4s;
   z-index: -1;
-  border-radius: 25px;
-  color: var(--white);
+  border-radius: 50px;
 }
-#sub_header li +li {
+/* #sub_header li +li {
   margin-top: 20px;
-}
+} */
 #sub_header li a {padding: 10px 20px;}
 .sec_content section {
   text-align: center;
   justify-content: space-between;
   gap: 100px;
-  margin: calc(var(--row) * 2) 0;
+  margin: calc(var(--row) * 4) 0;
 }
 .sec_content section div {width: 400px;}
 .sec_content section div h3 {margin-bottom: var(--row);}
