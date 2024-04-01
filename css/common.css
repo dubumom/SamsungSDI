@@ -281,6 +281,9 @@ button{
   align-items: center;
   font-size: 18px;
 }
+.depth_3 li a{
+  font-size: 16px;
+}
 
 /*  ==================== header : media ==================== */
 @media (min-width:768px){
