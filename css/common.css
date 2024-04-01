@@ -634,12 +634,27 @@ color: #000;}
   }
 .footer_top{
   flex-direction:column;
-  
 }
 .footer_3th{
   display: block;
  }
-
+ .footer-last{
+  flex-direction:column;
+  gap: 30px;
+ }
+.ft_family{
+  order: 1;
+}
+.samsungmini{
+  display: none;
+}
+.mm_menu{
+  order: 2;
+  white-space:nowrap;
+}
+.samsungwhitelogo{
+  order: 3;
+}
 }
 /* ==================== modal ====================  */
 .modal {
