@@ -160,11 +160,6 @@ function footerJs(){
   
 	let footerpagerbtn = $('.inquery_pager > ul > li');
 	footerpagerbtn.click(function(e){
-<<<<<<< HEAD
-		console.log($(this));
-=======
-
->>>>>>> member-im
 	  e.preventDefault();
 	  fadeSlide($(this).index());
 	});
