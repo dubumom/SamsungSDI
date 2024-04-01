@@ -64,7 +64,7 @@ if($(window).width() > 768){
 
 		if ($(this).hasClass('active')) {
 			$(this).find(".material-symbols-outlined").text("arrow_drop_up");
-		} else {
+		}else {
 			$(this).find(".material-symbols-outlined").text("arrow_drop_down");
 		}
 
