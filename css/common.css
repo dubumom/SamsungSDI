@@ -623,7 +623,6 @@ color: #000;}
   color: aliceblue;
   padding: 5px;
 }
-.footer_navi {padding: 30px;}
 .customer_li .batteryimg {width: 189px;}
 .footer_bottom{
   background: #FFFFFF;
@@ -635,21 +634,40 @@ color: #000;}
 
 /* ==================== footer : media 유부현  ==================== */
 @media screen and (max-width:768px){
-  .footer_top.container{
-  width: 100%;
-}
+  /* 맵버튼 사라짐 */
  #mapbtn{
     display: none;
   }
+  /* 공지사항 + 고객문의 */
 .footer_top{
   flex-direction:column;
+  padding: auto;
+  gap: 50px;
+  text-align: center;
 }
+/* 공지사항 */
+.footer_data,
+.ft_navi_h,
+.ft_navi_p{
+  display: none;
+}
+.notice_1st{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.notice {
+  padding-top: 0px;
+}
+.footer_navi {padding: 0px;}
+/* 푸터 마지막 섹션 */
 .footer_3th{
   display: block;
  }
  .footer-last{
   flex-direction:column;
   gap: 30px;
+  text-align: center;
  }
 .ft_family{
   order: 1;
