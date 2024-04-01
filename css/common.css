@@ -727,6 +727,8 @@ h2{
 }
 .mm_menu ul{
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .mm_menu{
   order: 2;
