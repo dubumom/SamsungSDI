@@ -22,10 +22,11 @@ main header {
 	top: 0px;
 	left:0;
 	bottom:0;
-	background:#000;
-	transition:0.4s cubic-bezier(0.65, 0, 0.35, 1);
+	background: var(--sub-color);
+	transition:0.4s;
   z-index: -1;
   border-radius: 25px;
+  color: var(--white);
 }
 #sub_header li +li {
   margin-top: 20px;

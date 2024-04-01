@@ -59,7 +59,7 @@ $(window).scroll(function() {
 function scrollToSection(num) {
 	const targetSection = $tabContent.eq(num);
 	const targetOST = targetSection.offset().top;
-	$('html, body').animate({scrollTop: targetOST}, 'slow');
+	$('html, body').stop().animate({scrollTop: targetOST}, 'slow');
 }
 
 function moveHighlight(num) {
