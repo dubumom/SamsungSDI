@@ -17,7 +17,7 @@
   font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 */
 /* 
-   ==================== variants ==================== 
+  ==================== variants ==================== 
 */
 :root {
   --font:1em;
@@ -34,7 +34,7 @@
 }
 
 /* 
-   ==================== layout ==================== 
+  ==================== layout ==================== 
 */
 
 .container {  
@@ -174,23 +174,6 @@ padding-right: 120px;}
   display: flex;
 }
 
-/* label{
-  position: absolute;
-  opacity: 0;
-  left: 0;
-  top: 0;
-  visibility:hidden;
-  transition:0.4s;
-}
-.form_2:focus-within label{
-  opacity:1;
-  visibility:visible;
-  top:-20px;
-  color:#000;
-}
-.form_2:focus-within input::placeholder{
-  opacity:0;
-} */
 button{
   background: #fff;
   border:none;
@@ -205,20 +188,15 @@ button{
   border:none;
   border-radius: 10px;
 }
-#search{
-
-}
 .search-bar {
   position: absolute;
   top: 23px;
   right: 300px;
-  background-color: none  ;
+  background-color: none;
   border: none;
   padding: 5px 10px;
 }
-.search-bar.open {
-  display: block;
-}
+.search-bar.open {display: block;}
 .search-bar input[type="search"] {
   width: 200px;
   height: 30px;
@@ -230,13 +208,9 @@ button{
 }
 .search-bar button {
   border: none; 
-  background-color: none ;
+  background-color: none;
   cursor: pointer;
 }
-/* .right_menu span:last-of-type{
-  position: absolute;
-  right: 310px;
-} */
 /* 햄버거 버튼 */
 .mobileToggle {
   position: fixed;
@@ -449,14 +423,6 @@ button{
 }
 .open .right_menu li:first-child{display: none;}
 .open .form_2{display: flex; position: absolute; right: 120px;} 
-/* .open #search{
-  position: absolute;
-  right: 140px;
-  width: 200px;
-  height: 40px;
-  opacity: 1;
-  background: #ebebeb;
-} */
 .open .form_2 span {display: block; background: none;}
 .open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; left: 155px; top: 1px;
 color: #000;}
@@ -662,84 +628,84 @@ color: #000;}
 /* ==================== footer : media 유부현  ==================== */
 @media screen and (max-width:768px){
   /* 맵버튼 사라짐 */
- #mapbtn{
+  #mapbtn{
     display: none;
   }
   /* 공지사항 + 고객문의 */
-.footer_top{
-  flex-direction:column;
-  gap: 50px;
-  text-align: center;
-}
-.notice_1st,
-.notice_2st {
-width: 100%;
-h2{
-  font-size: 1.75rem;
-    line-height: 2.1875rem;
-}
-}
+  .footer_top{
+    flex-direction:column;
+    gap: 50px;
+    text-align: center;
+  }
+  .notice_1st,
+  .notice_2st {
+  width: 100%;
+  h2{
+    font-size: 1.75rem;
+      line-height: 2.1875rem;
+  }
+  }
 
-/* 공지사항 */
-.footer_data,
-.ft_navi_h,
-.ft_navi_p{
-  display: none;
-}
-.notice_1st{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 50px;
-  border: 1px solid var(--light-black);
-  border-color: transparent transparent var(--light-black) transparent;
-}
+  /* 공지사항 */
+  .footer_data,
+  .ft_navi_h,
+  .ft_navi_p{
+    display: none;
+  }
+  .notice_1st{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+    border: 1px solid var(--light-black);
+    border-color: transparent transparent var(--light-black) transparent;
+  }
 
-.notice {
-  padding-top: 0px;
-}
-.footer_navi {padding: 0px;}
-/* 고객문의 */
-.main_readmore{
-  display: block;
-}
-.notice_2st{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-.inquery_pager{
-  display: none;
-}
-.ft_customer{
-  display: none;
-}
-/* 푸터 마지막 섹션 */
-.footer_3th{
-  display: block;
- }
- .footer-last{
-  flex-direction:column;
-  gap: 30px;
-  text-align: center;
- }
-.ft_family{
-  order: 1;
-}
-.samsungmini{
-  display: none;
-}
-.mm_menu ul{
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.mm_menu{
-  order: 2;
-}
-.samsungwhitelogo{
-  order: 3;
-}
+  .notice {
+    padding-top: 0px;
+  }
+  .footer_navi {padding: 0px;}
+  /* 고객문의 */
+  .main_readmore{
+    display: block;
+  }
+  .notice_2st{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .inquery_pager{
+    display: none;
+  }
+  .ft_customer{
+    display: none;
+  }
+  /* 푸터 마지막 섹션 */
+  .footer_3th{
+    display: block;
+  }
+  .footer-last{
+    flex-direction:column;
+    gap: 30px;
+    text-align: center;
+  }
+  .ft_family{
+    order: 1;
+  }
+  .samsungmini{
+    display: none;
+  }
+  .mm_menu ul{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .mm_menu{
+    order: 2;
+  }
+  .samsungwhitelogo{
+    order: 3;
+  }
 }
 /* ==================== modal ====================  */
 .modal {
