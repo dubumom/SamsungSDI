@@ -129,7 +129,6 @@ h2{
   }
   @media screen and (max-width:768px) {
     .sub_business_section1{
-      padding-top:calc(var(--row) * 3);
       margin-bottom: 48px;
   }
     .text_content p {
@@ -230,6 +229,20 @@ h2{
     span{
       font-weight: bold;
       font-size: 22px;
+      color: #fff;
+      position: absolute;
+      left: 40px;
+      top: 12px;
+    }
+
+    .border {
+      width: 130px;
+      height: 53px;
+      border-radius: 34.5px;
+      border: 2px solid #11359A;
+      background-color: #11359A;
+      position: absolute;
+      right: -90px;
     }
     .controls{
       position: absolute;
