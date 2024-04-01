@@ -508,9 +508,7 @@ color: #000;}
   }
 }
 /* 공지사항 */
-.notice {
-  padding-top: 20px;
-}
+
 .notice_1st,
 .notice_2st {width: 640px;}
 .footer_data span{
@@ -536,9 +534,9 @@ color: #000;}
 .ft_contents{
   display: flex;
   width: 100%;
-  /* width: 640px; */
-  padding-top: 30px;
   border: 1px solid red;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .ft_slide{
   position: absolute;
