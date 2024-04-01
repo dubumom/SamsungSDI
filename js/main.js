@@ -10,7 +10,7 @@ slideContainer.css({width:bannerWrapper.outerWidth()*slides.length + 'px'})
 
 function moveSlide(num){
   let moveAmount = -num * slideWidth;  
-  slideContainer.animate({transform:`translateX(${moveAmount})px`});
+  slideContainer.stop().animate({transform:`translateX(${moveAmount})px`});
   currentIdx = num;
   updateSlide();
 }
