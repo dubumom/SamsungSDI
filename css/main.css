@@ -491,18 +491,40 @@ esg
   .business.lineActive .container ul li:last-child::before {display: none;}
   
   /* career */
-  .career_left {
+  .career .container {
     width: 100%;
+    position: relative;
+  }
+  .career::after{
+    content: '';
+    display: block;
+    clear: both;
+  } 
+  .career .career_left {
+    width: 30%;
     padding-left: 0;
     text-align: center;
+    float: right;
+    border: 1px solid red;
+    box-sizing: border-box;
   }
-  .career_right {
-    width: 100%;
-    padding-top: calc(var(--row) * 2);
-  }
-  .career_right .sellphone {
-    margin-top: calc(var(--row) * 2);
+  .career .career_left .pr_list {display: none;}
+  .career .career_right {
     width: 70%;
+    height: 100%;
+    padding-top: none;
+    float: left;
+    border: 1px solid red;
+    box-sizing: border-box;
+    position: static;
+  }
+  .career .career_right ul {display: none;}
+  .career_right li {position: static;}
+  .career_right .sellphone {
+    margin-top: none;
+    width: 100%;
+    height: 79%;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
   }
@@ -510,6 +532,12 @@ esg
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .career .career_right .readmore{
+    position: absolute;
+    left: 0px; top: 0px;
+    right: none; bottom: none;
+    width: 100%;
   }
   .career_right ul {
     transform: translateY(0%);
