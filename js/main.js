@@ -5,11 +5,11 @@ let bannerWrapper = $('.bannerWrapper'),
     slides = slideContainer.find('li'),
     pager = bannerWrapper.find('.pager'),
     currentIdx = 0;
-slideWidth = bannerWrapper.outerWidth();
+let slideWidth = bannerWrapper.outerWidth();
 slideContainer.css({width:bannerWrapper.outerWidth()*slides.length + 'px'})
 
 function moveSlide(num){
-  let moveAmount = -num * slideWidth
+  let moveAmount = -num * slideWidth;  
   slideContainer.animate({transform:`translateX(${moveAmount})px`});
   currentIdx = num;
   updateSlide();
@@ -28,6 +28,12 @@ pager.find('a').click(function(e){
   e.preventDefault();
   let targetIdx = $(this).index();
   moveSlide(targetIdx)
+});
+
+$(window).resize(function(){
+  slideWidth = bannerWrapper.outerWidth();
+  slideContainer.css({width:slideWidth*slides.length + 'px'});
+  moveSlide(currentIdx);
 });
 
 let timer = undefined;
