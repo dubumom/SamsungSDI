@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* member-im */
-@import url(common.css);
+/* @import url(common.css); */
 
 .sub_business_section1{
   padding-top:calc(var(--row) * 3);
