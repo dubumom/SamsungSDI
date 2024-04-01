@@ -36,29 +36,34 @@ header.mouseleave(function(){
 	}
 });
 
-$(".main_menu .depth_2 > li").on("click", function() {
+$(".main_menu .depth_2 > li").on("click", function(e) {
+	e.stopPropagation();
+	console.log((this))
+
 if($(window).width() > 768){
 		let submenu = $(this).find(".depth_3");
-		console.log(submenu);
+
 		let submenuHeight = submenu.outerHeight();
 		if (submenu.length) { 
 			submenu.slideToggle();
+			$(this).siblings().find('> ul').slideUp();
+		}
+		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
+	} else{
+
+		let submenu = $(this).find(".depth_3");
+
+		let submenuHeight = submenu.outerHeight();
+		if (submenu.length > 0) { 
+			submenu.slideToggle();
+			$(this).siblings().find('> ul').slideUp();
 		}
 		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 	}
+
 });
 
-$(".main_menu .depth_2 > li").on("click", function() {
-	if($(window).width() < 768){
-			let submenu = $(this).find(".depth_3");
-			console.log(submenu);
-			let submenuHeight = submenu.outerHeight();
-			if (submenu.length) { 
-				submenu.slideToggle();
-			}
-			header.stop().animate({height:`${headerHeight + submenuHeight}px`});
-		}
-	});
+
 
 $(".depth_2 > li > a").click(function (event) {
 	event.preventDefault();
@@ -71,29 +76,20 @@ $(".depth_2 > li > a").click(function (event) {
 });
 
 	$(".main_menu > li").on("click", function() {
+
 		if($(window).width() < 768){		
+
 			let submenu = $(this).find(".depth_2");
-			console.log(submenu);
+
 			let submenuHeight = submenu.outerHeight();
-			if (submenu.length) { 
+			if (submenu.length >0) { 
 					submenu.slideToggle();
+					$(this).siblings().find('> ul').slideUp();
 			}
 
 		}
   });
 
-  $(".main_menu > li > ul > li").on("click", function() {
-	if($(window).width() < 768){		
-		let submenu = $(this).find(".depth_3");
-		console.log(submenu);
-		let submenuHeight = submenu.outerHeight();
-		if (submenu.length) { 
-				submenu.slideToggle();
-		}
-
-	}
-});
- 
  $(".depth_2").click(function (event) {
 	if($(window).width() < 768){	
 	 event.preventDefault();
@@ -129,29 +125,23 @@ $(window).resize(function(){
 
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
-	console.log('검색');
+
 	$('.right_menu').addClass('search');
  });
 
  
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
-let mainMenu = $('.main_menu');
+let mainMenu = $('.main_menu > li');
 
 $(document).on('click','.mobileToggle',function(){
 	if($(window).width() < 768){
-$('header').toggleClass("open");
-$('.search-bar').toggleClass("open");
+	$('header').toggleClass("open");
+	$('.search-bar').toggleClass("open");
 }
 });
 
-mainMenu.click(function(){
-if($(window).width() <= 600){
-	$(this).find('ul').slideToggle();
-	$(this).siblings().find('ul').slideUp();
-}
 
-})
 
 
 //푸터 제이쿼리 작동 함수
@@ -170,7 +160,11 @@ function footerJs(){
   
 	let footerpagerbtn = $('.inquery_pager > ul > li');
 	footerpagerbtn.click(function(e){
+<<<<<<< HEAD
 		console.log($(this));
+=======
+
+>>>>>>> member-im
 	  e.preventDefault();
 	  fadeSlide($(this).index());
 	});
