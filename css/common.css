@@ -461,8 +461,10 @@ color: #000;}
 }
 
 /* ==================== footer : 유부현 ==================== */
-
-.slide_readmore {display: block;}
+/* readmore img */
+.slide_readmore {
+  display: block;
+}
 .slide_readmore span {
   margin-right: 70px;
   font-weight: bold;
@@ -473,7 +475,7 @@ color: #000;}
   width: 150px;
   object-fit: cover;
 }
-/*공지사항*/
+/*공지사항 + 고객문의*/
 .footer_top{
   flex-direction: row;
   gap: 60px;
@@ -483,7 +485,10 @@ color: #000;}
     font-weight: bold;
   }
 }
-.notice {padding-top: 20px;}
+/* 공지사항 */
+.notice {
+  padding-top: 20px;
+}
 .notice_1st,
 .notice_2st {width: 640px;}
 .footer_data span{
@@ -502,39 +507,38 @@ color: #000;}
   color: var(--main-color);
   font-weight: bold;
 }
-.footer_navi_p{color: var(--medium-grays);}
 .footer_navi div{padding-bottom: 20px;}
+.footer_navi_p{color: var(--medium-grays);}
 
 /*고객문의*/
 .ft_contents{
   display: flex;
   width: 100%;
   /* width: 640px; */
-  padding-top: 30px;
-  border: 1px solid red;
+  padding-top: 60px;
+}
+.ft_contents .batteryimg{
+  width: 189px;
+  height: 89px;
 }
 .ft_slide{
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .ft_customer{
   overflow: hidden;
   position: relative;
   width: 100%;
   height: 100%;
 }
-.ft_contents .batteryimg{
-  width: 189px;
-  height: 89px;
+.ft_list2{
+  float: right;
 }
-.ft_list2{float: right;}
 .inquery_pager a {
   position: absolute;
   left: -9999px;
 }
-
 .inquery_pager {
   position: absolute; left: 110px; top: 5px;
   height: 20px;
@@ -551,8 +555,9 @@ color: #000;}
 .inquery_pager > ul > li > a{
   width: 100%;
 }
-.inquery_pager li.inquery_pager_active {background: var(--main-color);}
-
+.inquery_pager li.inquery_pager_active {
+  background: var(--main-color);
+}
 .mm_menu > ul > li{
   border-bottom: 2px solid transparent;
 }
@@ -623,9 +628,13 @@ color: #000;}
 .footer_bottom_last {display: flex;}
 
 /* ==================== footer : media 유부현  ==================== */
-@media screen and (min-width:768px){
+@media screen and (max-width:768px){
+ #mapbtn{
+    display: none;
+  }
 .footer_top{
-  /* flex-direction:column; */
+  flex-direction:column;
+  
 }
 .footer_3th{
   display: block;
