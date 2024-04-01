@@ -3,9 +3,9 @@
 @import url(common.css);
 
 .sub_business_section1{
-    margin-bottom: 50px;
+  padding-top:calc(var(--row) * 3);
+  margin-bottom: 48px;
 }
-
 .content_wrapper{
     width: 1120px;
     height: 182px;
