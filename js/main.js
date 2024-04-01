@@ -64,7 +64,11 @@ $(window).scroll(function(){
   }else{
     $('.business').removeClass('lineActive');
   }
+  if(business == 0) {
+    clearInterval(timer);
+  }
 });
+
 // career click event
 let prList = $('.pr_list > li');
 const prImg = $('.pr_imges').find('img');
@@ -101,7 +105,7 @@ prList.click(function(e){
   },800)
 });
 
-//prcenter autoslide
+//prcenter
 /*
 function slide(targetEl, direction) {
   let target = $(targetEl);
@@ -168,7 +172,7 @@ for (let i = 1; i <= 8; i++) {
 $(window).on('load resize', function() {
   if ($(window).width() <= 768) {
     slide('.slideDown', 'right'); 
-    slide('.slideUp', 'left');    
+    slide('.slideUp', 'left'); 
   } else {
     slide('.slideDown', 'down'); 
     slide('.slideUp', 'up'); 

@@ -548,7 +548,10 @@ esg
   }
 
   /*prcenter - 하는 중*/
-  .prcenter .container {width: 100%;}
+  .prcenter .container {
+    width: 100%;
+    height: 100%;
+  }
   .prcenter .container h2 {text-align: center;}
   .prcenter .container p {text-align: center;}
   .prcenter_txt {
@@ -556,7 +559,7 @@ esg
   }
   .prcenter_txt div{
     position: absolute;
-    top: 190%; left: 50%;
+    top: 210px; left: 50%;
     transform: translateX(-50%);
     text-align: center;
     width: 80%;
@@ -571,16 +574,17 @@ esg
     width: 100%;
     gap: 10px;
   }
-  .prcenter li + li {
-    margin-top: none;
+  .prcenter .autoSlide {
+    width: 1390px;
   }
   .prcenter .slideUp { 
     left: 0; right: 0;
-    bottom: 0;
+    bottom:270px;
   }
   .prcenter .slideDown {
     left: 0; right: 0;
-    bottom: 0;
+    bottom: 50px;
+    transform: translateX(-440px);
   }
   .prcenter li {
     width: 100%;
@@ -589,7 +593,8 @@ esg
     margin-top: none;
   }
   .prcenter img {
-    width: 100%;
+    width: 165px;
+    height: 165px;
     object-fit: cover;
   }
 
