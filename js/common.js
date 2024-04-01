@@ -36,29 +36,33 @@ header.mouseleave(function(){
 	}
 });
 
-$(".main_menu .depth_2 > li").on("click", function() {
+$(".main_menu .depth_2 > li").on("click", function(e) {
+	e.stopPropagation();
+	console.log((this))
+
 if($(window).width() > 768){
 		let submenu = $(this).find(".depth_3");
-		console.log(submenu);
+
 		let submenuHeight = submenu.outerHeight();
 		if (submenu.length) { 
 			submenu.slideToggle();
 		}
 		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
+	} else{
+
+		let submenu = $(this).find(".depth_3");
+
+		let submenuHeight = submenu.outerHeight();
+		if (submenu.length > 0) { 
+			submenu.slideToggle();
+			$(this).siblings().find('> ul').slideUp();
+		}
+		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 	}
+
 });
 
-$(".main_menu .depth_2 > li").on("click", function() {
-	if($(window).width() < 768){
-			let submenu = $(this).find(".depth_3");
-			console.log(submenu);
-			let submenuHeight = submenu.outerHeight();
-			if (submenu.length) { 
-				submenu.slideToggle();
-			}
-			header.stop().animate({height:`${headerHeight + submenuHeight}px`});
-		}
-	});
+
 
 $(".depth_2 > li > a").click(function (event) {
 	event.preventDefault();
@@ -71,29 +75,20 @@ $(".depth_2 > li > a").click(function (event) {
 });
 
 	$(".main_menu > li").on("click", function() {
+
 		if($(window).width() < 768){		
+
 			let submenu = $(this).find(".depth_2");
-			console.log(submenu);
+
 			let submenuHeight = submenu.outerHeight();
-			if (submenu.length) { 
+			if (submenu.length >0) { 
 					submenu.slideToggle();
+					$(this).siblings().find('> ul').slideUp();
 			}
 
 		}
   });
 
-  $(".main_menu > li > ul > li").on("click", function() {
-	if($(window).width() < 768){		
-		let submenu = $(this).find(".depth_3");
-		console.log(submenu);
-		let submenuHeight = submenu.outerHeight();
-		if (submenu.length) { 
-				submenu.slideToggle();
-		}
-
-	}
-});
- 
  $(".depth_2").click(function (event) {
 	if($(window).width() < 768){	
 	 event.preventDefault();
@@ -129,29 +124,23 @@ $(window).resize(function(){
 
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
-	console.log('검색');
+
 	$('.right_menu').addClass('search');
  });
 
  
 // 모바일 토글 
 let mobileToggle = $('.mobileToggle');
-let mainMenu = $('.main_menu');
+let mainMenu = $('.main_menu > li');
 
 $(document).on('click','.mobileToggle',function(){
 	if($(window).width() < 768){
-$('header').toggleClass("open");
-$('.search-bar').toggleClass("open");
+	$('header').toggleClass("open");
+	$('.search-bar').toggleClass("open");
 }
 });
 
-mainMenu.click(function(){
-if($(window).width() <= 600){
-	$(this).find('ul').slideToggle();
-	$(this).siblings().find('ul').slideUp();
-}
 
-})
 
 
 //푸터 제이쿼리 작동 함수
@@ -168,9 +157,9 @@ function footerJs(){
 		footerPager.append(`<a href="">${idx}</a>`);
 	});
   
-	let footerpagerbtn = footerPager.find('a');
-  
+	let footerpagerbtn = $('.inquery_pager > ul > li');
 	footerpagerbtn.click(function(e){
+
 	  e.preventDefault();
 	  fadeSlide($(this).index());
 	});
@@ -185,10 +174,12 @@ function footerJs(){
 	}
   
 	function fadeSlide(footernextIdx){
-		footerslides.eq(footercurrentIdx).fadeOut();
-		footerslides.eq(footernextIdx).fadeIn();
+		footerslides.eq(footercurrentIdx).animate({opacity:0});
+		footerslides.eq(footernextIdx).animate({opacity:1});
 		footercurrentIdx = footernextIdx;
 	}
+	footerslides.css({opacity:0});
+	footerslides.eq(0).css({opacity:1});
 	autoNews();
 	footerslideWrapper.mouseenter(function(){
 	  clearInterval(footertimer);
@@ -200,10 +191,18 @@ function footerJs(){
 }
 //quickmenu
 
-var currentPosition = parseInt($("#mapbtn").css("top"));
+let threshold = $(window).height() -150;
+let mapbtn =$("#mapbtn");
+let mapbtnOST = mapbtn.offset().top;
+
 $(window).scroll(function() {
-	var position = $(window).scrollTop(); 
-	$("#mapbtn").stop().animate({"top":position+currentPosition+"px"},1000);
+   var scrollAmt = $(window).scrollTop(); 
+   let newTop = mapbtnOST + (scrollAmt/10);
+
+   if(newTop < threshold ){
+      mapbtn.stop().animate({top:newTop+"px"}, 600);
+   }
+
 });
 
 
