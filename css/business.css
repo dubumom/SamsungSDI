@@ -3,15 +3,13 @@
 @import url(common.css);
 
 .sub_business_section1{
-    padding-top:calc(var(--row) * 3);
     margin-bottom: 50px;
 }
 
 .content_wrapper{
     width: 1120px;
     height: 182px;
-    left: 0;
-    gap: 100px;
+    gap: 96px;
     padding-bottom: 80px;
 }
 .content_wrapper img{
@@ -24,18 +22,17 @@
     line-height: 30px;
 }
 
-.sub_business_section2{
-
-}
 
 h2{
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-/* .sub_business_section2{
-    width: 100%;
-    height: 808px;
-} */
+.content_wrapper .readmore-img{
+  width: 100px;
+  height: 20px;
+  border-radius: 0;
+  padding-top: 10px;
+}
 
 .slidewrapper{
     position: relative;
@@ -52,16 +49,20 @@ h2{
     position:absolute;
     width: 140px;
     height: 400px;
-    transition:all 0.5s;  
+    transition:all 0.8s;  
     padding-top: 20px;
   }
-  .slide p{
-    display: none;
-    padding-top: 134px;
-    width: 580px; 
-    padding-left: 20px;
-    line-height: 23px;
-  }
+
+.slide p{
+  position: absolute;
+  opacity: 0;    
+  padding-top: 170px;
+  width: 580px; 
+  /* padding-left: 20px; */
+  line-height: 23px;
+  transition:0.1s 0s;
+  text-align: center;
+}
   .slide img{
     width: 100%;
     height: 100%;
@@ -69,22 +70,29 @@ h2{
     border-radius: 20px;
   }
   .slidewrapper .slide:nth-child(1){
-    left: 160px;;
+    left: 160px;
   }
   .slidewrapper .slide:nth-child(2){
+    left: 160px;
+  }
+  .slidewrapper .slide:nth-child(3){
     left:340px;
     width:600px;
     height: 400px;
     top:-20px;
   }
-  .slidewrapper .slide:nth-child(2) p{
-    display: block;
-    
-  }
-  .slidewrapper .slide:nth-child(3){
-    left:980px;
+  .slidewrapper .slide:nth-child(3) p{
+    opacity: 1;  
+    transition:0.3s 0.3s;
+    padding-top: 150px;
   }
   .slidewrapper .slide:nth-child(4){
+    left:980px;
+  }
+  .slidewrapper .slide:nth-child(5){
+    left:1160px;
+  }
+  .slidewrapper .slide:nth-child(6){
     left:1160px;
   }
 
@@ -103,12 +111,12 @@ h2{
   }
   .controls{
     position: absolute;
-    left: 50%;
+    left: 49%;
+    top: 450px;
   }
 
   .prev,
   .next{
-    /* position: absolute; */
     background: #fff;
     border: none;
   }
@@ -117,4 +125,129 @@ h2{
   }
   .next{
     right: 500px;
+  }
+  @media screen and (max-width:768px) {
+    .sub_business_section1{
+      padding-top:calc(var(--row) * 3);
+      margin-bottom: 48px;
+  }
+    .text_content p {
+      display: none; 
+    }
+  
+    .content_wrapper {
+      width: 100%;
+      flex-direction: column;
+      padding-bottom: 170px;
+      gap: 0;
+    }
+
+  
+    .content_wrapper img {
+      /* margin-bottom: 20px;  */
+      left: 0;
+    }
+  
+    .text_content {
+      text-align: center; 
+    }
+  
+    .slidewrapper{
+      position: relative;
+      margin:2rem auto;
+      overflow:hidden;
+      height: 680px;
+      width: 400px;
+    }
+    .slide-container {
+      width: 400px;
+      height: 420px;
+    }
+    .slidewrapper .slide{
+      position:absolute;
+      width: 140px;
+      height: 400px;
+      transition:all 0.8s;  
+      /* padding-top: 20px; */
+    }
+  
+  .slide p{
+    position: absolute;
+    opacity: 0;    
+    width: 400px; 
+    padding-top: 10px;
+    line-height: 23px;
+    transition:0.1s 0s;
+    text-align: center;
+  }
+    .slide img{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .slidewrapper .slide:nth-child(1){
+      left: -400px;
+    }
+    .slidewrapper .slide:nth-child(2){
+      left: -400px;
+    }
+    .slidewrapper .slide:nth-child(3){
+      left:0;
+      width: 400px;
+      height: 400px;
+      top:20px;
+    }
+    .slidewrapper .slide:nth-child(3) p{
+      opacity: 1;  
+      transition:0.3s 0.3s;
+      padding-top: 100px;
+    }
+    .slidewrapper .slide:nth-child(4){
+      left:980px;
+    }
+    .slidewrapper .slide:nth-child(5){
+      left:1160px;
+    }
+    .slidewrapper .slide:nth-child(6){
+      left:1160px;
+    }
+  
+    .status{
+      justify-content: center;
+      margin-top: 20px;
+      width: 200px;
+      border: 1px solid #ebebeb;
+    }
+  
+    .current-idx,
+    .total-idx{
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    span{
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .controls{
+      position: absolute;
+      left: 180px;
+      top: 380px;
+    }
+  
+    .prev,
+    .next{
+      background: #fff;
+      border: none;
+    }
+    .prev{
+      left: -150px;
+      position: absolute;
+
+    }
+    .next{
+      left: 140px;
+      position: absolute;
+    }
   }

@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOME || samsungSDI</title>
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -16,34 +17,45 @@
     <section class="banner">
       <h2 class="hidden">banner</h2>
       <div class="bannerWrapper">
-        <ul class="slidecontainer">
+        <ul class="slidecontainer d-flex">
           <li class="slide">
-            <h3 class="banner-title">초격차 기술력을 통해지속 가능한 친환경 미래 사회 구현 </h3>
-            <p class="h2">To make the world greener and sustainable through our innovative technology</p>
+            <div class="slide-text">              
+              <h3 class="banner-title">초격차 기술력을 통해지속 가능한 친환경 미래 사회 구현 </h3>
+              <p class="h2">To make the world greener and sustainable through our innovative technology</p>
+            </div>
             <img src="images/main_banner1.png" alt="">
           </li>
           <li class="slide">
-            <h3 class="banner-title">삼성SDI는 미래를 함께 만들어 갈 여러분을 기다리고 있습니다</h3>
-            <p class="h2">DRAW YOUR FUTURE IN SAMSUNG SDI</p>
+            <div class="slide-text">
+              <h3 class="banner-title">삼성SDI는 미래를 함께 만들어 갈 여러분을 기다리고 있습니다</h3>
+              <p class="h2">DRAW YOUR FUTURE IN SAMSUNG SDI</p>
+            </div>
             <img src="images/main_banner2.png" alt="">
           </li>
           <li class="slide">
-            <h3 class="banner-title">우리의 혁신으로 고객에게 전기자동차의 꿈을 앞당깁니다.</h3>
-            <p class="h2">여러분이 어떤 상상을 하시든 삼성SDI 배터리의 새로운 혁신이 자동차 제조자와 내일의 운전자들을 위하여 그러한 꿈들을 현실로 만들어 드립니다.</p>
+            <div class="slide-text">
+              <h3 class="banner-title">우리의 혁신으로 고객에게 전기자동차의 꿈을 앞당깁니다.</h3>
+              <p class="h2">여러분이 어떤 상상을 하시든 삼성SDI 배터리의 새로운 혁신이 자동차 제조자와 내일의 운전자들을 위하여 그러한 꿈들을 현실로 만들어 드립니다.</p>
+            </div>
             <img src="images/main_banner3.png" alt="">
           </li>
           <li class="slide">
-            <h3 class="banner-title">We are providing practical support activities</h3>
-            <p class="h2">삼성SDI는 ‘함께하면 더 멀리 갈수 있다’는 동반성장의 가치를 기본으로 협력업체와 상생의 관계를 넘어 동반자 관계를 유지하고 있습니다.</p>
+            <div class="slide-text">
+              <h3 class="banner-title">We are providing practical support activities</h3>
+              <p class="h2">삼성SDI는 ‘함께하면 더 멀리 갈수 있다’는 동반성장의 가치를 기본으로 협력업체와 상생의 관계를 넘어 동반자 관계를 유지하고 있습니다.</p>
+            </div>
             <img src="images/main_banner4.png" alt="">
           </li>
         </ul>
-        <p class="pager d-flex">
+        <p class="pager d-flex aic">
           <a href="#" data-num="1" class="bannerActive"><span>1</span></a>
           <a href="#" data-num="2"><span>2</span></a>
           <a href="#" data-num="3"><span>3</span></a>
           <a href="#" data-num="4"><span>4</span></a>
+          <span class="material-symbols-outlined bannerPause">pause</span>
+          <span class="material-symbols-outlined bannerPlay">play_arrow</span>
         </p>
+
       </div>
     </section>
     <section class="business d-flex aic">
@@ -57,7 +69,7 @@
               <svg class="st1" width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.9434 14.9999L19.2692 6.5L18.0894 12.4999H21.6287L16.1231 20.9999L18.0894 14.9999H14.9434Z"
                   fill="white" />
-                <path
+                <path class="st_item1" 
                   d="M19.2692 6.5L19.7598 6.59647C19.8079 6.35165 19.6682 6.10881 19.4323 6.02738C19.1965 5.94595 18.9367 6.05085 18.8235 6.27322L19.2692 6.5ZM14.9434 14.9999L14.4977 14.7731L14.1279 15.4999H14.9434V14.9999ZM18.0894 14.9999L18.5645 15.1556L18.7794 14.4999H18.0894V14.9999ZM16.1231 20.9999L15.648 20.8441C15.5697 21.0829 15.6808 21.3427 15.9076 21.451C16.1343 21.5593 16.4062 21.4826 16.5428 21.2717L16.1231 20.9999ZM21.6287 12.4999L22.0483 12.7718L22.5483 11.9999H21.6287V12.4999ZM18.0894 12.4999L17.5988 12.4035L17.4815 12.9999H18.0894V12.4999ZM18.8235 6.27322L14.4977 14.7731L15.389 15.2267L19.7148 6.72678L18.8235 6.27322ZM14.9434 15.4999H18.0894V14.4999H14.9434V15.4999ZM17.6143 14.8442L15.648 20.8441L16.5983 21.1556L18.5645 15.1556L17.6143 14.8442ZM16.5428 21.2717L22.0483 12.7718L21.209 12.2281L15.7035 20.728L16.5428 21.2717ZM21.6287 11.9999H18.0894V12.9999H21.6287V11.9999ZM18.58 12.5964L19.7598 6.59647L18.7786 6.40353L17.5988 12.4035L18.58 12.5964Z"
                   fill="black" />
                 <path
@@ -66,7 +78,7 @@
                 <path d="M1 2H6.07858L6.07858 26.9997H0.999999L1 2Z" stroke="black" stroke-width="2" />
               </svg>
               <span>소형배터리</span>
-            </a>
+            </a> 
           </li>
           <li>
             <a href="business.html">
@@ -104,7 +116,7 @@
           <li>
             <a href="business.html">
               <svg class="st4" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6.07227" y="6" width="23.3626" height="23.0003" rx="2" stroke="black" stroke-width="2" />
+                <rect class="st_item2" x="6.07227" y="6" width="23.3626" height="23.0003" rx="2" stroke="black" stroke-width="2" />
                 <rect x="11.1445" y="11" width="13.2176" height="13.0002" rx="2" stroke="black" stroke-width="2" />
                 <path d="M12.1738 5.50006V0" stroke="black" stroke-width="2" />
                 <path d="M12.1738 34.5003V29.0002" stroke="black" stroke-width="2" />
@@ -131,28 +143,31 @@
       <div class="career_left">
         <span>세상의 주인공이 될 사람들</span>
         <span class="h2">삼성SDI는 미래를 함께 만들어 갈<br>여러분을 기다리고 있습니다.</span>
-        <ul class="d-flex">
+        <ul class="d-flex pr_list">
           <li><a href="#" data-career="경력" data-location="기흥/천안(직무별 상이)" data-period="2024.01.01 ~ 2024.12.31"
-              data-detail="중대형전지 사업부 수시 경력 채용 공고"><img src="./images/main_career1.png" alt=""></a></li>
+              data-detail="중대형 전지 사업부 수시 경력 채용 공고"><img src="./images/main_career1.png" alt=""></a></li>
           <li><a href="#" data-career="경력" data-location="기흥/천안(직무별 상이)" data-period="2024.01.01 ~ 2024.12.31"
-              data-detail="소형형전지 사업부 수시 경력 채용 공고"><img src="./images/main_career2.png" alt=""></a></li>
+              data-detail="소형형 전지 사업부 수시 경력 채용 공고"><img src="./images/main_career2.png" alt=""></a></li>
           <li><a href="#" data-career="경력" data-location="수원" data-period="2024.01.01 ~ 2024.12.31"
-              data-detail="SDI연구소 수시 경력채용 공고"><img src="./images/main_career3.png" alt=""></a></li>
+              data-detail="SDI 연구소 수시 경력 채용 공고"><img src="./images/main_career3.png" alt=""></a></li>
           <li><a href="#" data-career="경력" data-location="기흥/수원" data-period="2024.01.01 ~ 2024.12.31"
-              data-detail="공정/설비R$D센터 수시 경력채용 공고"><img src="./images/main_career4.png" alt=""></a></li>
+              data-detail="공정/설비 R&D센터 수시 경력채용 공고"><img src="./images/main_career4.png" alt=""></a></li>
           <li><a href="#" data-career="경력" data-location="천안" data-period="2024.01.01 ~ 2024.12.31"
-              data-detail="Global안전/기술센터 수시 경력채용 공고"><img src="./images/main_career5.png" alt=""></a></li>
+              data-detail="Global 안전/기술센터 수시 경력채용 공고"><img src="./images/main_career5.png" alt=""></a></li>
         </ul>
       </div>
       <div class="career_right d-flex">
         <div class="sellphone d-flex aic">
           <h3 class="h2">채용공고</h3>
-          <span></span>
+          <p class="detail">Global 안전/기술센터 수시 경력채용 공고</p>
+          <div class="pr_imges animate__animated">
+            <img src="./images/main_career5.png" alt="">
+          </div>
         </div>
         <ul>
-          <li>모집대상<span></span></li>
-          <li>근무지<span></span></li>
-          <li>접수기간<span></span></li>
+          <li><em>모집대상:</em><span class="career_Recruitment">경력</span></li>
+          <li><em>근무지:</em><span class="pr_location">천안</span></li>
+          <li><em>접수기간:</em><span class="period">2024.01.01 ~ 2024.12.31</span></li>
         </ul>
         <a href="#" class="readmore"><img src="./images/readmore_icon.png" alt="more btn"></a>
       </div>
@@ -209,7 +224,7 @@
               시스템입니다. 또, 단순히 전기료가 싼 시간에 충전했다가 비싼 시간에 쓰는 것 뿐만 아니라, 태양광, 풍력 등 신재생에너지 사용에도 매우 유용하게 활용되고 있습니다.</p>
           </div>
           <div class="txt8">
-            <h3>모바일 시대 필수상식인 배터리 용어에 대하여</h3>
+            <h3 class="h3">모바일 시대 필수상식인 배터리 용어에 대하여</h3>
             <p class="h5">배터리의 성능을 이야기할 때 가장 중요한 항목은 바로 ‘용량’이죠. 용량은 쉽게 말하면 ‘얼만큼 많은 전기를 저장할 수 있는가?’를 의미하는데, 정확히 말하자면 저장되는
               전자의 수 =
               용량입니다. 용량을 늘리기 위해 가장 쉬운 방법은 배터리를 크게 만들면 됩니다. 하지만 모바일 시대를 살아가고 있는 우리에게 큰 배터리는 무용지물입니다.</p>
@@ -217,24 +232,24 @@
         </div>
         <div class="autoSlide">
           <ul class="slideUp">
-            <li><a href="#"><img src="./images/main_prcenter1.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter2.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter3.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter4.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter5.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter6.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter7.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter8.png" alt=""></a></li>
+            <li class="pr_img1"><a href="#"><img src="./images/main_prcenter1.png" alt="배터리 안전을 책임지는 '분리막'"></a></li>
+            <li class="pr_img2"><a href="#"><img src="./images/main_prcenter2.png" alt="삼성SDI, 배터리 '초격차 기술'의 진수 대공개"></a></li>
+            <li class="pr_img3"><a href="#"><img src="./images/main_prcenter3.png" alt="최윤호 사장, '지금까지와는 차원이 다른 변화와 혁신' 강조"></a></li>
+            <li class="pr_img4"><a href="#"><img src="./images/main_prcenter4.png" alt="전기자동차의 종류와 미래에 대하여"></a></li>
+            <li class="pr_img5"><a href="#"><img src="./images/main_prcenter5.png" alt="전기자동차의 종류와 미래에 대하여"></a></li>
+            <li class="pr_img6"><a href="#"><img src="./images/main_prcenter6.png" alt="자체발광 차세대 디스플레이, OLED에 대한 모든것"></a></li>
+            <li class="pr_img7"><a href="#"><img src="./images/main_prcenter7.png" alt="ESS와 UPS 기능 합친 UES 뜬다"></a></li>
+            <li class="pr_img8"><a href="#"><img src="./images/main_prcenter8.png" alt="모바일 시대 필수상식인 배터리 용어에 대하여"></a></li>
           </ul>
           <ul class="slideDown">
-            <li><a href="#"><img src="./images/main_prcenter1.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter2.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter3.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter4.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter5.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter6.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter7.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/main_prcenter8.png" alt=""></a></li>
+            <li class="pr_img8"><a href="#"><img src="./images/main_prcenter8.png" alt="모바일 시대 필수상식인 배터리 용어에 대하여"></a></li>
+            <li class="pr_img7"><a href="#"><img src="./images/main_prcenter7.png" alt="ESS와 UPS 기능 합친 UES 뜬다"></a></li>
+            <li class="pr_img6"><a href="#"><img src="./images/main_prcenter6.png" alt="자체발광 차세대 디스플레이, OLED에 대한 모든것"></a></li>
+            <li class="pr_img5"><a href="#"><img src="./images/main_prcenter5.png" alt="전기자동차의 종류와 미래에 대하여"></a></li>
+            <li class="pr_img4"><a href="#"><img src="./images/main_prcenter4.png" alt="전기자동차의 종류와 미래에 대하여"></a></li>
+            <li class="pr_img3"><a href="#"><img src="./images/main_prcenter3.png" alt="최윤호 사장, '지금까지와는 차원이 다른 변화와 혁신' 강조"></a></li>
+            <li class="pr_img2"><a href="#"><img src="./images/main_prcenter2.png" alt="삼성SDI, 배터리 '초격차 기술'의 진수 대공개"></a></li>
+            <li class="pr_img1"><a href="#"><img src="./images/main_prcenter1.png" alt="배터리 안전을 책임지는 '분리막'"></a></li>
           </ul>
         </div>
       </div>
@@ -246,7 +261,7 @@
         <p class="h2">Compliance & Ethics Management</p>
         <div class="esgText">
           <ul class="h3">
-            <li>세계가 인정하는 삼성SDI 지속가능경영</li>
+            <li>세계가 인정하는 삼성SD <br> 지속가능경영</li>
             <li>에너지 절감 및 재생에너지 사용</li>
             <li>생물다양성 정책</li>
             <li>산림파괴 방지 정책</li>
@@ -258,7 +273,7 @@
       </div>
     </section>
   </main>
-  <div class="modal">
+  <aside class="modal">
     <a href="#">
       <img src="./images/modal.png" alt="페이지 소개">
     </a>
@@ -267,18 +282,30 @@
       <label for="checkbox">오늘하루 열지 않음</label> 
       <a href="#" class="modal_close">close</a>
     </p>
-  </div>
+  </aside>
   <!-- member YOU -->
-  <footer id="footer">
-  </footer>
+  <aside class="quickbtn_map">
+    <div  class="quick">
+      <a href="#"><img id="mapbtn" src="images/map.png" alt="mapbtn"></a>
+    </div>
+    <div class="mapmodal">
+      <h2>Global Network</h2>
+      <p>삼성SDI는 세계 각지로 Global Network를 확장해 나가고 있습니다.<br>
+        전세계인의 생활 속에 함께하며 새로운 미래를 이끌어 나가기 위해 삼성SDI는 더 넓은 세계를 향해 나아가겠습니다.
+      </p>
+      <img src="images/SamsungSDI_map.jpg" alt="">
+      <button class="mapmodal_close">닫기</button>
+    </div>
+  </aside>
 
-
-
-
+  <footer id="footer"></footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery.transform2d.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/cookie2.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
