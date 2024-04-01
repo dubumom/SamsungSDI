@@ -468,6 +468,9 @@ color: #000;}
 
 /* ==================== footer : 유부현 ==================== */
 /* readmore img */
+.main_readmore{
+  display: none;
+}
 .slide_readmore {
   display: block;
 }
@@ -645,6 +648,15 @@ color: #000;}
   gap: 50px;
   text-align: center;
 }
+.notice_1st,
+.notice_2st {
+width: 100%;
+border: 1px solid var(--light-black);
+h2{
+  font-size: 1.75rem;
+    line-height: 2.1875rem;
+}
+}
 /* 공지사항 */
 .footer_data,
 .ft_navi_h,
@@ -660,6 +672,21 @@ color: #000;}
   padding-top: 0px;
 }
 .footer_navi {padding: 0px;}
+/* 고객문의 */
+.main_readmore{
+  display: block;
+}
+.notice_2st{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.inquery_pager{
+  display: none;
+}
+.ft_customer{
+  display: none;
+}
 /* 푸터 마지막 섹션 */
 .footer_3th{
   display: block;
