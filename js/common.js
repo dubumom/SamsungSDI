@@ -46,6 +46,7 @@ if($(window).width() > 768){
 		let submenuHeight = submenu.outerHeight();
 		if (submenu.length) { 
 			submenu.slideToggle();
+			$(this).siblings().find('> ul').slideUp();
 		}
 		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 	} else{
