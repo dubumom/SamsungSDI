@@ -204,10 +204,6 @@ business
   margin-left: 641px;
   animation:after 0.5s 4s linear forwards;
 }
-/* .business.lineActive li::after{
-  height: 100%;
-} */
-
 .business .container ul a {
   display: flex;
   flex-direction: column;
@@ -223,10 +219,6 @@ business
   stroke: var(--white);
 }
 
-/* 
-MAIN
-career
-*/
 /* 
 MAIN
 career
@@ -462,19 +454,82 @@ esg
     100% {width: 100px;}
   }
 
-  /* career */
-  .career_left {
+  /* business */
+  .business {
+    height: 800px;
+    position: relative;
+    color: var(--white);
+    overflow: hidden;
+    justify-content: space-around;
+  }
+  .business video {
+    position: absolute;
+    z-index: -1;
+    left: 0; right: 0; top: 0; bottom: 0;
     width: 100%;
-    padding-left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+  .business .container {
     text-align: center;
-  }
-  .career_right {
     width: 100%;
-    padding-top: calc(var(--row) * 2);
+    height: 100%;
   }
-  .career_right .sellphone {
-    margin-top: calc(var(--row) * 2);
+  .business .container h3 {
+    margin-top: 30%;
+  }
+  .business .container ul {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .business .container ul li::after {display: none;}
+  .business.lineActive .container ul li:last-child::before {display: none;}
+  
+  /* career */
+  .career.container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .career::after{
+    content: '';
+    display: block;
+    clear: both;
+  } 
+  .career .career_left {
+    margin-top: 300px;
+    width: 30%;
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: center;
+    float: right;
+    box-sizing: border-box;
+  }
+  .career .career_left .pr_list {display: none;}
+  .career .career_left span:first-of-type {display: none;}
+  .career_left, .career_right{
+    margin-top: calc(var(--row)* 2);
+  }
+  .career .career_right {
     width: 70%;
+    height: 100%;
+    padding-top: none;
+    float: left;
+    box-sizing: border-box;
+    position: static;
+  }
+  .career .career_right ul {display: none;}
+  .career_right li {position: static;}
+  .career_right .sellphone {
+    margin-top: none;
+    width: 90%;
+    height: 79%;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
   }
@@ -483,52 +538,55 @@ esg
     margin-left: auto;
     margin-right: auto;
   }
+  .career .career_right .readmore{
+    position: absolute;
+    right: 23px; bottom: 35%;
+    width: 150px;
+  }
   .career_right ul {
     transform: translateY(0%);
   }
 
-  /*prcenter*/
-  .prcenter .container {
-    position: relative;
-    width: 100%;
-  }
-  .prcenter .container h2{
-    padding-top: calc(var(--row) * 3);  
-    text-align: center;
-  }
+  /*prcenter - 하는 중*/
+  .prcenter .container {width: 100%;}
+  .prcenter .container h2 {text-align: center;}
   .prcenter .container p {text-align: center;}
+  .prcenter_txt {
+    height: 100%;
+  }
   .prcenter_txt div{
     position: absolute;
-    top: 190%; left: 3%;
+    top: 190%; left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    width: 30%;
+    width: 80%;
     display: none;
   }
-  .prcenter_txt div.prcenterActive {
-    display: block;
-  }
-  .prcenter .container h3 {
-    color: var(--sub-color);
-    margin-bottom: calc(var(--row) * 2);
-    /* text-align: center; */
-  }
-  .prcenter ul{
-    position: absolute; top: 0;
-    width: 386px;
-  }
-  .prcenter .slideUp{ 
+  .prcenter ul {
     display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    position: absolute;
+    top: auto; bottom: 0;
+    width: 100%;
+    gap: 10px;
+  }
+  .prcenter li + li {
+    margin-top: none;
+  }
+  .prcenter .slideUp { 
     left: 0; right: 0;
-  
+    bottom: 0;
   }
-  .prcenter .slideDown{
-    display: flex;
-    left: 0; right: 0;}
+  .prcenter .slideDown {
+    left: 0; right: 0;
+    bottom: 0;
+  }
   .prcenter li {
     width: 100%;
   }
   .prcenter li + li {
-    margin-top: 30px;
+    margin-top: none;
   }
   .prcenter img {
     width: 100%;
