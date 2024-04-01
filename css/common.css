@@ -668,19 +668,18 @@ color: #000;}
   /* 공지사항 + 고객문의 */
 .footer_top{
   flex-direction:column;
-  padding: auto;
   gap: 50px;
   text-align: center;
 }
 .notice_1st,
 .notice_2st {
 width: 100%;
-border: 1px solid var(--light-black);
 h2{
   font-size: 1.75rem;
     line-height: 2.1875rem;
 }
 }
+
 /* 공지사항 */
 .footer_data,
 .ft_navi_h,
@@ -691,7 +690,11 @@ h2{
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding-bottom: 50px;
+  border: 1px solid var(--light-black);
+  border-color: transparent transparent var(--light-black) transparent;
 }
+
 .notice {
   padding-top: 0px;
 }
