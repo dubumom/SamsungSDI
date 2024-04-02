@@ -39,7 +39,7 @@ header.mouseleave(function(){
 });
 
 header.mouseleave(function(){
-	if($(window).width() <= 768){
+	if($(window).width() < 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
@@ -55,7 +55,7 @@ if($(window).width() > 768){
 		let submenuHeight = submenu.outerHeight();
 		if (submenu.length) { 
 			submenu.slideToggle();
-			$(this).siblings().find(' ul').slideUp();
+			$(this).siblings().find('> ul').slideUp();
 		}
 		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 
@@ -88,7 +88,7 @@ if($(window).width() > 768){
 
 	$(".main_menu > li").on("click", function() {
 
-		if($(window).width() <= 768){		
+		if($(window).width() < 768){		
 
 			let submenu = $(this).find(".depth_2");
 
@@ -102,7 +102,7 @@ if($(window).width() > 768){
   });
 
  $(".depth_2").click(function (event) {
-	if($(window).width() <= 768){	
+	if($(window).width() < 768){	
 	 event.preventDefault();
 	 if ($(this).parent().hasClass("active")) {
 	 $(this).find(".material-symbols-outlined").text("arrow_drop_up");
@@ -123,7 +123,7 @@ $(window).resize(function(){
 });
 
 $(window).resize(function(){
-	if($(this).width() <= 768){
+	if($(this).width() < 768){
 		$('.depth_2').hide();
 	}
 });
@@ -146,7 +146,7 @@ let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu > li');
 
 $(document).on('click','.mobileToggle',function(){
-	if($(window).width() <= 768){
+	if($(window).width() < 768){
 	$('header').toggleClass("open");
 	$('.search-bar').toggleClass("open");
 }
