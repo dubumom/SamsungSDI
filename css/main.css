@@ -345,7 +345,7 @@ prcenter
   position: absolute;
   top: 190%; left: 3%;
   text-align: center;
-  width: 40%;
+  width: 35%;
   display: none;
 }
 /* .prcenter_txt div p.h5 {line-height: 26px;} */
@@ -354,20 +354,19 @@ prcenter
   color: var(--sub-color);
   margin-bottom: calc(var(--row) * 2);
 }
-
 .prcenter ul{
   position: absolute;
   top: 0;
   width: 386px;
 }
-.prcenter .slideUp {left: 0;}
+.prcenter .slideUp {right: 340px;}
 .prcenter .slideDown {
-  left: 416px;
+  right: 0;
   transform: translateY(-280px);}
 .prcenter li {width: 100%;}
 .prcenter li + li {margin-top: 30px;}
 .prcenter img {
-  width: 100%;
+  width: 80%;
   object-fit: cover;
 }
 
@@ -439,7 +438,7 @@ esg
   }
   .bannerWrapper .pager {bottom: 30px;}
   .bannerWrapper .pager > span {left: 0; top: calc(100% + 5px);}
-  .bannerWrapper .pager a{width: 100px;}
+  .bannerWrapper .pager a{width: 85px;}
   .bannerPause {display: none;}
   @keyframes width {
     0% {}
@@ -493,7 +492,7 @@ esg
     clear: both;
   } 
   .career .career_left {
-    margin-top: 300px;
+    margin-top: 230px;
     width: 30%;
     padding-left: 0;
     text-align: center;
@@ -518,13 +517,13 @@ esg
   .career_right .sellphone {
     margin-top:0;
     width: 100%;
-    height: 79%;
+    height: 68%;
     object-fit: cover;
     margin-left: auto;
     margin-right: auto;
   }
   .career_right .detail {
-    width: 80%;
+    width: 77%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -534,10 +533,10 @@ esg
     width: 150px;
   }
   .career_right ul {
-    transform: translateY(0%);
+    transform: translateY(0%);  
   }
 
-  /*prcenter - 하는 중*/
+  /*prcenter*/
   .prcenter .container {
     width: 100%;
     height: 100%;
@@ -563,10 +562,6 @@ esg
     top: auto; bottom: 0;
     width: 100%;
     gap: 10px;
-  }
-  .prcenter .autoSlide {
-    width: 1390px;
-    left: 0;
   }
   .prcenter .slideUp { 
     left: 0; right: 0;
