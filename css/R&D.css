@@ -14,6 +14,7 @@ main header {
   color: var(--medium-gray);
   box-shadow: none;
   z-index: 1;
+  transition: 0.3s;
 }
 /* #sub_header {
   display: flex;
@@ -67,6 +68,10 @@ main header {
     background: var(--light-gray);
     color: var(--text-color);
   }
+  main header.rndActive{
+    width: calc(100% + 34px);
+    transform: translateX(-17px);
+  }
   #sub_header ul{
     display: flex;
     width: 100%;
@@ -75,6 +80,12 @@ main header {
   }
   #sub_header li {padding:0;}
   #sub_header li a {padding: 0;}
+  #sub_header ul li {
+    border-bottom: 3px solid transparent; /* 기본적으로 밑줄 없음 */
+  }
+  #sub_header ul li.active {
+    border-bottom-color: var(--sub-color); /* 활성화된 섹션에만 밑줄 색상 추가 */
+  }
   .sec_content section {flex-direction: column;}
   .sec_content section div {width: 100%;}
   .sec_content section img {width: 100%;}

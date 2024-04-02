@@ -106,33 +106,6 @@ body {
 .body_s{font-size: calc(var(--font) * 0.875);}
 .body_xs{font-size: calc(var(--font) * 0.75);}
 
-/*  ==================== common : media ====================  */
-@media screen and (max-width: 768px){
-  .container {
-    width: 100%;
-    padding: 0 17px;
-    box-sizing: border-box;
-  }
-  
-  .banner-title {
-    font-size: calc(var(--font) * 3);
-    font-weight: 700; 
-    line-height: 3.5rem;
-  }
-  .h2 {
-    font-size: 1.125rem;
-    line-height: 1.25rem;
-  }
-  .h3 {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.125rem;
-  }
-  .h5 {
-    font-size: 0.875rem; /* 14px */
-    line-height: 1.0625rem;
-  }
-}
 /*  ==================== HEADER : 임시원 ====================  */
 header {
   background: rgb(255,255,255);
@@ -272,151 +245,7 @@ button{
 .depth_3 li a{
   font-size: 16px;
 }
-
-/*  ==================== header : media ==================== */
-@media (min-width:768px){
-  header nav > ul > li:hover ul{
-    display: block;
-  }
-}
-@media screen and (max-width: 768px) {
-  .logo{
-    padding-left: 10px;
-    z-index: 90;
-  }
-  nav{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    /* background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px); */
-    opacity: 0;
-    transition: 0.3s;
-    visibility: hidden;
-    ul{
-      width: 100px;
-      flex-direction: column;
-      li{
-          color: #000;
-          ul{
-            display: none;
-          }
-      }
-    }
-  }
-  .mobileToggle {
-    display: block;
-    right: 20px;
-  }
-  header nav > ul {position: relative;}
-  .main_menu{
-    gap: 25px;
-    position: absolute;
-    left: 120px;
-    top: 185px;
-    /* transform: translate(-50%,-50%); */
-    font-size: 18px;
-  }
-  .searchformToggle span{display: block;}
-  .main_nav > ul > li > ul{
-    position: relative;
-    top: 0;
-  }
-  .depth_2 .material-symbols-outlined{
-    position: absolute;
-    left: 110px;
-    padding-top: 15px;
-    align-items: center;
-    font-size: 18px;
-    z-index: 1000;
-    color: #000;
-  }
-  header {
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px);
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    overflow: visible !important;
-    left: 0;
-    right: 0;
-    padding: 20px 0;
-    box-sizing:border-box;
-    z-index: 9999;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  }
-  .right_menu{
-    left: 100px;
-    position: absolute;
-    left: 370px;
-    z-index: 100;
-    display: none;
-    top: 100px;
-  }
-  .right_menu li:first-child{opacity: 0;}
-  #search{
-    right: 0;
-    width: 200px;
-    height: 40px;
-  }
-  .main_menu .depth_2.active > a {
-    color: #ccc;
-  }
-  button{
-    background: #fff;
-    border:none;
-    z-index: 1000;
-  }
-  .form_2{
-    width: 200px;
-    height: 40px;
-    background: #ebebeb;
-    border:none;
-    border-radius: 10px;
-  }
-  /* #search{
-    width: 200px;
-    height: 26px;
-    position: absolute;
-    right: 300px;
-    background: #ebebeb;
-    border:none;
-    border-radius: 10px;
-  } */
-  .search-bar {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    /* display: none; */
-    background-color: none  ;
-    border: none;
-    padding: 5px 10px;
-  }
-  .search-bar.open {
-    display: block;
-  }
-  .search-bar input[type="search"] {
-    width: 200px; 
-    height: 30px;
-    border: none;
-    outline: none;
-    padding-bottom: 5px;
-    margin-right: 5px;
-    background: none;
-  }
-  .search-bar button {
-    border: none; 
-    background-color: none ;
-    cursor: pointer;
-  }
-  
-}
+/* 모바일 nav */
 .open nav{
   opacity: 1;
   visibility: visible;
@@ -638,95 +467,7 @@ color: #000;}
 /* .footer_bottom nav {height: 326px;} */
 .footer_bottom_last {display: flex;}
 
-/* ==================== footer : media 유부현  ==================== */
-@media screen and (max-width:768px){
-  /* 맵버튼 사라짐 */
-  .quick{
-    display: none;
-  }
-  /* 공지사항 + 고객문의 */
-  .footer_top{
-    flex-direction:column;
-    gap: 50px;
-    text-align: center;
-    border: 1px solid var(--light-black);
-    border-color: var(--light-black) transparent transparent transparent;
-  }
-  .notice_1st,
-  .notice_2st {
-  width: 100%;
-  h2{
-    font-size: 1.75rem;
-      line-height: 2.1875rem;
-  }
-  }
-
-  /* 공지사항 */
-  .footer_data,
-  .ft_navi_h,
-  .ft_navi_p{
-    display: none;
-  }
-  .notice_1st{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding-bottom: 50px;
-    border: 1px solid var(--light-black);
-    border-color: transparent transparent var(--light-black) transparent;
-  }
-
-  .notice {
-    padding-top: 0px;
-  }
-  .footer_navi {padding: 0px;}
-  /* 고객문의 */
-  .main_readmore{
-    display: block;
-  }
-  .notice_2st{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  .inquery_pager{
-    display: none;
-  }
-  .ft_customer{
-    display: none;
-  }
-  /* 푸터 마지막 섹션 */
-  .footer_3th{
-    display: block;
-  }
-  .footer-last{
-    flex-direction:column;
-    gap: 30px;
-    text-align: center;
-  }
-  .ft_family{
-    order: 1;
-  }
-  .samsungmini{
-    display: none;
-  }
-  .mm_menu ul{
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-  .mm_menu{
-    order: 2;
-  }
-  .samsungwhitelogo{
-    order: 3;
-  }
-  .mm2_menu{
-    padding-bottom: 20px;
-  }
-}
-/* ==================== modal ====================  */
+/* ==================== modal : 우예지 ====================  */
 .modal {
   position: fixed; 
   left: 5%; top: 15%;
@@ -896,7 +637,239 @@ main.container {padding-top:calc(var(--row) * 3);}
   0%{}
   100% {clip-path:polygon(0 0,100% 0,100% 100%,0 100%);}
 }
+
+/*  ==================== media query : mobile ====================  */
+
+@media (min-width:768px){
+  header nav > ul > li:hover ul{
+    display: block;
+  }
+}
 @media screen and (max-width:768px){
+  /* ==== common : 우예지 ====*/
+  .modal {display: none;}
+  .container {
+    width: 100%;
+    padding: 0 17px;
+    box-sizing: border-box;
+  }
+  .banner-title {
+    font-size: calc(var(--font) * 3);
+    font-weight: 700; 
+    line-height: 3.5rem;
+  }
+  .h2 {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+  .h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+  }
+  .h5 {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.0625rem;
+  }
+  /* ==== header : 임시원 ====*/
+
+  .logo{
+    padding-left: 10px;
+    z-index: 90;
+  }
+  nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    /* background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px); */
+    opacity: 0;
+    transition: 0.3s;
+    visibility: hidden;
+    ul{
+      width: 100px;
+      flex-direction: column;
+      li{
+          color: #000;
+          ul{
+            display: none;
+          }
+      }
+    }
+  }
+  .mobileToggle {
+    display: block;
+    right: 20px;
+  }
+  header nav > ul {position: relative;}
+  .main_menu{
+    gap: 25px;
+    position: absolute;
+    left: 120px;
+    top: 185px;
+    /* transform: translate(-50%,-50%); */
+    font-size: 18px;
+  }
+  .searchformToggle span{display: block;}
+  .main_nav > ul > li > ul{
+    position: relative;
+    top: 0;
+  }
+  .depth_2 .material-symbols-outlined{
+    position: absolute;
+    left: 110px;
+    padding-top: 15px;
+    align-items: center;
+    font-size: 18px;
+    z-index: 1000;
+    color: #000;
+  }
+  header {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    overflow: visible !important;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    box-sizing:border-box;
+    z-index: 9999;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  .right_menu{
+    left: 100px;
+    position: absolute;
+    left: 370px;
+    z-index: 100;
+    display: none;
+    top: 100px;
+  }
+  .right_menu li:first-child{opacity: 0;}
+  #search{
+    right: 0;
+    width: 200px;
+    height: 40px;
+  }
+  .main_menu .depth_2.active > a {color: #ccc;}
+  button{
+    background: #fff;
+    border:none;
+    z-index: 1000;
+  }
+  .form_2{
+    width: 200px;
+    height: 40px;
+    background: #ebebeb;
+    border:none;
+    border-radius: 10px;
+  }
+  /* #search{
+    width: 200px;
+    height: 26px;
+    position: absolute;
+    right: 300px;
+    background: #ebebeb;
+    border:none;
+    border-radius: 10px;
+  } */
+  .search-bar {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    /* display: none; */
+    background-color: none  ;
+    border: none;
+    padding: 5px 10px;
+  }
+  .search-bar.open {display: block;}
+  .search-bar input[type="search"] {
+    width: 200px; 
+    height: 30px;
+    border: none;
+    outline: none;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    background: none;
+  }
+  .search-bar button {
+    border: none; 
+    background-color: none ;
+    cursor: pointer;
+  }
+
+  /* ====footer : 유부현 ====*/
+
+  /* 맵버튼 사라짐 */
+  #mapbtn {display: none;}
+  /* 공지사항 + 고객문의 */
+  .footer_top{
+    flex-direction:column;
+    gap: 50px;
+    text-align: center;
+    border: 1px solid var(--light-black);
+    border-color: var(--light-black) transparent transparent transparent;
+  }
+  .notice_1st,
+  .notice_2st {
+  width: 100%;
+  h2{
+    font-size: 1.75rem;
+      line-height: 2.1875rem;
+  }
+  }
+
+  /* 공지사항 */
+  .footer_data,
+  .ft_navi_h,
+  .ft_navi_p{
+    display: none;
+  }
+  .notice_1st{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+    border: 1px solid var(--light-black);
+    border-color: transparent transparent var(--light-black) transparent;
+  }
+
+  .notice {padding-top: 0px;}
+  .footer_navi {padding: 0px;}
+  /* 고객문의 */
+  .main_readmore {display: block;}
+  .notice_2st {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .inquery_pager {display: none;}
+  .ft_customer {display: none;}
+  /* 푸터 마지막 섹션 */
+  .footer_3th {display: block;}
+  .footer-last {
+    flex-direction:column;
+    gap: 30px;
+    text-align: center;
+  }
+  .ft_family {order: 1;}
+  .samsungmini {display: none;}
+  .mm_menu ul {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .mm_menu {order: 2;}
+  .samsungwhitelogo {order: 3;}
+
+  /* ====sub common : 우예지 ==== */
   .sub_common h2 {text-align: center;}
   .sub_common .align {flex-direction: column;}
   .sub_common .align > ul {display: none;}
