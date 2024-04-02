@@ -111,9 +111,9 @@ body {
   }
   
   .banner-title {
-    font-size: calc(var(--font) * 2);
+    font-size: calc(var(--font) * 3);
     font-weight: 700; 
-    line-height: 2.5rem;
+    line-height: 3.5rem;
   }
   .h2 {
     font-size: 1.125rem;
@@ -844,6 +844,7 @@ main.container {padding-top:calc(var(--row) * 3);}
   clip-path:polygon(0 0, 0 0, 0 100%,0 100%);
   animation: img 3s forwards;
   width: 100%;
+  height: 100px;
   object-fit: cover;
 }
 @keyframes img {

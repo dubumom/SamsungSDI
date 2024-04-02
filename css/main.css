@@ -437,7 +437,12 @@ esg
     padding: 15px 10px;
     width: 65%;
   }
-  .bannerWrapper .slidecontainer .slide-text .banner-title {margin-bottom: 30px;}
+  .bannerWrapper .slidecontainer .slide-text .banner-title {
+    margin-bottom: 30px;
+    font-size: calc(var(--font) * 2);
+    font-weight: 700; 
+    line-height: 2.5rem;
+  }
   .bannerWrapper .pager {bottom: 30px;}
   .bannerWrapper .pager > span {left: 0; top: calc(100% + 5px);}
   .bannerWrapper .pager a{width: 100px;}
