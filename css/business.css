@@ -142,12 +142,14 @@ h2{
       flex-direction: column;
       padding-bottom: 170px;
       gap: 0;
+      position: relative;
     }
-
+    .content_wrapper:hover img{
+      opacity: 1;
+    }
   
     .content_wrapper img {
-      margin-bottom: 20px; 
-      opacity: 1;
+      margin-bottom: 20px;       
       -webkit-transition: .5s ease-in-out;
       transition: .5s ease-in-out;
       filter: blur(0);
@@ -162,14 +164,11 @@ h2{
      .readmore-img{
       opacity: 0;
       position: absolute;
-      top: 55%;
+      top: 85px;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
       transition: opacity 0.5s ease, top 0.5s ease, left 0.5s ease;
-    }
-    .content_wrapper img:hover + .readmore-img{
-      opacity: 1;
     }
 
     .slidewrapper{
