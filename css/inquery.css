@@ -47,6 +47,7 @@
 }
 .inquery_icon_li > a > span {
     position: relative; 
+    font-weight: bolder;
   }
 .inquery_icon_li a:hover span{
     color: var(--main-color);
@@ -89,7 +90,8 @@
     align-items: center;
 }
 .from_type{
-    font-size: calc(var(--font) * 1.125);
+    /* font-size: calc(var(--font) * 1.125); */
+    min-width: 96px; 
     white-space : nowrap;
     font-weight: 700;
 }
