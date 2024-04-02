@@ -354,13 +354,7 @@ prcenter
   color: var(--sub-color);
   margin-bottom: calc(var(--row) * 2);
 }
-.autoSlide {
-  width: 100%;
-  height: 900px;
-  position: absolute;
-  top: 0; left: 50%;
-  bottom: 0;
-}
+
 .prcenter ul{
   position: absolute;
   top: 0;
