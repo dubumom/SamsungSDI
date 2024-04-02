@@ -5,13 +5,17 @@
 /* 프리텐다드 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 /* 
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 */
 
 /* 삼성폰트 */
 @font-face {
   font-family: 'samsunggothic';
-  src: url('../srcs/fonts/NeonPlanetDisplay.ttf') format('ttf');
+  src: url('../font/SamsungGothic.woff2') format('woff2'),
+      url('../font/SamsungGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 /* 
   font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
@@ -63,13 +67,13 @@
 */
 
 body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: var(--font);
   color: var(--text-black);
   /* overflow-x: hidden; */
 }
 .banner-title{
-  font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-family:'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: calc(4 * var(--font));
   line-height: 5rem;
   text-transform: uppercase;
@@ -80,7 +84,7 @@ body {
   line-height: 2.5rem;
 }
 .h2{
-  font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-family:'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   font-size: calc(var(--font) * 1.75);
   line-height: 2.5rem;
 }
@@ -257,7 +261,7 @@ button{
 .main_nav > ul > li ul li{white-space:nowrap; font-size: 18px;}
 .depth_3 {display: none;}
 .depth_2 li em{font-weight: bold;}
-.main_menu .depth_3 {display: none;}
+.main_menu .depth_3 {display: none; padding-left: 20px;}
 .depth_2 .material-symbols-outlined{
   position: absolute;
   left: 110px;
@@ -359,6 +363,7 @@ button{
   #search{
     right: 0;
     width: 200px;
+    height: 40px;
   }
   .main_menu .depth_2.active > a {
     color: #ccc;
@@ -370,7 +375,7 @@ button{
   }
   .form_2{
     width: 200px;
-    height: 26px;
+    height: 40px;
     background: #ebebeb;
     border:none;
     border-radius: 10px;
@@ -425,9 +430,9 @@ button{
   top: 110px;
 }
 .open .right_menu li:first-child{display: none;}
-.open .form_2{display: flex; position: absolute; right: 120px;} 
+.open .form_2{display: flex; position: fixed; left: 30%;} 
 .open .form_2 span {display: block; background: none;}
-.open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; left: 160px; top: 1px;
+.open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; left: 160px; top: 7px;
 color: #000;}
 .open .main_menu {transform: none; align-items: start; left: 60px;}
 .open .depth_2{

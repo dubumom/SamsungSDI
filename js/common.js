@@ -93,7 +93,7 @@ if($(window).width() > 768){
 			let submenu = $(this).find(".depth_2");
 
 			let submenuHeight = submenu.outerHeight();
-			if (submenu.length >0) { 
+			if (submenu.length > 0) { 
 					submenu.slideToggle();
 					$(this).siblings().find('> ul').slideUp();
 			}
