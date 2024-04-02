@@ -32,14 +32,14 @@ mainMenu.mouseover(function(){
 })
 
 header.mouseleave(function(){
-	if($(window).width() > 768){
+	if($(window).width() >= 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
 });
 
 header.mouseleave(function(){
-	if($(window).width() < 768){
+	if($(window).width() <= 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
