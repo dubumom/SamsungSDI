@@ -808,7 +808,7 @@ main.container {padding-top:calc(var(--row) * 3);}
   /* ====footer : 유부현 ====*/
 
   /* 맵버튼 사라짐 */
-  #mapbtn {display: none;}
+   .quick{display: none;}
   /* 공지사항 + 고객문의 */
   .footer_top{
     flex-direction:column;
