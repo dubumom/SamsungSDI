@@ -496,13 +496,16 @@ color: #000;}
   font-weight: bold;
 }
 .footer_navi div{padding-bottom: 20px;}
-.footer_navi_p{color: var(--medium-grays);}
+.footer_navi_p{
+  color: var(--medium-grays);
+  line-height: 20px;
+}
 
 /*고객문의*/
 .ft_contents{
   display: flex;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -555,7 +558,9 @@ color: #000;}
 .inquery_pager > ul > li > a{
   width: 100%;
 }
-.inquery_pager li.inquery_pager_active {background: var(--main-color);}
+.inquery_pager li.inquery_pager_active{
+  background: var(--main-color);
+}
 
 .mm_menu > ul > li{
   border-bottom: 2px solid transparent;
