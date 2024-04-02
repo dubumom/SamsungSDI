@@ -55,12 +55,17 @@ main header {
 .patent .explan {text-align: center;} 
 
 @media screen and (max-width:768px){
+  main .sub_fiexd{
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   main header {
     width: 100%;
     position: sticky;
     left: 0;
     top: 120px;
-    height: 100px;
+    height: 50px;
     background: none;
     color: var(--medium-gray);
     box-shadow: none;
@@ -72,4 +77,5 @@ main header {
     width: 100%;
   }
   #sub_header li {padding:0;}
+  #sub_header li a {padding: 0;}
 }
