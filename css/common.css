@@ -199,13 +199,15 @@ button{
 }
 .search-bar.open {display: block;}
 .search-bar input[type="search"] {
-  width: 200px;
+  width: 180px;
   height: 30px;
   border: none;
   outline: none; 
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   margin-right: 5px; 
   background: none;
+  margin-left: 15px;
+  
 }
 .search-bar button {
   border: none; 
@@ -399,7 +401,7 @@ button{
     height: 30px;
     border: none;
     outline: none;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin-right: 5px;
     background: none;
   }
@@ -425,7 +427,7 @@ button{
 .open .right_menu li:first-child{display: none;}
 .open .form_2{display: flex; position: absolute; right: 120px;} 
 .open .form_2 span {display: block; background: none;}
-.open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; left: 155px; top: 1px;
+.open .right_menu span:last-of-type {opacity: 1; position: absolute; background: none; left: 160px; top: 1px;
 color: #000;}
 .open .main_menu {transform: none; align-items: start; left: 60px;}
 .open .depth_2{
