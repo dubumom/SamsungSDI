@@ -312,7 +312,7 @@ career
 }
 .career_right ul {transform: translateY(20%);}
 .sellphone .pr_imges {width: 190px;}
-.animate__animated {animation-duration: 0.8s;}
+.animate__animated {animation-duration: 0.4s;}
 .pr_imges> img {
   width: 100%;
   object-fit: cover;
