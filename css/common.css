@@ -644,6 +644,8 @@ color: #000;}
     flex-direction:column;
     gap: 50px;
     text-align: center;
+    border: 1px solid var(--light-black);
+    border-color: var(--light-black) transparent transparent transparent;
   }
   .notice_1st,
   .notice_2st {
