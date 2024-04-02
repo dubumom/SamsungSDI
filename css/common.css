@@ -796,6 +796,50 @@ input[type="checkbox"]:checked {background: var(--main-color);}
 }
 
 /*  ==================== mapbtn : 유부현 ==================== */
+.qkbtn{
+  width: 80px;
+  height: 80px;
+  background-color: #0064CD;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  position: fixed;
+  right: 30px;
+  bottom: 0px;
+  z-index: 9999;
+  justify-items: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  span{
+    font-weight: 700;
+    font-size: calc(var(--font) * 1.75);
+    line-height: 2.5rem;
+    color: var(--white);
+  }
+}
+/* #mapbtn{
+  bottom: 180px
+}
+#upbtn{
+  bottom: 90px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 #mapbtn{
   width: 100px;
   height: 100px;
@@ -808,7 +852,7 @@ input[type="checkbox"]:checked {background: var(--main-color);}
     width: 100%;
     object-fit: cover;
   }
-}
+} */
 .quickbtn_map{
   display:none;
   position: fixed;
