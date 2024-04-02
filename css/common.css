@@ -641,7 +641,7 @@ color: #000;}
 /* ==================== footer : media 유부현  ==================== */
 @media screen and (max-width:768px){
   /* 맵버튼 사라짐 */
-  #mapbtn{
+  .quick{
     display: none;
   }
   /* 공지사항 + 고객문의 */
@@ -714,12 +714,16 @@ color: #000;}
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 15px;
   }
   .mm_menu{
     order: 2;
   }
   .samsungwhitelogo{
     order: 3;
+  }
+  .mm2_menu{
+    padding-bottom: 20px;
   }
 }
 /* ==================== modal ====================  */
