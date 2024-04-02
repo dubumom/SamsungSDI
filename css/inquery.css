@@ -6,7 +6,7 @@
 
 /*inquery 폰트*/
 .inquery_icon_h2{
-    text-align: center  !important; 
+    text-align: center  ; 
     font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     font-size: calc(var(--font) * 1.75);
     line-height: 40px;
@@ -219,7 +219,28 @@ span.bad-input:before{
     top:50%;
     transform:translateY(-50%);
 }
-
+@media screen and (max-width:768px) {
+    .inquery_form{
+        display: none;
+    }
+    .inquery_icon_h2{
+        text-align: start;  
+    }
+    .inquery_ul{
+        display: block
+    }
+    .legend_h2{
+        padding-bottom: 27px;
+    }
+    .inquery_icon_li svg{
+        display: none;
+    }
+    .inquery_icon_li{
+        width: 100%;
+        height: 52px;
+    }
+    
+}
 /* 약관
 .terms-area {margin-top: 24px;}
 .terms-area > .ipt-wrap {display: flex; gap: 24px; align-items: center;} */
