@@ -48,27 +48,17 @@ $(document).ready(function(){
     if ($(window).width() < 768) {
       $(".accordion-content").hide();
     }
-  
-    // 화면 크기가 변경될 때 아코디언 상태 업데이트
-    $(window).resize(function(){
-      if ($(window).width() > 768) {
-        $(".inquery_ul").show();
-      } else {
-        $(".inquery_ul").hide();
-      }
-    });
-  
-    // // 아코디언 헤더 클릭 시 토글 동작
-    // $(".legend_h2").click(function(){
-    //   // 클릭된 헤더의 다음 형제 요소를 토글
-    //   $(this).next(".inquery_ul").slideToggle();
-    //   // 다른 헤더의 내용 닫기
-    //   $(".inquery_ul").not($(this).next()).slideUp();
-    // });
-
-    $('.legend_h2').click(function()
-     {$('inquery_ul').slideToggle();
-    });
-
-
   });
+
+let legend = $('.legend_inquery'),
+    legendbutton = $('.arrow_updouwn span')
+    legend.click(function(){
+        legend.toggleClass('open');
+    if(legend.hasClass('open')){
+        legend.stop().animate({left:'-70px'},300,'easeOutBack');
+        legendbutton.$('span:first-child');
+    }else{
+        legend.stop().animate({left:'-350px'},300,'easeInBack');
+        legendbutton.$('span:last-child');
+    }
+});
