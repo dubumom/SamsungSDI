@@ -16,6 +16,14 @@
     width: 190px;
     height: 190px;
     border-radius: 100px;
+    opacity: 1;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    filter: blur(0);
+}
+.content_wrapper img:hover {
+  opacity: 0.5;
+  filter: blur(1px);
 }
 .text_content{
     width: 782px;
