@@ -46,9 +46,9 @@ main header {
 .sec_content section div p {line-height: 30px;}
 .sec_content section img {border-radius: 25px;}
 #sec1 div {order: 2;}
-#sec1 p {order: 1;}
+#sec1 img {order: 1;}
 #sec3 div {order: 2;}
-#sec3 p {order: 1;}
+#sec3 img {order: 1;}
 .patent {padding: calc(var(--row) * 3) 0;}
 .patent h2.h1{line-height: 55px;}
 .patent img {margin-top: var(--row);}
@@ -62,20 +62,30 @@ main header {
   }
   main header {
     width: 100%;
-    position: sticky;
-    left: 0;
-    top: 120px;
-    height: 50px;
-    background: none;
-    color: var(--medium-gray);
-    box-shadow: none;
-    z-index: 1;
-    border: 1px solid red;
+    top: 80px;
+    height: 60px;
+    background: var(--light-gray);
+    color: var(--text-color);
   }
   #sub_header ul{
     display: flex;
     width: 100%;
+    justify-content: space-around;
+    align-items: center;
   }
   #sub_header li {padding:0;}
   #sub_header li a {padding: 0;}
+  .sec_content section {flex-direction: column;}
+  .sec_content section div {width: 100%;}
+  .sec_content section img {width: 100%;}
+  #sec1 div {order: 1;}
+  #sec1 img {order: 2;}
+  #sec3 div {order: 1;}
+  #sec3 img {order: 2;}
+  .patent img {
+    margin-top: var(--row);
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
