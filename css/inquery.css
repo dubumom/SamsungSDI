@@ -233,10 +233,17 @@ span.bad-input{
         display: none;
     }
     .inquery_ul{
-        display: none;
+       flex-direction: column;
+    }
+    .legend_inquery{
+        display: block;
     }
     .legend_h2{
         padding-bottom: 27px;
+        transition: var(--white) 0.4s ease;
+    }
+    .inquery_icon_h2{
+        text-align: start;
     }
     .inquery_icon_li svg{
         display: none;
@@ -252,12 +259,14 @@ span.bad-input{
     .inquery_icon_li:nth-child(5) a{
         margin-top: 10px;
     }
-   
-    .legend_inquery .material-symbols-outlined{
-        position: absolute;
-        left: 400px;
-        top: 550px;
-        
+    .legend_inquery > div span:last-child{
+        display: none;
+    }
+    .legend_inquery.open > div span:last-child{
+        display: block;
+    }
+    .legend_inquery.open > div span:first-child{
+        display: none;
     }
 }
 /* 약관

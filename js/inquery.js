@@ -39,6 +39,26 @@ $("#msgForm").validate({
     errorClass:'bad-input',
     errorElement:'span'
 });
-$('.legend_h2').click(function(){
-    $('.inquery_ul').toggle();
+// $('.legend_h2').click(function(){
+//     $('.inquery_ul').toggle();
+// });
+
+$(document).ready(function(){
+    // 초기화: 화면 너비가 768px 이하일 때 아코디언 내용 숨기기
+    if ($(window).width() < 768) {
+      $(".accordion-content").hide();
+    }
+  });
+
+let legend = $('.legend_inquery'),
+    legendbutton = $('.arrow_updouwn span')
+    legend.click(function(){
+        legend.toggleClass('open');
+    if(legend.hasClass('open')){
+        legend.stop().animate({left:'-70px'},300,'easeOutBack');
+        legendbutton.$('span:first-child');
+    }else{
+        legend.stop().animate({left:'-350px'},300,'easeInBack');
+        legendbutton.$('span:last-child');
+    }
 });
