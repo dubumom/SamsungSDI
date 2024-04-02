@@ -261,7 +261,7 @@ button{
 .main_nav > ul > li ul li{white-space:nowrap; font-size: 18px;}
 .depth_3 {display: none;}
 .depth_2 li em{font-weight: bold;}
-.main_menu .depth_3 {display: none;}
+.main_menu .depth_3 {display: none; padding-left: 20px;}
 .depth_2 .material-symbols-outlined{
   position: absolute;
   left: 110px;
