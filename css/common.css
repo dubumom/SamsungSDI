@@ -816,7 +816,10 @@ main.container {padding-top:calc(var(--row) * 3);}
     text-align: center;
     border: 1px solid var(--light-black);
     border-color: var(--light-black) transparent transparent transparent;
+    padding: 50px 0;
   }
+  .footer_bottom {padding: 50px 0;}
+  .footer_bottom hr{display: none;}
   .notice_1st,
   .notice_2st {
   width: 100%;
