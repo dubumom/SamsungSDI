@@ -801,8 +801,8 @@ input[type="checkbox"]:checked {background: var(--main-color);}
 
 /*  ==================== mapbtn : 유부현 ==================== */
 .qqkkbtn{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-color: #0064CD;
   border-radius: 50%;
   border: 2px solid #fff;
@@ -822,8 +822,8 @@ input[type="checkbox"]:checked {background: var(--main-color);}
   }
 }
 .quick{
-  width: 80px;
-  height: 80px
+  width: 60px;
+  height: 60px
 }
 /* #mapbtn{
   bottom: 180px
