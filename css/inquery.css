@@ -26,7 +26,7 @@
 .inquery_icon_li{
     width: 170px;
     height: 156px;
-    border: 1px solid var(--medium-gray);
+    border: 2px solid var(--medium-gray);
     margin: auto;
 }
 .inquery_icon_li a{
