@@ -11,7 +11,7 @@
 /* 삼성폰트 */
 @font-face {
   font-family: 'samsunggothic';
-  src: url('../srcs/fonts/NeonPlanetDisplay.ttf') format('ttf');
+  src: url(../font/samsunggothic.ttf) format('ttf');
 }
 /* 
   font-family: 'samsunggothic', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
