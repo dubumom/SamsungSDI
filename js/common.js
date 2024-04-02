@@ -258,14 +258,17 @@ $('.mapmodal_close').click(function() {
 let rotated = false;
     xbtn.click(function() {
         if (!rotated) {
-            upbtn.animate({bottom: '90px'}, 'slow');
-            mapbtn.animate({bottom: '180px',height: '80px'}, 'slow');
+            upbtn.animate({bottom: '100px'}, 'slow');
+            mapbtn.animate({bottom: '190px',height: '80px'}, 'slow');
             xbtn.css({ transform: 'rotate(45deg)',transition: 'transform 0.5s ease'});
             rotated = true;
         } else {
-            upbtn.animate({bottom: '0px'}, 'slow');
-            mapbtn.animate({ bottom: '0px', height: '0px'}, 'slow');
+            upbtn.animate({bottom: '10px'}, 'slow');
+            mapbtn.animate({ bottom: '10px', height: '0px'}, 'slow');
             xbtn.css({transform: 'rotate(0deg)',transition: 'transform 0.5s ease'});
             rotated = false;
         }
+    });
+
+	upbtn.click(function() {$('html, body').animate({scrollTop: 0}, 'slow');
     });

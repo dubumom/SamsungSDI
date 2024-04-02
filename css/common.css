@@ -805,16 +805,15 @@ input[type="checkbox"]:checked {background: var(--main-color);}
   box-sizing: border-box;
   position: fixed;
   right: 30px;
-  bottom: 0px;
+  bottom: 10px;
   z-index: 9999;
   justify-items: center;
   display: flex;
   justify-content: center; 
   align-items: center; 
   span{
-    font-weight: 700;
-    font-size: calc(var(--font) * 1.75);
-    line-height: 2.5rem;
+    font-weight: 400;
+    font-size:50px;
     color: var(--white);
   }
 }
@@ -824,21 +823,6 @@ input[type="checkbox"]:checked {background: var(--main-color);}
 #upbtn{
   bottom: 90px;
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 #mapbtn{
   width: 100px;
