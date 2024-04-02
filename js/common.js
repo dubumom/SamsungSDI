@@ -17,7 +17,7 @@ $('.depth_2').each(function(){
 let headerHeight = tallestHeight + initHeight + 100;
 
 mainMenu.mouseover(function(){ 
-	if($(window).width() > 768){
+	if($(window).width() >= 768){
 		console.log('mainmenu hover');
 		
 		let openedMenuHeight = 0;
@@ -32,14 +32,14 @@ mainMenu.mouseover(function(){
 })
 
 header.mouseleave(function(){
-	if($(window).width() > 768){
+	if($(window).width() >= 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
 });
 
 header.mouseleave(function(){
-	if($(window).width() < 768){
+	if($(window).width() <= 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
@@ -49,7 +49,7 @@ $(".main_menu .depth_2 > li").on("click", function(e) {
 	e.stopPropagation();
 	console.log((this))
 
-if($(window).width() > 768){
+if($(window).width() >= 768){
 		let submenu = $(this).find(".depth_3");
 
 		let submenuHeight = submenu.outerHeight();
@@ -88,7 +88,7 @@ if($(window).width() > 768){
 
 	$(".main_menu > li").on("click", function() {
 
-		if($(window).width() < 768){		
+		if($(window).width() <= 768){		
 
 			let submenu = $(this).find(".depth_2");
 
@@ -102,7 +102,7 @@ if($(window).width() > 768){
   });
 
  $(".depth_2").click(function (event) {
-	if($(window).width() < 768){	
+	if($(window).width() <= 768){	
 	 event.preventDefault();
 	 if ($(this).parent().hasClass("active")) {
 	 $(this).find(".material-symbols-outlined").text("arrow_drop_up");
@@ -117,19 +117,19 @@ if($(window).width() > 768){
 
 
 $(window).resize(function(){
-	if($(this).width() > 768){
+	if($(this).width() >= 768){
 		$('.depth_2').show();
 	}
 });
 
 $(window).resize(function(){
-	if($(this).width() < 768){
+	if($(this).width() <= 768){
 		$('.depth_2').hide();
 	}
 });
 
 $(window).resize(function(){
-	if($(this).width() > 768){
+	if($(this).width() >= 768){
 		$('open').remove();
 	}
 });
@@ -146,7 +146,7 @@ let mobileToggle = $('.mobileToggle');
 let mainMenu = $('.main_menu > li');
 
 $(document).on('click','.mobileToggle',function(){
-	if($(window).width() < 768){
+	if($(window).width() <= 768){
 	$('header').toggleClass("open");
 	$('.search-bar').toggleClass("open");
 }
