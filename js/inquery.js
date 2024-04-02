@@ -39,3 +39,6 @@ $("#msgForm").validate({
     errorClass:'bad-input',
     errorElement:'span'
 });
+$('.legend_h2').click(function(){
+    $('.inquery_ul').toggle();
+});

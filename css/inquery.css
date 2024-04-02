@@ -35,7 +35,7 @@
     width: 100%;
 }
 .inquery_icon_li:nth-child(5) a{
-    padding-top: 24px;
+    margin-top: 34px;
     gap: 20px;
 }
 .inquery_icon_li a:hover svg path{
@@ -230,7 +230,7 @@ span.bad-input:before{
         text-align: start;  
     }
     .inquery_ul{
-        display: block
+        display: none;
     }
     .legend_h2{
         padding-bottom: 27px;
@@ -241,8 +241,23 @@ span.bad-input:before{
     .inquery_icon_li{
         width: 100%;
         height: 52px;
+        background: #ebebeb;
     }
-    
+    .inquery_icon_li a{
+        padding-top: 10px;
+    }
+    .inquery_icon_li:nth-child(5) a{
+        margin-top: 10px;
+    }
+    .legend_h2{
+        position: relative;
+    }
+    .legend_inquery .material-symbols-outlined{
+        position: absolute;
+        left: 400px;
+        top: 550px;
+        
+    }
 }
 /* 약관
 .terms-area {margin-top: 24px;}
