@@ -25,6 +25,7 @@
   opacity: 0.5;
   filter: blur(1px);
 }
+
 .text_content{
     width: 782px;
     line-height: 30px;
@@ -158,7 +159,19 @@ h2{
     .text_content {
       text-align: center; 
     }
-  
+     .readmore-img{
+      opacity: 0;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: opacity 0.5s ease, top 0.5s ease, left 0.5s ease;
+    }
+    .content_wrapper img:hover .readmore-img{
+      opacity: 1;
+    }
+
     .slidewrapper{
       position: relative;
       margin:2rem auto;
