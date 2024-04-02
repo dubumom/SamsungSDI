@@ -197,22 +197,22 @@ button:hover::after{
 }
 /*오류메시지*/
 span.bad-input{
-    background: var(--main-color);
+    background: transparent;
     border-radius:5px;
     padding: 3px 10px;
-    color:#fff;
+    color:red;
     position: absolute;
     white-space: nowrap;
     margin-left:50px;
     opacity: 0;
     animation:fadeIn 0.5s forwards;
-    right: 15%;
+    right: 16%;
 }
 @keyframes fadeIn {
     0% {opacity: 0; margin-left: 50px;}	
     100% {opacity: 1; margin-left: 10px;}	
 }
-span.bad-input:before{
+/* span.bad-input:before{
     content:'';
     position: absolute;
     border-style:solid;
@@ -221,7 +221,7 @@ span.bad-input:before{
     right:100%;
     top:50%;
     transform:translateY(-50%);
-}
+} */
 @media screen and (max-width:768px) {
     .inquery_form{
         display: none;
