@@ -17,7 +17,7 @@ $('.depth_2').each(function(){
 let headerHeight = tallestHeight + initHeight + 100;
 
 mainMenu.mouseover(function(){ 
-	if($(window).width() >= 768){
+	if($(window).width() > 768){
 		console.log('mainmenu hover');
 		
 		let openedMenuHeight = 0;
@@ -32,7 +32,7 @@ mainMenu.mouseover(function(){
 })
 
 header.mouseleave(function(){
-	if($(window).width() >= 768){
+	if($(window).width() > 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
@@ -49,13 +49,13 @@ $(".main_menu .depth_2 > li").on("click", function(e) {
 	e.stopPropagation();
 	console.log((this))
 
-if($(window).width() >= 768){
+if($(window).width() > 768){
 		let submenu = $(this).find(".depth_3");
 
 		let submenuHeight = submenu.outerHeight();
 		if (submenu.length) { 
 			submenu.slideToggle();
-			$(this).siblings().find('> ul').slideUp();
+			$(this).siblings().find(' ul').slideUp();
 		}
 		header.stop().animate({height:`${headerHeight + submenuHeight}px`});
 
@@ -93,7 +93,7 @@ if($(window).width() >= 768){
 			let submenu = $(this).find(".depth_2");
 
 			let submenuHeight = submenu.outerHeight();
-			if (submenu.length >0) { 
+			if (submenu.length > 0) { 
 					submenu.slideToggle();
 					$(this).siblings().find('> ul').slideUp();
 			}
@@ -117,7 +117,7 @@ if($(window).width() >= 768){
 
 
 $(window).resize(function(){
-	if($(this).width() >= 768){
+	if($(this).width() > 768){
 		$('.depth_2').show();
 	}
 });
@@ -129,7 +129,7 @@ $(window).resize(function(){
 });
 
 $(window).resize(function(){
-	if($(this).width() >= 768){
+	if($(this).width() > 768){
 		$('open').remove();
 	}
 });
