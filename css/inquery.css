@@ -187,10 +187,13 @@ legend{
     transform:translateX(-100%);
   }
 button:hover{
-    color: #3498db;
+    color: var(--main-color);
   }
 .main .container{
     position: relative;
+}
+button:hover::after{
+    transform: none;
 }
 /*오류메시지*/
 span.bad-input{
