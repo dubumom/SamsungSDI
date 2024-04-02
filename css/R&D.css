@@ -67,6 +67,10 @@ main header {
     background: var(--light-gray);
     color: var(--text-color);
   }
+  main header.rndActive{
+    width: calc(100% + 34px);
+    transform: translateX(-17px);
+  }
   #sub_header ul{
     display: flex;
     width: 100%;
