@@ -19,23 +19,26 @@ $("#msgForm").validate({
     },
     messages:{
         username:{
-            required : '이름은 필수입니다.',
-            minlength :'최소 두 글자 이상 입력해주세요.'
+            required : '&#42;이름은 필수입니다.',
+            minlength :'&#42;최소 두 글자 이상 입력해주세요.'
         },
         useremail: {
-            required: '이메일은 필수입니다.',
-            email: '이메일 형식에 맞춰 입력해주세요'
+            required: '&#42;이메일은 필수입니다.',
+            email: '&#42;이메일 형식에 맞춰 입력해주세요'
         },
         msg:{
-            required: '문의내용은 필수입니다.',
-            msg: '문의내용을 입력해주세요',
-            minlength: '최소 열 글자 이상 입력해주세요.'
+            required: '&#42;문의내용은 필수입니다.',
+            msg: '&#42;문의내용을 입력해주세요',
+            minlength: '&#42;최소 열 글자 이상 입력해주세요.'
         },
         inquery_title:{
-            required: '제목은 필수입니다.',
-            minlength: '최소 두 글자 이상 입력해주세요.'
+            required: '&#42;제목은 필수입니다.',
+            minlength: '&#42;최소 두 글자 이상 입력해주세요.'
         }
     },
     errorClass:'bad-input',
     errorElement:'span'
+});
+$('.legend_h2').click(function(){
+    $('.inquery_ul').toggle();
 });

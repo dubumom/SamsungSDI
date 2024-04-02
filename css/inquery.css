@@ -14,6 +14,10 @@
     /* padding-bottom: 30px; */
     color: var(--text-black);
 }
+/* 반응형html */
+.legend_inquery{
+    display: none;
+}
 /*inquery svg 아이콘*/
 .inquery_ul{
     /* padding-top: 30px; */
@@ -35,7 +39,7 @@
     width: 100%;
 }
 .inquery_icon_li:nth-child(5) a{
-    padding-top: 24px;
+    margin-top: 34px;
     gap: 20px;
 }
 .inquery_icon_li a:hover svg path{
@@ -43,6 +47,7 @@
 }
 .inquery_icon_li > a > span {
     position: relative; 
+    font-weight: bolder;
   }
 .inquery_icon_li a:hover span{
     color: var(--main-color);
@@ -85,7 +90,8 @@
     align-items: center;
 }
 .from_type{
-    font-size: calc(var(--font) * 1.125);
+    /* font-size: calc(var(--font) * 1.125); */
+    min-width: 96px; 
     white-space : nowrap;
     font-weight: 700;
 }
@@ -197,22 +203,22 @@ button:hover::after{
 }
 /*오류메시지*/
 span.bad-input{
-    background: var(--main-color);
+    background: transparent;
     border-radius:5px;
     padding: 3px 10px;
-    color:#fff;
+    color:red;
     position: absolute;
     white-space: nowrap;
     margin-left:50px;
     opacity: 0;
     animation:fadeIn 0.5s forwards;
-    right: 15%;
+    right: 16%;
 }
 @keyframes fadeIn {
     0% {opacity: 0; margin-left: 50px;}	
     100% {opacity: 1; margin-left: 10px;}	
 }
-span.bad-input:before{
+/* span.bad-input:before{
     content:'';
     position: absolute;
     border-style:solid;
@@ -221,16 +227,13 @@ span.bad-input:before{
     right:100%;
     top:50%;
     transform:translateY(-50%);
-}
+} */
 @media screen and (max-width:768px) {
     .inquery_form{
         display: none;
     }
-    .inquery_icon_h2{
-        text-align: start;  
-    }
     .inquery_ul{
-        display: block
+        display: none;
     }
     .legend_h2{
         padding-bottom: 27px;
@@ -241,8 +244,21 @@ span.bad-input:before{
     .inquery_icon_li{
         width: 100%;
         height: 52px;
+        background: #ebebeb;
     }
-    
+    .inquery_icon_li a{
+        padding-top: 10px;
+    }
+    .inquery_icon_li:nth-child(5) a{
+        margin-top: 10px;
+    }
+   
+    .legend_inquery .material-symbols-outlined{
+        position: absolute;
+        left: 400px;
+        top: 550px;
+        
+    }
 }
 /* 약관
 .terms-area {margin-top: 24px;}

@@ -32,14 +32,14 @@ mainMenu.mouseover(function(){
 })
 
 header.mouseleave(function(){
-	if($(window).width() > 768){
+	if($(window).width() >= 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
 });
 
 header.mouseleave(function(){
-	if($(window).width() < 768){
+	if($(window).width() <= 768){
 	header.stop().animate({height:`${initHeight}px`});
 	$('.depth_3').hide();
 	}
@@ -210,25 +210,65 @@ function footerJs(){
 }
 //quickmenu
 
-let threshold = $(window).height() -150;
-let mapbtn =$("#mapbtn");
-let mapbtnOST = mapbtn.offset().top;
+// let threshold = $(window).height() -150;
+// let mapbtnOST = mapbtn.offset().top;
+// let mapbtn =$("#mapbtn");
 
-$(window).scroll(function() {
-   var scrollAmt = $(window).scrollTop(); 
-   let newTop = mapbtnOST + (scrollAmt/10);
+// $(window).scroll(function() {
+// 	var scrollAmt = $(window).scrollTop(); 
+// 	let newTop = mapbtnOST + (scrollAmt/10);
+	
+// 	if(newTop < threshold ){
+// 		mapbtn.stop().animate({top:newTop+"px"}, 600);
+// 	}
+	
+// });
 
-   if(newTop < threshold ){
-      mapbtn.stop().animate({top:newTop+"px"}, 600);
-   }
+let mapbtn = $("#mappbtn");
+let upbtn = $("#upbtn");
+let xbtn = $("#xbtn");
 
-});
-
-
-$('#mapbtn').click(function(e) 
+mapbtn.click(function(e) 
 { e.preventDefault();
 	$('.quickbtn_map').fadeIn(); 
 });          
 $('.mapmodal_close').click(function() {
 	$('.quickbtn_map').fadeOut();
 });
+
+// let rotated = false;
+
+// xbtn.click(function() {
+// 	if (!rotated) {
+// 		upbtn.css('bottom', '90px');
+// 		mapbtn.css('bottom', '180px').animate({
+// 			height: 'toggle'
+// 		});
+// 		xbtn.css('transform', 'rotate(45deg)');
+// 		rotated = true;
+// 	} else {
+// 		upbtn.css('bottom', '');
+// 		mapbtn.css('bottom', '').animate({
+// 			height: 'toggle'
+// 		});
+// 		xbtn.css('transform', '');
+// 		rotated = false;
+// 	}
+// });
+let rotated = false;
+    xbtn.click(function() {
+        if (!rotated) {
+            upbtn.stop().animate({bottom: '80px'}, 'slow');
+            mapbtn.stop().animate({bottom: '150px',height: '60px'}, 'slow');
+            xbtn.css({ transform: 'rotate(45deg)',transition: 'transform 0.5s ease'});
+            rotated = true;
+        } else {
+            upbtn.stop().animate({bottom: '10px'}, 'slow');
+            mapbtn.stop().animate({ bottom: '10px', height: '60px'}, 'slow');
+            xbtn.css({transform: 'rotate(0deg)',transition: 'transform 0.5s ease'});
+            rotated = false;
+        }
+    });
+
+	upbtn.click(function() {$('html, body').stop().animate({scrollTop: 0}, 'slow');
+    });
