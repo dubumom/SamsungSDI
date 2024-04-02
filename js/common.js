@@ -172,8 +172,13 @@ function footerJs(){
 	let footerpagerbtn = $('.inquery_pager > ul > li');
 	footerpagerbtn.click(function(e){
 	  e.preventDefault();
-	  fadeSlide($(this).index());
+	//   fadeSlide($(this).index());
+	let idx = $(this).index();
+    fadeSlide(idx);
+    footerpagerbtn.removeClass('inquery_pager_active');
+    $(this).addClass('inquery_pager_active');
 	});
+
   
 	footerslides.eq(0).fadeIn();
   
@@ -181,6 +186,9 @@ function footerJs(){
 		footertimer = setInterval(()=>{
 		let footernextIdx = (footercurrentIdx + 1) % footerslideCount;
 		fadeSlide(footernextIdx);
+		footercurrentIdx = footernextIdx;
+		footerpagerbtn.removeClass('inquery_pager_active');
+		footerpagerbtn.eq(footercurrentIdx).addClass('inquery_pager_active');
 	  }, 4000);
 	}
   

@@ -558,7 +558,7 @@ color: #000;}
 .inquery_pager > ul > li > a{
   width: 100%;
 }
-.inquery_pager li:active{
+.inquery_pager li.inquery_pager_active{
   background: var(--main-color);
 }
 
