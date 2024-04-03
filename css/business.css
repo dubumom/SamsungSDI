@@ -17,7 +17,6 @@
     height: 190px;
     border-radius: 100px;
 }
-
 .text_content{
     width: 782px;
     line-height: 30px;
@@ -35,14 +34,12 @@
 h2{
     padding-bottom: 10px;
 }
-
 .content_wrapper .readmore-img{
   width: 100px;
   height: 20px;
   border-radius: 0;
   padding-top: 10px;
 }
-
 .slidewrapper{
     position: relative;
     margin:2rem auto;
@@ -61,13 +58,11 @@ h2{
     transition:all 0.8s;  
     padding-top: 20px;
   }
-
 .slide p{
   position: absolute;
   opacity: 0;    
   padding-top: 170px;
   width: 580px; 
-  /* padding-left: 20px; */
   line-height: 23px;
   transition:0.1s 0s;
   text-align: center;
@@ -78,12 +73,8 @@ h2{
     object-fit: cover;
     border-radius: 20px;
   }
-  .slidewrapper .slide:nth-child(1){
-    left: 160px;
-  }
-  .slidewrapper .slide:nth-child(2){
-    left: 160px;
-  }
+  .slidewrapper .slide:nth-child(1) {left: 160px;}
+  .slidewrapper .slide:nth-child(2) {left: 160px;}
   .slidewrapper .slide:nth-child(3){
     left:340px;
     width:600px;
@@ -95,23 +86,15 @@ h2{
     transition:0.3s 0.3s;
     padding-top: 150px;
   }
-  .slidewrapper .slide:nth-child(4){
-    left:980px;
-  }
-  .slidewrapper .slide:nth-child(5){
-    left:1160px;
-  }
-  .slidewrapper .slide:nth-child(6){
-    left:1160px;
-  }
-
+  .slidewrapper .slide:nth-child(4) {left:980px;}
+  .slidewrapper .slide:nth-child(5) {left:1160px;}
+  .slidewrapper .slide:nth-child(6) {left:1160px;}
   .status{
     justify-content: center;
     margin-top: 20px;
     width: 200px;
     border: 1px solid #ebebeb;
   }
-
   .current-idx,
   .total-idx{
     font-size: 18px;
@@ -123,18 +106,13 @@ h2{
     left: 49%;
     top: 450px;
   }
-
   .prev,
   .next{
     background: #fff;
     border: none;
   }
-  .prev{
-    left: 480px;
-  }
-  .next{
-    right: 500px;
-  }
+  .prev {left: 480px;}
+  .next {right: 500px;}
   @media screen and (max-width:768px) {
     .sub_business_section1{
       padding-top:calc(var(--row) * 1);
@@ -143,7 +121,6 @@ h2{
     .text_content p {
       display: none; 
     }
-  
     .content_wrapper {
       width: 100%;
       flex-direction: column;
@@ -151,10 +128,7 @@ h2{
       gap: 0;
       position: relative;
     }
-    .content_wrapper:hover img{
-      opacity: 1;
-    }
-  
+    .content_wrapper:hover img{opacity: 1;}
     .content_wrapper img {
       margin-bottom: 20px;       
       -webkit-transition: .5s ease-in-out;
@@ -169,7 +143,7 @@ h2{
       text-align: center; 
       width: 100%;
     }
-     .readmore-img{
+    .readmore-img{
       opacity: 0;
       position: absolute;
       top: 85px;
@@ -178,7 +152,6 @@ h2{
       z-index: 1;
       transition: opacity 0.5s ease, top 0.5s ease, left 0.5s ease;
     }
-
     .slidewrapper{
       position: relative;
       margin:2rem auto;
@@ -197,7 +170,6 @@ h2{
       transition:all 0.8s;  
       /* padding-top: 20px; */
     }
-  
   .slide p{
     position: absolute;
     opacity: 0;    
@@ -213,12 +185,8 @@ h2{
       object-fit: cover;
       border-radius: 20px;
     }
-    .slidewrapper .slide:nth-child(1){
-      left: -400px;
-    }
-    .slidewrapper .slide:nth-child(2){
-      left: -400px;
-    }
+    .slidewrapper .slide:nth-child(1){left: -400px;}
+    .slidewrapper .slide:nth-child(2){left: -400px;}
     .slidewrapper .slide:nth-child(3){
       left:0;
       width: 400px;
@@ -230,23 +198,15 @@ h2{
       transition:0.3s 0.3s;
       padding-top: 100px;
     }
-    .slidewrapper .slide:nth-child(4){
-      left:980px;
-    }
-    .slidewrapper .slide:nth-child(5){
-      left:1160px;
-    }
-    .slidewrapper .slide:nth-child(6){
-      left:1160px;
-    }
-  
+    .slidewrapper .slide:nth-child(4){left:980px;}
+    .slidewrapper .slide:nth-child(5){left:1160px;}
+    .slidewrapper .slide:nth-child(6){left:1160px;}
     .status{
       justify-content: center;
       margin-top: 20px;
       width: 200px;
       border: 1px solid #ebebeb;
     }
-  
     .current-idx,
     .total-idx{
       font-size: 18px;
@@ -262,7 +222,6 @@ h2{
       left: 180px;
       top: 380px;
     }
-  
     .prev,
     .next{
       background: #fff;
@@ -271,7 +230,6 @@ h2{
     .prev{
       left: -150px;
       position: absolute;
-
     }
     .next{
       left: 140px;

@@ -16,7 +16,6 @@ $('.depth_2').each(function(){
 let headerHeight = tallestHeight + initHeight + 100;
 mainMenu.mouseover(function(){ 
 	if($(window).width() > 768){
-		console.log('mainmenu hover');
 		let openedMenuHeight = 0;
 		mainMenu.find('ul').filter(function(){
 			if(this.style.display == 'block'){

@@ -266,9 +266,7 @@ career
 .career .career_left li:nth-child(4){left: 240px;}
 .career .career_left li:nth-child(5){left: 320px;}
 
-.career .career_left li img{
-  width: 100%;
-}
+.career .career_left li img{width: 100%;}
 .career .career_right {
   float: right;
   width: 55%;
@@ -332,15 +330,9 @@ prcenter
   overflow: hidden;
   background: #F2F2F2;
 }
-.prcenter .container {
-  position: relative;
-}
-.prcenter .container h2{
-  padding-top: calc(var(--row) * 3);
-}
-.prcenter_txt {
-  width: 100%; height: 100%;
-}
+.prcenter .container {position: relative;}
+.prcenter .container h2{padding-top: calc(var(--row) * 3);}
+.prcenter_txt {width: 100%; height: 100%;}
 .prcenter_txt div{
   position: absolute;
   top: 190%; left: 3%;
@@ -532,9 +524,7 @@ esg
     right: 4px; bottom: 35%;
     width: 150px;
   }
-  .career_right ul {
-    transform: translateY(0%);  
-  }
+  .career_right ul {transform: translateY(0%); }
 
   /*prcenter*/
   .prcenter .container {
@@ -593,9 +583,7 @@ esg
     width: 100%;
     overflow: hidden;
   }
-  .esg .esgText ul {
-    margin-top: 50%;
-  }
+  .esg .esgText ul {margin-top: 50%;}
   .esg .esgText li {
     position: static;
     width: auto;

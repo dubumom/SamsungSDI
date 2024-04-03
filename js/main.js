@@ -113,7 +113,6 @@ prList.click(function(e){
 
 //prcenter
 function slide(targetEl, direction) {
-  console.log(direction);
   let target = $(targetEl);
   let slideHeight = target.find('li').eq(0).height() + 30;
 

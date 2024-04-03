@@ -61,7 +61,6 @@
   grid-template-rows: auto;
 }
 .p-row {padding: calc(var(--row)) 0;}
-
 /* 
  ==================== typography ==================== 
 */
@@ -141,8 +140,7 @@ header .container {
   transform: translate(-50%,-50%);
   font-size: 18px;
 }
-.right_menu{gap: 45px;
-padding-right: 120px;}
+.right_menu{gap: 45px; padding-right: 120px;}
 
 /* 검색 */
 .right_menu.search li:first-child,
@@ -242,9 +240,7 @@ button{
   align-items: center;
   font-size: 18px;
 }
-.depth_3 li a{
-  font-size: 16px;
-}
+.depth_3 li a{font-size: 16px;}
 /* 모바일 nav */
 .open nav{
   opacity: 1;
@@ -268,18 +264,14 @@ color: #000;}
 .open .depth_2{
   left: 20px;
 }
-.open .depth_2 li span{
-  opacity: 1;
-}
+.open .depth_2 li span{opacity: 1;}
 .open .b.searchformToggle ,
 .opne .b{display: none;}
 .open button {color: #1A5AAD; position: absolute;  background: none;}
 .open .depth_2 li em{
   display: none;
 }
-.open .main_nav > ul > li > a{
-  font-weight: bold;
-}
+.open .main_nav > ul > li > a{font-weight: bold;}
 .open .depth_3 {
   display: block;
   padding-left: 40px;
@@ -343,7 +335,6 @@ color: #000;}
 .ft_contents{
   display: flex;
   width: 100%;
-  /* border: 1px solid red; */
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -420,7 +411,6 @@ color: #000;}
 .footer_3th {padding: 20px 0;}
 .footer_3th > ul {
   display: flex;
-  /* gap: 5px; */
   justify-content: space-between;
 }
 .footer_3th > ul > li > ul {margin-top: 20px;}
@@ -465,7 +455,6 @@ color: #000;}
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(180.92deg, #1A5AAD 0.73%, #012B65 99.15%);
 }
-/* .footer_bottom nav {height: 326px;} */
 .footer_bottom_last {display: flex;}
 
 /* ==================== modal : 우예지 ====================  */
@@ -689,7 +678,6 @@ main.container {padding-top:calc(var(--row) * 3);}
     justify-content: center;
     align-items: center;
     background: #fff;
-    /* background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px); */
     opacity: 0;
     visibility: hidden;
     ul{
@@ -713,7 +701,6 @@ main.container {padding-top:calc(var(--row) * 3);}
     position: absolute;
     left: 120px;
     top: 185px;
-    /* transform: translate(-50%,-50%); */
     font-size: 18px;
   }
   .searchformToggle span{display: block;}
@@ -771,20 +758,10 @@ main.container {padding-top:calc(var(--row) * 3);}
     border:none;
     border-radius: 10px;
   }
-  /* #search{
-    width: 200px;
-    height: 26px;
-    position: absolute;
-    right: 300px;
-    background: #ebebeb;
-    border:none;
-    border-radius: 10px;
-  } */
   .search-bar {
     position: absolute;
     top: 0;
     right: 10px;
-    /* display: none; */
     background-color: none  ;
     border: none;
     padding: 5px 10px;

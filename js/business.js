@@ -4,8 +4,7 @@ let wrapper = $('.slidewrapper'),
   slides = $('.slide'),
   totalIdx = $('.slide').length,
   pag = $(".pagination").find("span");
-  
-  console.log(slides.eq(0).index())
+
   pag.text(currentIdx + ' / ' + totalIdx);
   $('.next').click(function() {
     let slides = slideContainer.find('.slide');
