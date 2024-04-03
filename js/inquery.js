@@ -43,20 +43,14 @@ $("#msgForm").validate({
 //     $('.inquery_ul').toggle();
 // });
 
-$(document).ready(function(){
     // 초기화: 화면 너비가 768px 이하일 때 아코디언 내용 숨기기
     if ($(window).width() < 768) {
       $(".accordion-content").hide();
     }
-  });
 
-let legend = $('.legend_inquery'),
-    legendbutton = $('.arrow_updouwn span')
+let legend = $('.legend_inquery')
+    iqcontent = $('.inquery_ul')
     legend.click(function(){
-        legend.toggleClass('open');
-    if(legend.hasClass('open')){
-      
-    }else{
-    
-    }
-});
+        iqcontent.toggleClass('open');
+
+    });
