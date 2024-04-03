@@ -274,6 +274,9 @@ span.bad-input{
     .legend_inquery.open > .arrow_updouwn > a:first-child{
         display: none;
     }
+    .open span:first-of-type, .open span:last-of-type {
+        opacity: 1;
+    }
 }
 /* 약관
 .terms-area {margin-top: 24px;}
