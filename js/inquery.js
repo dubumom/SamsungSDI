@@ -48,9 +48,11 @@ $("#msgForm").validate({
       $(".accordion-content").hide();
     }
 
-let legend = $('.legend_inquery')
-    iqcontent = $('.inquery_ul')
+let legend = $('.legend_inquery');
+    iqcontent = $('.inquery_ul');
     legend.click(function(){
-        iqcontent.toggleClass('open');
+        legend.toggleClass('open');
+        iqcontent.slideToggle();
+
 
     });

@@ -253,6 +253,7 @@ span.bad-input{
         width: 100%;
         height: 52px;
         background: #ebebeb;
+        box-sizing: border-box;
     }
     .inquery_icon_li a{
         padding-top: 10px;
@@ -263,13 +264,14 @@ span.bad-input{
     .inquery_ul{
         display: none;
     }
-    .legend_inquery > div a:last-child{
+    .legend_inquery > .arrow_updouwn > a:last-child{
         display: none;
     }
-    .legend_inquery.open > div a:last-child{
+    .legend_inquery.open >.arrow_updouwn > a:last-child{
         display: block;
+        opacity: 1;
     }
-    .legend_inquery.open > div a:first-child{
+    .legend_inquery.open > .arrow_updouwn > a:first-child{
         display: none;
     }
 }
