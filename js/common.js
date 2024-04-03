@@ -130,7 +130,7 @@ $(window).resize(function(){
 
 $(window).resize(function(){
 	if($(this).width() > 768){
-		$('open').remove();
+		$('nav').removeClass('open');
 	}
 });
 
