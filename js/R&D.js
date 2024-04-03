@@ -11,20 +11,14 @@ $(window).scroll(function() {
 	const scrollTop = $(window).scrollTop();
 	if ($(window).width() > 768) {
 		$tabContent.each(function(idx) {
-			const sectionTop = $(this).offset().top;
+			const sectionTop = $(this).offset().top - 200;
 			if (scrollTop >= sectionTop - 5) {
 				moveHighlight(idx);
 			}
 		});
 	} else {
-		const subHeaderTop = $subheader.position().top;
-		if (scrollTop >= subHeaderTop) {
-			$subheader.addClass('rndActive');
-		} else {
-			$subheader.removeClass('rndActive');
-		}
 		$tabContent.each(function(idx) {
-			const sectionTop = $(this).offset().top;
+			const sectionTop = $(this).offset().top - 200;
 			if (scrollTop >= sectionTop - 5) {
 				$tabMenu.removeClass('active');
 				$tabMenu.eq(idx).addClass('active');
@@ -32,6 +26,15 @@ $(window).scroll(function() {
 		});
 	}
 });
+
+if($(window).width()<=768){
+	if ($(window).scrollTop() <= 430) {
+		$subheader.addClass('rndActive');
+	} else {
+		$subheader.removeClass('rndActive');
+	}
+}
+console.log($(window).scrollTop());
 function scrollToSection(num) {
 	const targetSection = $tabContent.eq(num) -1;
 	const targetOST = targetSection.offset().top;
