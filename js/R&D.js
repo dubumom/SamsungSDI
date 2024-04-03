@@ -4,6 +4,17 @@ const $highLight = $('.sHeaderActive');
 const $subheader = $('#sub_header');
 let suebHeaderOST = $subheader.offset().top;
 
+
+$(window).resize(function(){
+  if ($(window).width() < 768) {
+    suebHeaderOST = $subheader.offset().top;
+  }
+});
+
+
+$(window).trigger('resize');
+
+
 $tabMenu.click(function(e){
   e.preventDefault();
   scrollToSection($(this).index());
@@ -18,12 +29,15 @@ $(window).scroll(function() {
       }
     });
   } else {
-    $tabContent.each(function(idx) {
-      if(suebHeaderOST-80 <= scrollTop){
+   
+    if(suebHeaderOST-80 <= scrollTop){
         $subheader.addClass('rndActive');
       } else {
         $subheader.removeClass('rndActive');
       }
+    $tabContent.each(function(idx) {
+
+
       const sectionTop = $(this).offset().top - 200;
       if (scrollTop >= sectionTop - 5) {
         $tabMenu.removeClass('active');
