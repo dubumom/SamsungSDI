@@ -249,6 +249,7 @@ button{
 .open nav{
   opacity: 1;
   visibility: visible;
+  transition: 0.3s;
 }
 .open .mobileToggle span{background: #1A5AAD;} 
 .open .right_menu{
@@ -690,7 +691,6 @@ main.container {padding-top:calc(var(--row) * 3);}
     background: #fff;
     /* background: linear-gradient(180deg, rgba(255,255,255,1) 80px, rgba(238,238,238,1) 80px); */
     opacity: 0;
-    transition: 0.3s;
     visibility: hidden;
     ul{
       width: 100px;
