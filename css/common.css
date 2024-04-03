@@ -871,6 +871,9 @@ main.container {padding-top:calc(var(--row) * 3);}
   }
   .mm_menu {order: 2;}
   .samsungwhitelogo {order: 3;}
+  .mm2_menu{
+   padding-bottom: 30px;
+  }
 
   /* ====sub common : 우예지 ==== */
   .sub_common h2 {text-align: center;}
