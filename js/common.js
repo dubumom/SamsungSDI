@@ -119,20 +119,12 @@ if($(window).width() > 768){
 $(window).resize(function(){
 	if($(this).width() > 768){
 		$('.depth_2').show();
-	}
-});
-
-$(window).resize(function(){
-	if($(this).width() < 768){
+		$('nav').removeClass('open');
+	}else{
 		$('.depth_2').hide();
 	}
 });
 
-$(window).resize(function(){
-	if($(this).width() > 768){
-		$('nav').removeClass('open');
-	}
-});
 
 // 검색 기능
 $('header').on('click','.searchformToggle', function(){
