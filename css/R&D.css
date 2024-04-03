@@ -39,7 +39,7 @@ main header {
 .sec_content section {
   text-align: center;
   justify-content: space-between;
-  gap: 100px;
+  padding: 100px 0;
   margin: calc(var(--row) * 4) 0;
 }
 .sec_content section div {width: 400px;}

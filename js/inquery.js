@@ -49,6 +49,4 @@ let legend = $('.legend_inquery'),
     legend.click(function(){
         legend.toggleClass('open');
         iqcontent.slideToggle();
-
-
     });
