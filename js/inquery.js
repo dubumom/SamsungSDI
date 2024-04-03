@@ -55,10 +55,8 @@ let legend = $('.legend_inquery'),
     legend.click(function(){
         legend.toggleClass('open');
     if(legend.hasClass('open')){
-        legend.stop().animate({left:'-70px'},300,'easeOutBack');
-        legendbutton.$('span:first-child');
+      
     }else{
-        legend.stop().animate({left:'-350px'},300,'easeInBack');
-        legendbutton.$('span:last-child');
+    
     }
 });
