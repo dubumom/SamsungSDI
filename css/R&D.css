@@ -41,8 +41,6 @@ main header {
   justify-content: space-between;
   padding: 100px 0;
   margin: calc(var(--row) * 4) 0;
-  border: 1px solid red;
-  box-sizing: border-box;
 }
 .sec_content section div {width: 400px;}
 .sec_content section div h3 {margin-bottom: var(--row);}

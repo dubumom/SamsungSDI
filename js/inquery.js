@@ -47,12 +47,9 @@ $("#msgForm").validate({
     if ($(window).width() < 768) {
       $(".accordion-content").hide();
     }
-
 let legend = $('.legend_inquery');
     iqcontent = $('.inquery_ul');
     legend.click(function(){
         legend.toggleClass('open');
         iqcontent.slideToggle();
-
-
     });
