@@ -28,7 +28,7 @@ $(window).scroll(function() {
 });
 
 if($(window).width()<=768){
-	if ($(window).scrollTop() <= 430) {
+	if ($('##sec1').offset().top <= 430) {
 		$subheader.addClass('rndActive');
 	} else {
 		$subheader.removeClass('rndActive');
